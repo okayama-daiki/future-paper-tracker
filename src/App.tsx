@@ -579,8 +579,8 @@ function App() {
 				<p className="eyebrow">Curated deadline index</p>
 				<h1>Future Paper Tracker</h1>
 				<p className="heroText">
-					Submission deadlines and conference dates for algorithms,
-					optimization, and theory venues, collected from source pages.
+					Deadlines and conference dates across algorithms, optimization, and
+					theory, curated for Japanese researchers.
 				</p>
 				<div className="heroStats">
 					<div className="statCard">
