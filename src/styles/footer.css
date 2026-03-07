@@ -1,0 +1,65 @@
+.footer {
+	margin-top: 22px;
+}
+
+.pendingList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.pendingChip {
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 10px;
+	border: 1px solid #cc1f1a;
+	font-size: 0.82rem;
+	font-weight: 700;
+	color: #cc1f1a;
+	background: transparent;
+	transition:
+		background-color 140ms ease,
+		color 140ms ease,
+		border-color 140ms ease;
+}
+
+.pendingChip:hover {
+	background: #0f1720;
+	color: #fffdf8;
+	text-decoration: none;
+}
+
+.siteFooter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	margin-top: 32px;
+	padding-top: 16px;
+	border-top: 1px solid #0f1720;
+	color: #55616f;
+	font-size: 0.82rem;
+}
+
+.siteFooterCopyright {
+	margin: 0;
+}
+
+.siteFooterLinks {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+}
+
+.siteFooterLink {
+	color: #0f1720;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.siteFooterLink:hover {
+	color: #cc1f1a;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.16em;
+}

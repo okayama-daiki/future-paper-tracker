@@ -1,0 +1,1122 @@
+{
+	"generated_at": "2026-03-07T17:47:50.661Z",
+	"mode": "full-list-web-fetched",
+	"conferences": [
+		{
+			"conference_key": "PODC",
+			"conference_name": "ACM Symposium on Principles of Distributed Computing",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://www.podc.org/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "abstract_submission_deadline",
+							"start_at_utc": "2026-02-12T11:59:59Z",
+							"source_url": "https://www.podc.org/podc2026/call-for-papers/"
+						},
+						{
+							"event_type": "full_paper_submission_deadline",
+							"start_at_utc": "2026-02-17T11:59:59Z",
+							"source_url": "https://www.podc.org/podc2026/call-for-papers/"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2026-04-30T11:59:59Z",
+							"source_url": "https://www.podc.org/podc2026/call-for-papers/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-07-06T00:00:00Z",
+							"end_at_utc": "2026-07-10T23:59:59Z",
+							"source_url": "https://www.podc.org/"
+						}
+					],
+					"venue": "Royal Holloway, University of London, Egham, England",
+					"venue_source_url": "https://icalppodcspaa2026.cs.rhul.ac.uk/local/"
+				}
+			],
+			"series_official_url": "https://www.podc.org/"
+		},
+		{
+			"conference_key": "SIROCCO",
+			"conference_name": "International Colloquium on Structural Information and Communication Complexity",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://sirocco2026.webspace.durham.ac.uk/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "abstract_submission_deadline",
+							"start_at_utc": "2025-11-03T11:59:59Z",
+							"source_url": "https://sirocco2026.webspace.durham.ac.uk/call-for-papers/"
+						},
+						{
+							"event_type": "full_paper_submission_deadline",
+							"start_at_utc": "2025-11-15T11:59:59Z",
+							"source_url": "https://sirocco2026.webspace.durham.ac.uk/call-for-papers/"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2026-01-20T00:00:00Z",
+							"source_url": "https://sirocco2026.webspace.durham.ac.uk/call-for-papers/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-06-09T00:00:00Z",
+							"end_at_utc": "2026-06-11T23:59:59Z",
+							"source_url": "https://sirocco2026.webspace.durham.ac.uk/news/"
+						}
+					],
+					"venue": "Durham University, Durham, United Kingdom",
+					"venue_source_url": "https://sirocco2026.webspace.durham.ac.uk/"
+				}
+			],
+			"series_official_url": "https://sirocco.hiit.fi"
+		},
+		{
+			"conference_key": "WAOA",
+			"conference_name": "The Workshop on Approximation and Online Algorithms",
+			"editions": [
+				{
+					"year": 2025,
+					"official_site": "https://algo-conference.org/2025/waoa/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "full_paper_submission_deadline",
+							"start_at_utc": "2025-07-07T11:59:59Z",
+							"source_url": "https://algo-conference.org/2025/waoa/"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2025-08-07T00:00:00Z",
+							"source_url": "https://algo-conference.org/2025/waoa/"
+						},
+						{
+							"event_type": "camera_ready",
+							"start_at_utc": "2025-08-14T00:00:00Z",
+							"source_url": "https://algo-conference.org/2025/waoa/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-09-18T00:00:00Z",
+							"end_at_utc": "2025-09-19T23:59:59Z",
+							"source_url": "https://algo-conference.org/2025/waoa/"
+						}
+					],
+					"venue": "Faculty of Physics, University of Warsaw, Warsaw, Poland",
+					"venue_source_url": "https://algo-conference.org/2025/"
+				}
+			],
+			"series_official_url": "https://algo-conference.org/"
+		},
+		{
+			"conference_key": "AAAC",
+			"conference_name": "Annual Meeting of Asian Association for Algorithms and Computation",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://math.ouc.edu.cn/aaac2026/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2026-03-01T11:59:59Z",
+							"source_url": "https://math.ouc.edu.cn/aaac2026/"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2026-03-28T11:59:59Z",
+							"source_url": "https://math.ouc.edu.cn/aaac2026/"
+						},
+						{
+							"event_type": "camera_ready",
+							"start_at_utc": "2026-04-11T11:59:59Z",
+							"source_url": "https://math.ouc.edu.cn/aaac2026/"
+						},
+						{
+							"event_type": "registration_deadline",
+							"start_at_utc": "2026-04-18T11:59:59Z",
+							"source_url": "https://math.ouc.edu.cn/aaac2026/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-05-23T00:00:00Z",
+							"end_at_utc": "2026-05-24T23:59:59Z",
+							"source_url": "https://math.ouc.edu.cn/aaac2026/"
+						}
+					],
+					"venue": "Academic Conference Center, Ocean University of China (Yushan Campus), Qingdao, China",
+					"venue_source_url": "https://math.ouc.edu.cn/aaac2026/"
+				},
+				{
+					"year": 2025,
+					"official_site": "https://conference.cs.cityu.edu.hk/aaac2025/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-03-01T11:59:59Z",
+							"source_url": "https://conference.cs.cityu.edu.hk/aaac2025/"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2025-03-28T00:00:00Z",
+							"source_url": "https://conference.cs.cityu.edu.hk/aaac2025/"
+						},
+						{
+							"event_type": "camera_ready",
+							"start_at_utc": "2025-04-18T00:00:00Z",
+							"source_url": "https://conference.cs.cityu.edu.hk/aaac2025/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-05-31T00:00:00Z",
+							"end_at_utc": "2025-06-01T23:59:59Z",
+							"source_url": "https://conference.cs.cityu.edu.hk/aaac2025/"
+						}
+					],
+					"venue": "City University of Hong Kong, Hong Kong, China",
+					"venue_source_url": "https://conference.cs.cityu.edu.hk/aaac2025/"
+				}
+			],
+			"series_official_url": "http://asia-algo-comp.org"
+		},
+		{
+			"conference_key": "WAAC",
+			"conference_name": "Japan–Korea/Korea–Japan Joint Workshop on Algorithms and Computation",
+			"editions": [
+				{
+					"year": 2025,
+					"official_site": "https://waac-alg-comp.github.io/2025/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-05-25T14:59:59Z",
+							"source_url": "https://waac-alg-comp.github.io/2025/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-08-19T00:00:00Z",
+							"end_at_utc": "2025-08-20T23:59:59Z",
+							"source_url": "https://waac-alg-comp.github.io/2025/"
+						}
+					],
+					"venue": "Frontier Research in Applied Sciences Building, Hokkaido University, Sapporo, Japan",
+					"venue_source_url": "https://waac-alg-comp.github.io/2025/"
+				}
+			],
+			"series_official_url": "https://waac-alg-comp.github.io"
+		},
+		{
+			"conference_key": "SIGAL",
+			"conference_name": "情報処理学会アルゴリズム研究会",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "http://www.ipsj-sigal.or.jp/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2026-03-09T14:59:00Z",
+							"source_url": "https://www.ipsj.or.jp/kenkyukai/event/al208.html"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-05-20T00:00:00Z",
+							"end_at_utc": "2026-05-21T23:59:59Z",
+							"source_url": "https://www.ipsj.or.jp/kenkyukai/event/al208.html"
+						}
+					]
+				}
+			],
+			"series_official_url": "http://www.ipsj-sigal.or.jp/"
+		},
+		{
+			"conference_key": "COMP",
+			"conference_name": "電子情報通信学会コンピュテーション研究会",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://www.ieice.org/~comp/",
+					"cfp_published": false,
+					"events": []
+				}
+			],
+			"series_official_url": "https://www.ieice.org/~comp/"
+		},
+		{
+			"conference_key": "JSIAM",
+			"conference_name": "日本応用数理学会年会",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://jsiam.org/jsiam_archive/past_meetings/annual2026/",
+					"cfp_published": false,
+					"events": [
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-09-15T00:00:00Z",
+							"end_at_utc": "2026-09-17T23:59:59Z",
+							"source_url": "https://jsiam.org/jsiam_archive/past_meetings/annual2026/"
+						}
+					],
+					"venue": "福岡国際会議場",
+					"venue_source_url": "https://jsiam.org/jsiam_archive/past_meetings/annual2026/"
+				},
+				{
+					"year": 2025,
+					"official_site": "https://jsiam.org/annual2025/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-07-11T00:00:00Z",
+							"source_url": "https://jsiam.org/annual2025/"
+						},
+						{
+							"event_type": "camera_ready",
+							"start_at_utc": "2025-07-23T00:00:00Z",
+							"source_url": "https://jsiam.org/annual2025/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-09-02T00:00:00Z",
+							"end_at_utc": "2025-09-04T23:59:59Z",
+							"source_url": "https://jsiam.org/annual2025/"
+						}
+					],
+					"venue": "東京理科大学 神楽坂キャンパス",
+					"venue_source_url": "https://jsiam.org/annual2025/"
+				}
+			],
+			"series_official_url": "https://jsiam.org/jsiam_archive/past_meetings"
+		},
+		{
+			"conference_key": "ORSJ-spring",
+			"conference_name": "OR学会 春季研究発表会",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://orsj.org/2026s/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2026-01-19T00:00:00Z",
+							"source_url": "https://orsj.org/2026s/conference/submission/"
+						},
+						{
+							"event_type": "abstract_submission_deadline",
+							"start_at_utc": "2026-01-27T00:00:00Z",
+							"source_url": "https://orsj.org/2026s/conference/submission/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-03-04T00:00:00Z",
+							"end_at_utc": "2026-03-06T23:59:59Z",
+							"source_url": "https://orsj.org/2026s/"
+						}
+					],
+					"venue": "麗澤大学（校舎さつき）",
+					"venue_source_url": "https://orsj.org/2026s/"
+				}
+			],
+			"series_official_url": "https://orsj.org/nc-dummy"
+		},
+		{
+			"conference_key": "ORSJ-autumn",
+			"conference_name": "OR学会 秋季研究発表会",
+			"editions": [
+				{
+					"year": 2025,
+					"official_site": "https://orsj.org/2025f/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-07-16T00:00:00Z",
+							"source_url": "https://orsj.org/2025f/conference/submission/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-09-10T00:00:00Z",
+							"end_at_utc": "2025-09-12T23:59:59Z",
+							"source_url": "https://orsj.org/2025f/"
+						}
+					],
+					"venue": "広島大学",
+					"venue_source_url": "https://orsj.org/2025f/"
+				}
+			],
+			"series_official_url": "https://orsj.org/nc-dummy"
+		},
+		{
+			"conference_key": "LA-summer",
+			"conference_name": "夏のLAシンポジウム",
+			"editions": [
+				{
+					"year": 2025,
+					"official_site": "https://la-symposium.github.io/2025/summer.html",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-06-18T00:00:00Z",
+							"source_url": "https://la-symposium.github.io/2025/summer.html"
+						},
+						{
+							"event_type": "registration_deadline",
+							"start_at_utc": "2025-07-13T00:00:00Z",
+							"source_url": "https://la-symposium.github.io/2025/summer.html"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-07-23T00:00:00Z",
+							"end_at_utc": "2025-07-25T23:59:59Z",
+							"source_url": "https://la-symposium.github.io/2025/summer.html"
+						}
+					],
+					"venue": "アイーナ・いわて県民情報交流センター 会議室803",
+					"venue_source_url": "https://la-symposium.github.io/2025/summer.html"
+				}
+			],
+			"series_official_url": "https://la-symposium.github.io/index.html"
+		},
+		{
+			"conference_key": "LA-winter",
+			"conference_name": "冬のLAシンポジウム",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://la-symposium.github.io/2025/winter.html",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-12-07T00:00:00Z",
+							"source_url": "https://la-symposium.github.io/2025/winter.html"
+						},
+						{
+							"event_type": "registration_deadline",
+							"start_at_utc": "2026-01-18T00:00:00Z",
+							"source_url": "https://la-symposium.github.io/2025/winter.html"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-01-26T00:00:00Z",
+							"end_at_utc": "2026-01-28T23:59:59Z",
+							"source_url": "https://la-symposium.github.io/2025/winter.html"
+						}
+					],
+					"venue": "京都大学数理解析研究所 420号室",
+					"venue_source_url": "https://la-symposium.github.io/2025/winter.html"
+				}
+			],
+			"series_official_url": "https://la-symposium.github.io/index.html"
+		},
+		{
+			"conference_key": "RAMP",
+			"conference_name": "RAMP　数理最適化シンポジウム",
+			"editions": [
+				{
+					"year": 2025,
+					"official_site": "https://orsj.org/ramp/ramp2025/webopen",
+					"cfp_published": false,
+					"events": [
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-10-16T00:00:00Z",
+							"end_at_utc": "2025-10-17T23:59:59Z",
+							"source_url": "https://orsj.org/ramp/ramp2025/webopen"
+						}
+					],
+					"venue": "九州大学西新プラザ",
+					"venue_source_url": "https://orsj.org/ramp/ramp2025/webopen"
+				}
+			],
+			"series_official_url": "https://orsj.org/ramp/"
+		},
+		{
+			"conference_key": "RAOTA",
+			"conference_name": "日本OR学会研究部会：最適化の理論とアルゴリズム",
+			"editions": [
+				{
+					"year": 2025,
+					"official_site": "https://orsj.org/raota/#tsukuba25",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-04-30T14:59:00Z",
+							"source_url": "https://orsj.org/raota/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-05-31T00:00:00Z",
+							"end_at_utc": "2025-06-01T23:59:59Z",
+							"source_url": "https://orsj.org/raota/"
+						}
+					],
+					"venue": "筑波大学 筑波キャンパス 春日地区 春日講堂",
+					"venue_source_url": "https://orsj.org/raota/#tsukuba25"
+				}
+			],
+			"series_official_url": "https://orsj.org/raota/"
+		},
+		{
+			"conference_key": "FIT",
+			"conference_name": "情報科学技術フォーラム",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://www.ipsj.or.jp/event/fit/fit2026/index.html",
+					"cfp_published": false,
+					"events": [
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-09-02T00:00:00Z",
+							"end_at_utc": "2026-09-04T23:59:59Z",
+							"source_url": "https://www.ipsj.or.jp/event/fit/fit2026/index.html"
+						}
+					],
+					"venue": "北九州学術研究都市（北九州市立大学、九州工業大学、早稲田大学）",
+					"venue_source_url": "https://www.ipsj.or.jp/event/fit/fit2026/index.html"
+				},
+				{
+					"year": 2025,
+					"official_site": "https://www.ipsj.or.jp/event/fit/fit2025/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-05-09T06:00:00Z",
+							"source_url": "https://www.ipsj.or.jp/event/fit/fit2025/appli_paper.html"
+						},
+						{
+							"event_type": "camera_ready",
+							"start_at_utc": "2025-06-13T00:00:00Z",
+							"source_url": "https://www.ipsj.or.jp/event/fit/fit2025/appli_paper.html"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-09-03T00:00:00Z",
+							"end_at_utc": "2025-09-05T23:59:59Z",
+							"source_url": "https://www.ipsj.or.jp/event/fit/fit2025/"
+						}
+					],
+					"venue": "北海道科学大学（北海道札幌市手稲区前田7条15丁目4番1号）",
+					"venue_source_url": "https://www.ipsj.or.jp/event/fit/fit2025/"
+				}
+			],
+			"series_official_url": "https://www.ipsj.or.jp/event/fit/fit.html"
+		},
+		{
+			"conference_key": "MIP",
+			"conference_name": "Mixed Integer Programming Workshop",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://www.mixedinteger.org/2026",
+					"cfp_published": false,
+					"events": [
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-05-18T00:00:00Z",
+							"end_at_utc": "2026-05-21T23:59:59Z",
+							"source_url": "https://www.mixedinteger.org/2026"
+						}
+					],
+					"venue": "University of Connecticut - Stamford Campus, Stamford, Connecticut, USA",
+					"venue_source_url": "https://www.mixedinteger.org/2026"
+				}
+			],
+			"series_official_url": "https://www.mixedinteger.org/"
+		},
+		{
+			"conference_key": "IPCO",
+			"conference_name": "Integer Programming and Combinatorial Optimization",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://events.math.unipd.it/ipco2026/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-11-01T11:59:59Z",
+							"source_url": "https://events.math.unipd.it/ipco2026/call-for-papers"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2026-02-16T11:59:59Z",
+							"source_url": "https://events.math.unipd.it/ipco2026/call-for-papers"
+						},
+						{
+							"event_type": "camera_ready",
+							"start_at_utc": "2026-03-21T11:59:59Z",
+							"source_url": "https://events.math.unipd.it/ipco2026/call-for-papers"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-06-17T00:00:00Z",
+							"end_at_utc": "2026-06-19T23:59:59Z",
+							"source_url": "https://events.math.unipd.it/ipco2026/"
+						}
+					],
+					"venue": "University of Padova, Padova, Italy",
+					"venue_source_url": "https://events.math.unipd.it/ipco2026/"
+				}
+			],
+			"series_official_url": "https://mathopt.zib.de/?nav=ipco"
+		},
+		{
+			"conference_key": "IFORS",
+			"conference_name": "International Federation of Operational Research Societies",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://www.ifors.org/call-for-papers-ifors-2026/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "abstract_submission_deadline",
+							"start_at_utc": "2026-03-15T22:59:59Z",
+							"source_url": "https://www.ifors.org/call-for-papers-ifors-2026/"
+						},
+						{
+							"event_type": "registration_deadline",
+							"start_at_utc": "2026-04-25T00:00:00Z",
+							"source_url": "https://www.ifors.org/call-for-papers-ifors-2026/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-07-12T00:00:00Z",
+							"end_at_utc": "2026-07-17T23:59:59Z",
+							"source_url": "https://www.ifors.org/call-for-papers-ifors-2026/"
+						}
+					],
+					"venue": "University of Vienna, Vienna, Austria",
+					"venue_source_url": "https://www.ifors.org/call-for-papers-ifors-2026/"
+				}
+			],
+			"series_official_url": "https://www.ifors.org/"
+		},
+		{
+			"conference_key": "COSS",
+			"conference_name": "RIMS 共同研究「組合せ最適化セミナー」",
+			"editions": [
+				{
+					"year": 2025,
+					"official_site": "https://www.kurims.kyoto-u.ac.jp/coss/coss2025/coss2025.html",
+					"cfp_published": false,
+					"events": [
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-07-22T00:00:00Z",
+							"end_at_utc": "2025-07-24T23:59:59Z",
+							"source_url": "https://www.kurims.kyoto-u.ac.jp/coss/coss2025/coss2025.html"
+						}
+					],
+					"venue": "京都大学数理解析研究所 4階420号室",
+					"venue_source_url": "https://www.kurims.kyoto-u.ac.jp/coss/coss2025/coss2025.html"
+				}
+			],
+			"series_official_url": "https://www.kurims.kyoto-u.ac.jp/coss/coss2025/coss2025.html"
+		},
+		{
+			"conference_key": "MOPTA",
+			"conference_name": "Modeling and Optimization: Theory and Applications",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://coral.ise.lehigh.edu/mopta2026/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "abstract_submission_deadline",
+							"start_at_utc": "2026-04-15T00:00:00Z",
+							"source_url": "https://coral.ise.lehigh.edu/mopta2026/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-08-18T00:00:00Z",
+							"end_at_utc": "2026-08-19T23:59:59Z",
+							"source_url": "https://coral.ise.lehigh.edu/mopta2026/"
+						}
+					],
+					"venue": "Rauch Business Center, Lehigh University, Bethlehem, Pennsylvania, USA",
+					"venue_source_url": "https://coral.ise.lehigh.edu/mopta2026/"
+				},
+				{
+					"year": 2025,
+					"official_site": "https://coral.ise.lehigh.edu/mopta2025/",
+					"cfp_published": false,
+					"events": [
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-06-17T00:00:00Z",
+							"end_at_utc": "2025-06-20T23:59:59Z",
+							"source_url": "https://coral.ise.lehigh.edu/mopta2025/"
+						}
+					],
+					"venue": "Teatro Micaelense, Ponta Delgada, Azores, Portugal",
+					"venue_source_url": "https://coral.ise.lehigh.edu/mopta2025/"
+				}
+			],
+			"series_official_url": "https://coral.ise.lehigh.edu/mopta2026/"
+		},
+		{
+			"conference_key": "ALGO",
+			"conference_name": "Annual Meeting Combining the Premier Algorithmic Conference",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://algo-conference.org/2026/",
+					"cfp_published": false,
+					"events": [
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-08-31T00:00:00Z",
+							"end_at_utc": "2026-09-04T23:59:59Z",
+							"source_url": "https://algo-conference.org/2026/"
+						}
+					],
+					"venue": "L'Aquila, Italy",
+					"venue_source_url": "https://algo-conference.org/2026/"
+				}
+			],
+			"series_official_url": "https://algo-conference.org/"
+		},
+		{
+			"conference_key": "JCDCGGG",
+			"conference_name": "the Japan Conference on Discrete and Computational Geometry, Graphs, and Games",
+			"editions": [
+				{
+					"year": 2025,
+					"official_site": "https://sokoban.cn/yang/cjcdcggg2025/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-06-27T11:59:59Z",
+							"source_url": "https://sokoban.cn/yang/cjcdcggg2025/"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2025-07-12T00:00:00Z",
+							"source_url": "https://sokoban.cn/yang/cjcdcggg2025/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-09-12T00:00:00Z",
+							"end_at_utc": "2025-09-14T23:59:59Z",
+							"source_url": "https://sokoban.cn/yang/cjcdcggg2025/"
+						}
+					],
+					"venue": "Guangdong University of Foreign Studies (Bai Yun Mountain Campus), First Teaching Building, Guangzhou, China",
+					"venue_source_url": "https://sokoban.cn/yang/cjcdcggg2025/venue.php"
+				}
+			],
+			"series_official_url": "http://www.alg.cei.uec.ac.jp/itohiro/JCDCGG/"
+		},
+		{
+			"conference_key": "INFORMS",
+			"conference_name": "INFORMS Annual Meeting",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://meetings.informs.org/wordpress/annual/",
+					"cfp_published": false,
+					"events": [
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-11-01T00:00:00Z",
+							"end_at_utc": "2026-11-04T23:59:59Z",
+							"source_url": "https://www.informs.org/Meetings-Conferences/INFORMS-Conference-Calendar/2026-INFORMS-Annual-Meeting"
+						}
+					],
+					"venue": "New Orleans, Louisiana, USA",
+					"venue_source_url": "https://meetings.informs.org/wordpress/annual/"
+				}
+			],
+			"series_official_url": "https://www.informs.org/Meetings-Conferences/INFORMS-Conference-Calendar"
+		},
+		{
+			"conference_key": "ISSAC",
+			"conference_name": "The International Symposium on Symbolic and Algebraic Computation",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://www.issac-conference.org/2026/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "abstract_submission_deadline",
+							"start_at_utc": "2026-01-31T11:59:59Z",
+							"source_url": "https://www.issac-conference.org/2026/"
+						},
+						{
+							"event_type": "full_paper_submission_deadline",
+							"start_at_utc": "2026-02-07T11:59:59Z",
+							"source_url": "https://www.issac-conference.org/2026/"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2026-04-17T00:00:00Z",
+							"source_url": "https://www.issac-conference.org/2026/"
+						},
+						{
+							"event_type": "camera_ready",
+							"start_at_utc": "2026-05-08T11:59:59Z",
+							"source_url": "https://www.issac-conference.org/2026/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-07-13T00:00:00Z",
+							"end_at_utc": "2026-07-17T23:59:59Z",
+							"source_url": "https://www.issac-conference.org/2026/"
+						}
+					],
+					"venue": "Oldenburg, Germany",
+					"venue_source_url": "https://www.issac-conference.org/2026/"
+				}
+			],
+			"series_official_url": "https://www.issac-conference.org"
+		},
+		{
+			"conference_key": "SODA",
+			"conference_name": "ACM-SIAM Symposium on Discrete Algorithms",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://www.siam.org/conferences-events/siam-conferences/soda26/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-07-14T00:00:00Z",
+							"source_url": "https://www.siam.org/conferences-events/siam-conferences/soda26/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-01-11T00:00:00Z",
+							"end_at_utc": "2026-01-14T23:59:59Z",
+							"source_url": "https://www.siam.org/conferences-events/siam-conferences/soda26/"
+						}
+					],
+					"venue": "Philadelphia, Pennsylvania, USA",
+					"venue_source_url": "https://www.siam.org/conferences-events/siam-conferences/soda26/"
+				},
+				{
+					"year": 2027,
+					"official_site": "https://www.siam.org/conferences-events/siam-conferences/soda27/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2026-07-09T00:00:00Z",
+							"source_url": "https://www.siam.org/conferences-events/siam-conferences/soda27/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2027-01-24T00:00:00Z",
+							"end_at_utc": "2027-01-27T23:59:59Z",
+							"source_url": "https://www.siam.org/conferences-events/siam-conferences/soda27/"
+						}
+					],
+					"venue": "Philadelphia, Pennsylvania, USA",
+					"venue_source_url": "https://www.siam.org/conferences-events/siam-conferences/soda27/"
+				}
+			],
+			"series_official_url": "https://www.siam.org/conferences-events/siam-conferences/soda26/"
+		},
+		{
+			"conference_key": "FOCS",
+			"conference_name": "The IEEE Symposium on Foundations of Computer Science",
+			"editions": [
+				{
+					"year": 2025,
+					"official_site": "https://focs.computer.org/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-04-04T00:00:00Z",
+							"source_url": "https://focs.computer.org/"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2025-07-08T00:00:00Z",
+							"source_url": "https://focs.computer.org/"
+						},
+						{
+							"event_type": "registration_deadline",
+							"start_at_utc": "2025-11-21T00:00:00Z",
+							"source_url": "https://focs.computer.org/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2025-12-14T00:00:00Z",
+							"end_at_utc": "2025-12-17T23:59:59Z",
+							"source_url": "https://focs.computer.org/"
+						}
+					],
+					"venue": "PARKROYAL Darling Harbour, Sydney, Australia",
+					"venue_source_url": "https://focs.computer.org/2025/venue/"
+				}
+			],
+			"series_official_url": "https://focs.computer.org/"
+		},
+		{
+			"conference_key": "STOC",
+			"conference_name": "ACM Symposium on Theory of Computing",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://acm-stoc.org/stoc2026/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-11-04T21:59:00Z",
+							"source_url": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2026-02-01T00:00:00Z",
+							"source_url": "https://acm-stoc.org/stoc2026/"
+						},
+						{
+							"event_type": "camera_ready",
+							"start_at_utc": "2026-03-31T00:00:00Z",
+							"source_url": "https://acm-stoc.org/stoc2026/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-06-22T00:00:00Z",
+							"end_at_utc": "2026-06-26T23:59:59Z",
+							"source_url": "https://acm-stoc.org/stoc2026/"
+						}
+					],
+					"venue": "Salt Lake City, Utah, USA",
+					"venue_source_url": "https://acm-stoc.org/stoc2026/"
+				}
+			],
+			"series_official_url": "https://acm-stoc.org"
+		},
+		{
+			"conference_key": "ACDA",
+			"conference_name": "SIAM Conference on Applied and Computational Discrete Algorithms",
+			"editions": [
+				{
+					"year": 2025,
+					"official_site": "https://www.siam.org/conferences-events/siam-conferences/acda25/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "abstract_submission_deadline",
+							"start_at_utc": "2025-06-24T00:00:00Z",
+							"source_url": "https://www.siam.org/conferences-events/siam-conferences/acda25/"
+						}
+					],
+					"venue": "Montreal Convention Center, Montreal, Quebec, Canada",
+					"venue_source_url": "https://www.siam.org/conferences-events/siam-conferences/acda25/"
+				}
+			],
+			"series_official_url": "https://www.siam.org/conferences-events/siam-conferences/acda25/"
+		},
+		{
+			"conference_key": "AAAI",
+			"conference_name": "The Association for the Advancement of Artificial Intelligence",
+			"editions": [
+				{
+					"year": 2027,
+					"official_site": "https://aaai.org/conference/aaai/aaai-27/",
+					"cfp_published": false,
+					"events": [
+						{
+							"event_type": "conference",
+							"start_at_utc": "2027-02-16T00:00:00Z",
+							"end_at_utc": "2027-02-23T23:59:59Z",
+							"source_url": "https://aaai.org/conference/aaai/"
+						}
+					],
+					"venue": "Montréal, Québec, Canada",
+					"venue_source_url": "https://aaai.org/conference/aaai/"
+				},
+				{
+					"year": 2026,
+					"official_site": "https://aaai.org/conference/aaai/aaai-26/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "abstract_submission_deadline",
+							"start_at_utc": "2025-07-26T11:59:59Z",
+							"source_url": "https://aaai.org/conference/aaai/aaai-26/"
+						},
+						{
+							"event_type": "full_paper_submission_deadline",
+							"start_at_utc": "2025-08-02T11:59:59Z",
+							"source_url": "https://aaai.org/conference/aaai/aaai-26/"
+						},
+						{
+							"event_type": "phase1_notification",
+							"start_at_utc": "2025-09-15T00:00:00Z",
+							"source_url": "https://aaai.org/conference/aaai/aaai-26/"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2025-11-08T00:00:00Z",
+							"source_url": "https://aaai.org/conference/aaai/aaai-26/"
+						},
+						{
+							"event_type": "camera_ready",
+							"start_at_utc": "2025-11-16T00:00:00Z",
+							"source_url": "https://aaai.org/conference/aaai/aaai-26/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-01-20T00:00:00Z",
+							"end_at_utc": "2026-01-27T23:59:59Z",
+							"source_url": "https://aaai.org/conference/aaai/aaai-26/"
+						}
+					],
+					"venue": "Singapore EXPO, Singapore",
+					"venue_source_url": "https://aaai.org/conference/aaai/aaai-26/"
+				}
+			],
+			"series_official_url": "https://aaai.org/conference/aaai/"
+		},
+		{
+			"conference_key": "SWAT",
+			"conference_name": "Scandinavian Symposium on Algorithm Theory",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://swat2026.compute.dtu.dk/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "abstract_submission_deadline",
+							"start_at_utc": "2026-02-17T11:59:59Z",
+							"source_url": "https://swat2026.compute.dtu.dk/"
+						},
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2026-02-21T11:59:59Z",
+							"source_url": "https://swat2026.compute.dtu.dk/"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2026-04-11T11:59:59Z",
+							"source_url": "https://swat2026.compute.dtu.dk/"
+						},
+						{
+							"event_type": "camera_ready",
+							"start_at_utc": "2026-04-18T11:59:59Z",
+							"source_url": "https://swat2026.compute.dtu.dk/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-06-17T00:00:00Z",
+							"end_at_utc": "2026-06-19T23:59:59Z",
+							"source_url": "https://swat2026.compute.dtu.dk/"
+						}
+					],
+					"venue": "IDA Conference, Ingeniørernes Hus, Copenhagen, Denmark",
+					"venue_source_url": "https://swat2026.compute.dtu.dk/"
+				}
+			],
+			"series_official_url": "https://swat2026.compute.dtu.dk/"
+		},
+		{
+			"conference_key": "WALCOM",
+			"conference_name": "International Conference and Workshops on Algorithms and Computation",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://mozart.diei.unipg.it/walcom2026/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2025-09-22T11:59:59Z",
+							"source_url": "https://mozart.diei.unipg.it/walcom2026/cfp.html"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2025-11-08T11:59:59Z",
+							"source_url": "https://mozart.diei.unipg.it/walcom2026/cfp.html"
+						},
+						{
+							"event_type": "camera_ready",
+							"start_at_utc": "2025-11-25T11:59:59Z",
+							"source_url": "https://mozart.diei.unipg.it/walcom2026/cfp.html"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-03-04T00:00:00Z",
+							"end_at_utc": "2026-03-06T23:59:59Z",
+							"source_url": "https://mozart.diei.unipg.it/walcom2026/cfp.html"
+						}
+					],
+					"venue": "Department of Engineering, University of Perugia, Perugia, Italy",
+					"venue_source_url": "https://mozart.diei.unipg.it/walcom2026/venue.html"
+				}
+			],
+			"series_official_url": "https://www.walcom-conference.org/"
+		},
+		{
+			"conference_key": "ICALP",
+			"conference_name": "International Colloquium on Automata, Languages, and Programming",
+			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://icalppodcspaa2026.cs.rhul.ac.uk/icalp/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "abstract_submission_deadline",
+							"start_at_utc": "2026-02-04T11:59:59Z",
+							"source_url": "https://icalppodcspaa2026.cs.rhul.ac.uk/icalp/"
+						},
+						{
+							"event_type": "full_paper_submission_deadline",
+							"start_at_utc": "2026-02-07T11:59:59Z",
+							"source_url": "https://icalppodcspaa2026.cs.rhul.ac.uk/icalp/"
+						},
+						{
+							"event_type": "notification",
+							"start_at_utc": "2026-04-20T00:00:00Z",
+							"source_url": "https://icalppodcspaa2026.cs.rhul.ac.uk/icalp/"
+						},
+						{
+							"event_type": "camera_ready",
+							"start_at_utc": "2026-05-11T00:00:00Z",
+							"source_url": "https://icalppodcspaa2026.cs.rhul.ac.uk/icalp/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-07-07T00:00:00Z",
+							"end_at_utc": "2026-07-10T23:59:59Z",
+							"source_url": "https://icalppodcspaa2026.cs.rhul.ac.uk/icalp/"
+						}
+					],
+					"venue": "Royal Holloway, University of London, Egham Hill, Egham, Surrey TW20 0EX, United Kingdom",
+					"venue_source_url": "https://icalppodcspaa2026.cs.rhul.ac.uk/local/"
+				}
+			],
+			"series_official_url": "https://eatcs.org/index.php/future-icalps"
+		}
+	],
+	"pending_conference_keys": [
+		"COMP",
+		"RAMP"
+	]
+}

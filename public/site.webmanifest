@@ -1,0 +1,16 @@
+{
+  "name": "Future Paper Tracker",
+  "short_name": "FPT",
+  "description": "Conference deadlines and dates in algorithms, optimization, and theory, curated for Japanese researchers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f1e8",
+  "theme_color": "#f6f1e8",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+.hero {
+	display: grid;
+	grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
+	gap: 28px;
+	padding: 28px 0 22px;
+	border-top: 6px solid #cc1f1a;
+	border-bottom: 1px solid #0f1720;
+}
+
+.heroDetail {
+	grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr);
+}
+
+.heroActions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-end;
+	gap: 10px;
+	grid-column: 2;
+	grid-row: 1 / span 2;
+}
+
+.eyebrow,
+.sectionEyebrow,
+.statLabel,
+.detailLabel {
+	margin: 0;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.eyebrow,
+.sectionEyebrow,
+.detailLabel,
+.statLabel {
+	color: #667381;
+}
+
+.hero h1 {
+	margin: 10px 0 0;
+	max-width: 11ch;
+	font-family: "Space Grotesk", "IBM Plex Sans JP", sans-serif;
+	font-size: clamp(2.8rem, 7vw, 6.4rem);
+	font-weight: 700;
+	line-height: 0.9;
+	letter-spacing: -0.06em;
+	color: #0f1720;
+	text-wrap: balance;
+}
+
+.heroText {
+	max-width: 56ch;
+	margin: 14px 0 0;
+	font-size: 1rem;
+	line-height: 1.7;
+	color: #2b3440;
+}
+
+.heroStats {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0;
+	align-self: end;
+	border-top: 1px solid #0f1720;
+	border-left: 1px solid #0f1720;
+}
+
+.statCard {
+	display: grid;
+	gap: 8px;
+	min-height: 120px;
+	padding: 18px 16px;
+	border-right: 1px solid #0f1720;
+	border-bottom: 1px solid #0f1720;
+}
+
+.statValue {
+	font-family: "Space Grotesk", "IBM Plex Sans JP", sans-serif;
+	font-size: clamp(2rem, 5vw, 3.1rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.06em;
+	color: #0f1720;
+}
+
+.heroMeta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 22px;
+}
+
+.metaChip {
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 10px;
+	border: 1px solid #0f1720;
+	font-size: 0.78rem;
+	line-height: 1.2;
+	color: #0f1720;
+}
+
+.metaChipLive {
+	background: #cc1f1a;
+	color: #fffdf8;
+	border-color: #cc1f1a;
+}
+
+.metaChipMuted {
+	color: #667381;
+	border-color: #9ca7b3;
+}
+
+.heroLink,
+.backButton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 40px;
+	padding: 0 14px;
+	border: 1px solid #0f1720;
+	background: transparent;
+	color: #0f1720;
+	font-size: 0.86rem;
+	font-weight: 600;
+	text-decoration: none;
+	cursor: pointer;
+	transition:
+		background-color 140ms ease,
+		color 140ms ease,
+		border-color 140ms ease;
+}
+
+.heroLink:hover,
+.backButton:hover {
+	background: #0f1720;
+	color: #fffdf8;
+	text-decoration: none;
+}
