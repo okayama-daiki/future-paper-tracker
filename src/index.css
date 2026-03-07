@@ -1,0 +1,33 @@
+:root {
+	font-family:
+		"Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #f8fafc;
+	color: #0f172a;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	background:
+		radial-gradient(circle at 80% -10%, #dbeafe, transparent 35%),
+		radial-gradient(circle at 0% 0%, #fef3c7, transparent 25%), #f8fafc;
+}
+
+a {
+	color: #0f766e;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
