@@ -27,6 +27,8 @@ type DisplayRow = {
 };
 
 const data = rawData as ConferencesDataFile;
+const GITHUB_REPO_URL = "https://github.com/okayama-daiki/future-paper-tracker";
+const BUY_ME_A_COFFEE_URL = "https://buymeacoffee.com/daikiokayama";
 
 function readConferenceIdFromUrl(): string | null {
 	if (typeof window === "undefined") {
@@ -70,6 +72,13 @@ function formatUtc(iso: string): string {
 	return `${year}-${month}-${day} ${hour}:${minute} UTC`;
 }
 
+function formatEventType(eventType: string): string {
+	return eventType
+		.split("_")
+		.map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+		.join(" ");
+}
+
 function deadlineTag(eventType: string): {
 	label: string;
 	tone: "full" | "submission" | "abstract";
@@ -99,6 +108,18 @@ function deadlinePriority(eventType: string): number {
 		default:
 			return Number.POSITIVE_INFINITY;
 	}
+}
+
+function isDeadlineEventType(eventType: string): boolean {
+	return deadlinePriority(eventType) !== Number.POSITIVE_INFINITY;
+}
+
+function isPastUtc(iso: string, now: number): boolean {
+	const timestamp = new Date(iso).getTime();
+	if (Number.isNaN(timestamp)) {
+		return false;
+	}
+	return timestamp < now;
 }
 
 function buildConferenceEntries(
@@ -177,11 +198,40 @@ function getPastConferenceEntries(
 		.sort((a, b) => (b.conferenceYear ?? 0) - (a.conferenceYear ?? 0));
 }
 
+function SiteFooter() {
+	const year = new Date().getUTCFullYear();
+
+	return (
+		<footer className="siteFooter">
+			<p className="siteFooterCopyright">© {year} Daiki Okayama</p>
+			<nav className="siteFooterLinks" aria-label="Project links">
+				<a
+					className="siteFooterLink"
+					href={GITHUB_REPO_URL}
+					target="_blank"
+					rel="noreferrer"
+				>
+					GitHub
+				</a>
+				<a
+					className="siteFooterLink"
+					href={BUY_ME_A_COFFEE_URL}
+					target="_blank"
+					rel="noreferrer"
+				>
+					Buy Me a Coffee
+				</a>
+			</nav>
+		</footer>
+	);
+}
+
 function App() {
 	const [query, setQuery] = useState("");
 	const [selectedConferenceId, setSelectedConferenceId] = useState<
 		string | null
 	>(() => readConferenceIdFromUrl());
+	const [now, setNow] = useState(() => Date.now());
 
 	useEffect(() => {
 		const onPopState = () => {
@@ -193,7 +243,20 @@ function App() {
 		};
 	}, []);
 
+	useEffect(() => {
+		const intervalId = window.setInterval(() => {
+			setNow(Date.now());
+		}, 60_000);
+
+		return () => {
+			window.clearInterval(intervalId);
+		};
+	}, []);
+
 	const conferenceEntries = useMemo(() => buildConferenceEntries(data), []);
+	const trackedSeriesCount = data.conferences.length;
+	const trackedEditionCount = conferenceEntries.length;
+	const pendingCount = data.pending_conference_keys.length;
 
 	const conferenceEntryMap = useMemo(() => {
 		return new Map(conferenceEntries.map((entry) => [entry.id, entry]));
@@ -256,194 +319,340 @@ function App() {
 
 		return (
 			<main className="page">
-				<header className="header">
-					<button className="backButton" type="button" onClick={backToList}>
-						Back to list
-					</button>
-					<h1>
-						{selectedConference.displayKey} -{" "}
-						{selectedConference.conferenceName}
-					</h1>
-					<p>Generated: {formatUtc(data.generated_at)}</p>
+				<header className="hero heroDetail">
+					<div className="heroActions">
+						<button className="backButton" type="button" onClick={backToList}>
+							Back to list
+						</button>
+						<a
+							className="heroLink"
+							href={selectedConference.editionOfficialSite}
+							target="_blank"
+							rel="noreferrer"
+						>
+							Open edition site
+						</a>
+					</div>
+					<p className="eyebrow">{selectedConference.conferenceKey} edition</p>
+					<h1>{selectedConference.displayKey}</h1>
+					<p className="heroText">{selectedConference.conferenceName}</p>
+					<div className="heroMeta">
+						<span className="metaChip">
+							Generated {formatUtc(data.generated_at)}
+						</span>
+						<span className="metaChip">
+							{selectedConference.events.length} tracked events
+						</span>
+						<span
+							className={`metaChip ${
+								selectedConference.cfpPublished
+									? "metaChipLive"
+									: "metaChipMuted"
+							}`}
+						>
+							CfP{" "}
+							{selectedConference.cfpPublished ? "published" : "not published"}
+						</span>
+					</div>
 				</header>
 
-				<section className="detailCard">
-					<h2>Metadata</h2>
-					<ul className="detailList">
-						<li>
-							<strong>Series official site:</strong>{" "}
-							<a
-								href={selectedConference.seriesOfficialSite}
-								target="_blank"
-								rel="noreferrer"
-							>
-								{selectedConference.seriesOfficialSite}
-							</a>
-						</li>
-						<li>
-							<strong>Edition official site:</strong>{" "}
-							<a
-								href={selectedConference.editionOfficialSite}
-								target="_blank"
-								rel="noreferrer"
-							>
-								{selectedConference.editionOfficialSite}
-							</a>
-						</li>
-						<li>
-							<strong>CfP published:</strong>{" "}
-							{selectedConference.cfpPublished ? "yes" : "no"}
-						</li>
-					</ul>
-				</section>
-
-				<section className="detailCard">
-					<h2>Source pages (CfP / related)</h2>
-					<ul className="detailList">
-						{sourceLinks.map((url) => (
-							<li key={url}>
-								<a href={url} target="_blank" rel="noreferrer">
-									{url}
+				<div className="detailGrid">
+					<section className="detailCard panel">
+						<div className="sectionHeading">
+							<div>
+								<p className="sectionEyebrow">Overview</p>
+								<h2>Metadata</h2>
+							</div>
+						</div>
+						<ul className="detailList">
+							<li>
+								<span className="detailLabel">Series official site</span>
+								<a
+									href={selectedConference.seriesOfficialSite}
+									target="_blank"
+									rel="noreferrer"
+								>
+									{selectedConference.seriesOfficialSite}
 								</a>
 							</li>
-						))}
-					</ul>
-				</section>
+							<li>
+								<span className="detailLabel">Edition official site</span>
+								<a
+									href={selectedConference.editionOfficialSite}
+									target="_blank"
+									rel="noreferrer"
+								>
+									{selectedConference.editionOfficialSite}
+								</a>
+							</li>
+							<li>
+								<span className="detailLabel">CfP published</span>
+								<span>{selectedConference.cfpPublished ? "Yes" : "No"}</span>
+							</li>
+						</ul>
+					</section>
 
-				<section className="detailCard">
-					<h2>Past conference records</h2>
-					{pastConferenceEntries.length === 0 ? (
-						<p className="sub">No past records in this app yet.</p>
-					) : (
+					<section className="detailCard panel">
+						<div className="sectionHeading">
+							<div>
+								<p className="sectionEyebrow">Traceability</p>
+								<h2>Source pages</h2>
+							</div>
+						</div>
 						<ul className="detailList">
-							{pastConferenceEntries.map((entry) => (
-								<li key={entry.id}>
-									<button
-										type="button"
-										className="inlineLink"
-										onClick={() => openConference(entry.id)}
-									>
-										{entry.displayKey}
-									</button>
+							{sourceLinks.map((url) => (
+								<li key={url}>
+									<a href={url} target="_blank" rel="noreferrer">
+										{url}
+									</a>
 								</li>
 							))}
 						</ul>
-					)}
-				</section>
+					</section>
 
-				<section className="detailCard">
-					<h2>Events</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Event</th>
-								<th>UTC</th>
-								<th>Source</th>
-							</tr>
-						</thead>
-						<tbody>
-							{selectedConference.events.map((event) => (
-								<tr
-									key={`${event.event_type}-${event.start_at_utc}-${event.source_url}`}
-								>
-									<td>
-										<code>{event.event_type}</code>
-									</td>
-									<td>
-										{formatUtc(event.start_at_utc)}
-										{event.end_at_utc ? (
-											<div className="sub">
-												to {formatUtc(event.end_at_utc)}
-											</div>
-										) : null}
-									</td>
-									<td>
-										<a href={event.source_url} target="_blank" rel="noreferrer">
-											link
-										</a>
-									</td>
+					<section className="detailCard panel">
+						<div className="sectionHeading">
+							<div>
+								<p className="sectionEyebrow">History</p>
+								<h2>Past conference records</h2>
+							</div>
+						</div>
+						{pastConferenceEntries.length === 0 ? (
+							<p className="emptyState">
+								No past records for this series in the app yet.
+							</p>
+						) : (
+							<ul className="detailList">
+								{pastConferenceEntries.map((entry) => (
+									<li key={entry.id}>
+										<button
+											type="button"
+											className="inlineLink"
+											onClick={() => openConference(entry.id)}
+										>
+											{entry.displayKey}
+										</button>
+									</li>
+								))}
+							</ul>
+						)}
+					</section>
+				</div>
+
+				<section className="detailCard detailCardWide panel">
+					<div className="sectionHeading">
+						<div>
+							<p className="sectionEyebrow">Timeline</p>
+							<h2>Events</h2>
+						</div>
+					</div>
+					<div className="tableScroller">
+						<table className="dataTable">
+							<thead>
+								<tr>
+									<th>Event</th>
+									<th>Time (UTC)</th>
+									<th>Source</th>
 								</tr>
-							))}
-						</tbody>
-					</table>
+							</thead>
+							<tbody>
+								{selectedConference.events.map((event) => {
+									const isPastDeadline =
+										isDeadlineEventType(event.event_type) &&
+										isPastUtc(event.start_at_utc, now);
+
+									return (
+										<tr
+											key={`${event.event_type}-${event.start_at_utc}-${event.source_url}`}
+											className={isPastDeadline ? "expiredRow" : undefined}
+										>
+											<td>
+												<div className="eventTitle">
+													<span className="eventLabel">
+														{formatEventType(event.event_type)}
+													</span>
+													<code className="eventCode">{event.event_type}</code>
+												</div>
+											</td>
+											<td>
+												<span className="dateValue">
+													{formatUtc(event.start_at_utc)}
+												</span>
+												{event.end_at_utc ? (
+													<div className="dateRange">
+														to {formatUtc(event.end_at_utc)}
+													</div>
+												) : null}
+											</td>
+											<td>
+												<a
+													className="sourceLink"
+													href={event.source_url}
+													target="_blank"
+													rel="noreferrer"
+												>
+													Open source
+												</a>
+											</td>
+										</tr>
+									);
+								})}
+							</tbody>
+						</table>
+					</div>
 				</section>
+				<SiteFooter />
 			</main>
 		);
 	}
 
 	return (
 		<main className="page">
-			<header className="header">
+			<header className="hero">
+				<p className="eyebrow">Curated deadline index</p>
 				<h1>Future Paper Tracker</h1>
-				<p>Generated: {formatUtc(data.generated_at)}</p>
+				<p className="heroText">
+					Submission deadlines and conference dates for algorithms,
+					optimization, and theory venues, collected from source pages.
+				</p>
+				<div className="heroStats">
+					<div className="statCard">
+						<span className="statLabel">Visible deadlines</span>
+						<strong className="statValue">{filteredRows.length}</strong>
+					</div>
+					<div className="statCard">
+						<span className="statLabel">Tracked editions</span>
+						<strong className="statValue">{trackedEditionCount}</strong>
+					</div>
+					<div className="statCard">
+						<span className="statLabel">Tracked series</span>
+						<strong className="statValue">{trackedSeriesCount}</strong>
+					</div>
+					<div className="statCard">
+						<span className="statLabel">Pending keys</span>
+						<strong className="statValue">{pendingCount}</strong>
+					</div>
+				</div>
+				<div className="heroMeta">
+					<span className="metaChip">
+						Generated {formatUtc(data.generated_at)}
+					</span>
+				</div>
 			</header>
 
-			<section className="controls">
-				<label>
-					Search
+			<section className="controls panel">
+				<div className="sectionHeading">
+					<div>
+						<p className="sectionEyebrow">Filter</p>
+						<h2>Primary submission deadlines</h2>
+					</div>
+					<p className="sectionHint">Sorted by the latest primary deadline.</p>
+				</div>
+				<label className="searchField">
+					<span>Search</span>
 					<input
 						value={query}
 						onChange={(event) => setQuery(event.target.value)}
-						placeholder="conference key+year / name"
+						placeholder="conference name / abbreviation"
 					/>
 				</label>
 			</section>
 
-			<section className="meta">
-				<span>Rows: {filteredRows.length}</span>
-				<span>Pending: {data.pending_conference_keys.length}</span>
-			</section>
-
-			<section className="tableWrap">
-				<table>
-					<thead>
-						<tr>
-							<th>Conference</th>
-							<th>UTC</th>
-							<th>Source</th>
-						</tr>
-					</thead>
-					<tbody>
-						{filteredRows.map((row) => {
-							const tag = deadlineTag(row.eventType);
-							return (
-								<tr
-									key={`${row.conferenceId}-${row.eventType}-${row.startAtUtc}`}
-								>
-									<td>
-										<button
-											type="button"
-											className="conferenceLink"
-											onClick={() => openConference(row.conferenceId)}
-										>
-											<strong>{row.displayKey}</strong>
-										</button>
-										<div className="sub">{row.conferenceName}</div>
-										<div className="sub">
-											<span className={`tag ${tag.tone}`}>{tag.label}</span>
+			<section className="tableWrap panel">
+				<div className="sectionHeading sectionHeadingTight">
+					<div>
+						<p className="sectionEyebrow">Queue</p>
+						<h2>Deadline board</h2>
+					</div>
+				</div>
+				<div className="tableScroller">
+					<table className="dataTable">
+						<thead>
+							<tr>
+								<th>Conference</th>
+								<th>Deadline</th>
+								<th>Source</th>
+							</tr>
+						</thead>
+						<tbody>
+							{filteredRows.length === 0 ? (
+								<tr>
+									<td colSpan={3}>
+										<div className="emptyState">
+											No conferences matched the current search.
 										</div>
 									</td>
-									<td>
-										{formatUtc(row.startAtUtc)}
-										{row.endAtUtc ? (
-											<div className="sub">to {formatUtc(row.endAtUtc)}</div>
-										) : null}
-									</td>
-									<td>
-										<a href={row.sourceUrl} target="_blank" rel="noreferrer">
-											link
-										</a>
-									</td>
 								</tr>
-							);
-						})}
-					</tbody>
-				</table>
+							) : (
+								filteredRows.map((row) => {
+									const tag = deadlineTag(row.eventType);
+									const isPastDeadline = isPastUtc(row.startAtUtc, now);
+									return (
+										<tr
+											key={`${row.conferenceId}-${row.eventType}-${row.startAtUtc}`}
+											className={isPastDeadline ? "expiredRow" : undefined}
+										>
+											<td>
+												<button
+													type="button"
+													className="conferenceLink"
+													onClick={() => openConference(row.conferenceId)}
+												>
+													<strong>{row.displayKey}</strong>
+												</button>
+												<div className="sub">{row.conferenceName}</div>
+											</td>
+											<td>
+												<span className="dateValue">
+													{formatUtc(row.startAtUtc)}
+												</span>
+												{row.endAtUtc ? (
+													<div className="dateRange">
+														to {formatUtc(row.endAtUtc)}
+													</div>
+												) : null}
+												<div className="deadlineMeta">
+													<span className={`tag ${tag.tone}`}>{tag.label}</span>
+												</div>
+											</td>
+											<td>
+												<a
+													className="sourceLink"
+													href={row.sourceUrl}
+													target="_blank"
+													rel="noreferrer"
+												>
+													Open source
+												</a>
+											</td>
+										</tr>
+									);
+								})
+							)}
+						</tbody>
+					</table>
+				</div>
 			</section>
-			<footer className="footer">
-				<h2>Pending conference keys</h2>
-				<p>{data.pending_conference_keys.join(", ")}</p>
+			<footer className="footer panel">
+				<div className="sectionHeading sectionHeadingTight">
+					<div>
+						<p className="sectionEyebrow">Backlog</p>
+						<h2>Pending conference keys</h2>
+					</div>
+				</div>
+				{data.pending_conference_keys.length === 0 ? (
+					<p className="emptyState">No pending conference keys.</p>
+				) : (
+					<div className="pendingList">
+						{data.pending_conference_keys.map((conferenceKey) => (
+							<span key={conferenceKey} className="pendingChip">
+								{conferenceKey}
+							</span>
+						))}
+					</div>
+				)}
 			</footer>
+			<SiteFooter />
 		</main>
 	);
 }
