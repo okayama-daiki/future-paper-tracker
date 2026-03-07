@@ -1,0 +1,69 @@
+.page {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 28px 24px 72px;
+}
+
+.panel,
+.hero {
+	animation: fadeIn 240ms ease-out both;
+}
+
+.panel {
+	margin-top: 22px;
+	padding: 18px 0 0;
+	border-top: 1px solid #0f1720;
+}
+
+.sectionHeading {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 16px;
+	margin-bottom: 16px;
+}
+
+.sectionHeading h2 {
+	margin: 4px 0 0;
+	font-family: "Space Grotesk", "IBM Plex Sans JP", sans-serif;
+	font-size: clamp(1.3rem, 3vw, 1.9rem);
+	font-weight: 700;
+	letter-spacing: -0.04em;
+	color: #0f1720;
+}
+
+.sectionHeadingTight {
+	margin-bottom: 10px;
+}
+
+.sectionHint {
+	margin: 0;
+	max-width: none;
+	font-size: 0.9rem;
+	line-height: 1.55;
+	color: #55616f;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.controls {
+	display: block;
+}
+
+.emptyState {
+	margin: 0;
+	padding: 16px 0;
+	color: #667381;
+	font-size: 0.92rem;
+	line-height: 1.6;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
