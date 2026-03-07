@@ -463,6 +463,10 @@ function App() {
 			);
 		});
 	}, [rows, query]);
+	const openConferenceCount = useMemo(
+		() => filteredRows.filter((row) => !isPastUtc(row.startAtUtc, now)).length,
+		[filteredRows, now],
+	);
 
 	const totalPages = Math.max(
 		1,
@@ -741,7 +745,7 @@ function App() {
 	return (
 		<main className="page">
 			<header className="hero">
-				<p className="eyebrow">Curated deadline index</p>
+				<p className="eyebrow">Conference deadline tracker</p>
 				<h1>Future Paper Tracker</h1>
 				<p className="heroText">
 					Deadlines and conference dates across algorithms, optimization, and
@@ -749,8 +753,8 @@ function App() {
 				</p>
 				<div className="heroStats">
 					<div className="statCard">
-						<span className="statLabel">Visible deadlines</span>
-						<strong className="statValue">{filteredRows.length}</strong>
+						<span className="statLabel">Open conferences</span>
+						<strong className="statValue">{openConferenceCount}</strong>
 					</div>
 					<div className="statCard">
 						<span className="statLabel">Tracked editions</span>
