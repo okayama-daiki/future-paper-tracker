@@ -70,7 +70,7 @@ jobs:
             - name: Build for Pages
               run: |
                   bunx tsc -b
-                  bunx vite build --base="/${{ github.event.repository.name }}/"
+                  bunx vite build
 
             - name: Upload Pages artifact
               uses: actions/upload-pages-artifact@v4.0.0
