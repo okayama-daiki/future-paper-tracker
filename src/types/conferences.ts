@@ -3,6 +3,8 @@ export type EventRecord = {
 	start_at_utc: string;
 	end_at_utc?: string;
 	source_url: string;
+	estimated?: boolean;
+	estimated_from_year?: number;
 };
 
 export type EditionRecord = {

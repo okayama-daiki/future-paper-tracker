@@ -20,10 +20,13 @@ type DisplayRow = {
 	displayKey: string;
 	conferenceKey: string;
 	conferenceName: string;
+	editionOfficialSite: string;
 	eventType: string;
 	startAtUtc: string;
 	endAtUtc?: string;
 	sourceUrl: string;
+	estimated: boolean;
+	estimatedFromYear?: number;
 };
 
 const data = rawData as ConferencesDataFile;
@@ -123,6 +126,61 @@ function isPastUtc(iso: string, now: number): boolean {
 	return timestamp < now;
 }
 
+function findPrimaryDeadlineEvent(events: EventRecord[]): EventRecord | null {
+	const candidates = events.filter(
+		(event) =>
+			deadlinePriority(event.event_type) !== Number.POSITIVE_INFINITY &&
+			!event.estimated,
+	);
+	if (candidates.length === 0) {
+		return null;
+	}
+
+	return [...candidates].sort((a, b) => {
+		const priorityComparison =
+			deadlinePriority(a.event_type) - deadlinePriority(b.event_type);
+		if (priorityComparison !== 0) {
+			return priorityComparison;
+		}
+		return (
+			new Date(a.start_at_utc).getTime() - new Date(b.start_at_utc).getTime()
+		);
+	})[0];
+}
+
+function findEstimatedPrimaryDeadlineEvent(
+	events: EventRecord[],
+): EventRecord | null {
+	const candidates = events.filter(
+		(event) =>
+			deadlinePriority(event.event_type) !== Number.POSITIVE_INFINITY &&
+			event.estimated,
+	);
+	if (candidates.length === 0) {
+		return null;
+	}
+
+	return [...candidates].sort((a, b) => {
+		const priorityComparison =
+			deadlinePriority(a.event_type) - deadlinePriority(b.event_type);
+		if (priorityComparison !== 0) {
+			return priorityComparison;
+		}
+		return (
+			new Date(a.start_at_utc).getTime() - new Date(b.start_at_utc).getTime()
+		);
+	})[0];
+}
+
+function shiftUtcByEditionYears(iso: string, yearOffset: number): string {
+	const date = new Date(iso);
+	if (Number.isNaN(date.getTime())) {
+		return iso;
+	}
+	date.setUTCFullYear(date.getUTCFullYear() + yearOffset);
+	return date.toISOString().replace(".000Z", "Z");
+}
+
 function buildConferenceEntries(
 	dataFile: ConferencesDataFile,
 ): ConferenceEntry[] {
@@ -148,34 +206,108 @@ function buildConferenceEntries(
 	return entries;
 }
 
-function selectPrimaryDeadline(conference: ConferenceEntry): DisplayRow | null {
-	const candidates = conference.events.filter(
-		(event) => deadlinePriority(event.event_type) !== Number.POSITIVE_INFINITY,
+function buildEstimatedPrimaryDeadline(
+	conference: ConferenceEntry,
+	allEntries: ConferenceEntry[],
+): EventRecord | null {
+	const existingEstimatedPrimaryDeadline = findEstimatedPrimaryDeadlineEvent(
+		conference.events,
 	);
-	if (candidates.length === 0) {
+	if (existingEstimatedPrimaryDeadline) {
+		return existingEstimatedPrimaryDeadline;
+	}
+
+	if (conference.cfpPublished || conference.conferenceYear === null) {
+		return null;
+	}
+	const currentYear = conference.conferenceYear;
+
+	const previousEdition = allEntries
+		.filter(
+			(entry) =>
+				entry.conferenceKey === conference.conferenceKey &&
+				entry.id !== conference.id &&
+				entry.conferenceYear !== null &&
+				entry.conferenceYear < currentYear,
+		)
+		.sort((a, b) => (b.conferenceYear ?? 0) - (a.conferenceYear ?? 0))
+		.find((entry) => findPrimaryDeadlineEvent(entry.events) !== null);
+
+	if (!previousEdition || previousEdition.conferenceYear === null) {
 		return null;
 	}
 
-	const selected = [...candidates].sort((a, b) => {
-		const priorityComparison =
-			deadlinePriority(a.event_type) - deadlinePriority(b.event_type);
-		if (priorityComparison !== 0) {
-			return priorityComparison;
-		}
-		return (
-			new Date(a.start_at_utc).getTime() - new Date(b.start_at_utc).getTime()
+	const previousPrimaryDeadline = findPrimaryDeadlineEvent(
+		previousEdition.events,
+	);
+	if (!previousPrimaryDeadline) {
+		return null;
+	}
+
+	const editionYearOffset = currentYear - previousEdition.conferenceYear;
+
+	return {
+		event_type: previousPrimaryDeadline.event_type,
+		start_at_utc: shiftUtcByEditionYears(
+			previousPrimaryDeadline.start_at_utc,
+			editionYearOffset,
+		),
+		end_at_utc: previousPrimaryDeadline.end_at_utc
+			? shiftUtcByEditionYears(
+					previousPrimaryDeadline.end_at_utc,
+					editionYearOffset,
+				)
+			: undefined,
+		source_url: previousPrimaryDeadline.source_url,
+		estimated: true,
+		estimated_from_year: previousEdition.conferenceYear,
+	};
+}
+
+function buildDisplayEvents(
+	conference: ConferenceEntry,
+	allEntries: ConferenceEntry[],
+): EventRecord[] {
+	const events = [...conference.events];
+	if (findPrimaryDeadlineEvent(events) === null) {
+		const estimatedPrimaryDeadline = buildEstimatedPrimaryDeadline(
+			conference,
+			allEntries,
 		);
-	})[0];
+		if (estimatedPrimaryDeadline) {
+			events.push(estimatedPrimaryDeadline);
+		}
+	}
+
+	return events.sort(
+		(a, b) =>
+			new Date(a.start_at_utc).getTime() - new Date(b.start_at_utc).getTime(),
+	);
+}
+
+function selectPrimaryDeadline(
+	conference: ConferenceEntry,
+	allEntries: ConferenceEntry[],
+): DisplayRow | null {
+	const selected =
+		findPrimaryDeadlineEvent(conference.events) ??
+		buildEstimatedPrimaryDeadline(conference, allEntries);
+	if (!selected) {
+		return null;
+	}
 
 	return {
 		conferenceId: conference.id,
 		displayKey: conference.displayKey,
 		conferenceKey: conference.conferenceKey,
 		conferenceName: conference.conferenceName,
+		editionOfficialSite: conference.editionOfficialSite,
 		eventType: selected.event_type,
 		startAtUtc: selected.start_at_utc,
 		endAtUtc: selected.end_at_utc,
 		sourceUrl: selected.source_url,
+		estimated: selected.estimated ?? false,
+		estimatedFromYear: selected.estimated_from_year,
 	};
 }
 
@@ -300,7 +432,7 @@ function App() {
 
 	const rows = useMemo<DisplayRow[]>(() => {
 		return conferenceEntries
-			.map((conference) => selectPrimaryDeadline(conference))
+			.map((conference) => selectPrimaryDeadline(conference, conferenceEntries))
 			.filter((row): row is DisplayRow => row !== null)
 			.sort((a, b) => {
 				const dateComparison =
@@ -376,8 +508,12 @@ function App() {
 	};
 
 	if (selectedConference) {
+		const displayEvents = buildDisplayEvents(
+			selectedConference,
+			conferenceEntries,
+		);
 		const sourceLinks = Array.from(
-			new Set(selectedConference.events.map((event) => event.source_url)),
+			new Set(displayEvents.map((event) => event.source_url)),
 		);
 		const pastConferenceEntries = getPastConferenceEntries(
 			selectedConference,
@@ -397,7 +533,7 @@ function App() {
 							target="_blank"
 							rel="noreferrer"
 						>
-							Open edition site
+							Open site
 						</a>
 					</div>
 					<p className="eyebrow">{selectedConference.conferenceKey} edition</p>
@@ -408,7 +544,7 @@ function App() {
 							Generated {formatUtc(data.generated_at)}
 						</span>
 						<span className="metaChip">
-							{selectedConference.events.length} tracked events
+							{displayEvents.length} tracked events
 						</span>
 						<span
 							className={`metaChip ${
@@ -519,11 +655,11 @@ function App() {
 								<tr>
 									<th>Event</th>
 									<th>Time (UTC)</th>
-									<th>Source</th>
+									<th>Conference site</th>
 								</tr>
 							</thead>
 							<tbody>
-								{selectedConference.events.map((event) => {
+								{displayEvents.map((event) => {
 									const isPastDeadline =
 										isDeadlineEventType(event.event_type) &&
 										isPastUtc(event.start_at_utc, now);
@@ -539,11 +675,18 @@ function App() {
 														{formatEventType(event.event_type)}
 													</span>
 													<code className="eventCode">{event.event_type}</code>
+													{event.estimated ? (
+														<div className="eventNote">
+															Estimated from {selectedConference.conferenceKey}{" "}
+															{event.estimated_from_year}
+														</div>
+													) : null}
 												</div>
 											</td>
 											<td>
 												<span className="dateValue">
 													{formatUtc(event.start_at_utc)}
+													{event.estimated ? " ?" : ""}
 												</span>
 												{event.end_at_utc ? (
 													<div className="dateRange">
@@ -554,11 +697,11 @@ function App() {
 											<td>
 												<a
 													className="sourceLink"
-													href={event.source_url}
+													href={selectedConference.editionOfficialSite}
 													target="_blank"
 													rel="noreferrer"
 												>
-													Open source
+													Open site
 												</a>
 											</td>
 										</tr>
@@ -646,7 +789,7 @@ function App() {
 							<tr>
 								<th>Conference</th>
 								<th>Deadline</th>
-								<th>Source</th>
+								<th>Conference site</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -680,6 +823,7 @@ function App() {
 											<td>
 												<span className="dateValue">
 													{formatUtc(row.startAtUtc)}
+													{row.estimated ? " ?" : ""}
 												</span>
 												{row.endAtUtc ? (
 													<div className="dateRange">
@@ -688,16 +832,25 @@ function App() {
 												) : null}
 												<div className="deadlineMeta">
 													<span className={`tag ${tag.tone}`}>{tag.label}</span>
+													{row.estimated ? (
+														<span className="tag estimated">ESTIMATED</span>
+													) : null}
 												</div>
+												{row.estimated && row.estimatedFromYear ? (
+													<div className="deadlineNote">
+														Based on {row.conferenceKey} {row.estimatedFromYear}
+														.
+													</div>
+												) : null}
 											</td>
 											<td>
 												<a
 													className="sourceLink"
-													href={row.sourceUrl}
+													href={row.editionOfficialSite}
 													target="_blank"
 													rel="noreferrer"
 												>
-													Open source
+													Open site
 												</a>
 											</td>
 										</tr>

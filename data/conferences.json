@@ -1,5 +1,5 @@
 {
-	"generated_at": "2026-03-07T15:14:48Z",
+	"generated_at": "2026-03-07T17:34:41.897Z",
 	"mode": "full-list-web-fetched",
 	"conferences": [
 		{
@@ -243,6 +243,19 @@
 			"conference_name": "日本応用数理学会年会",
 			"editions": [
 				{
+					"year": 2026,
+					"official_site": "https://jsiam.org/jsiam_archive/past_meetings/annual2026/",
+					"cfp_published": false,
+					"events": [
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-09-15T00:00:00Z",
+							"end_at_utc": "2026-09-17T23:59:59Z",
+							"source_url": "https://jsiam.org/jsiam_archive/past_meetings/annual2026/"
+						}
+					]
+				},
+				{
 					"year": 2025,
 					"official_site": "https://jsiam.org/annual2025/",
 					"cfp_published": true,
@@ -433,6 +446,19 @@
 			"conference_name": "情報科学技術フォーラム",
 			"editions": [
 				{
+					"year": 2026,
+					"official_site": "https://www.ipsj.or.jp/event/fit/fit2026/index.html",
+					"cfp_published": false,
+					"events": [
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-09-02T00:00:00Z",
+							"end_at_utc": "2026-09-04T23:59:59Z",
+							"source_url": "https://www.ipsj.or.jp/event/fit/fit2026/index.html"
+						}
+					]
+				},
+				{
 					"year": 2025,
 					"official_site": "https://www.ipsj.or.jp/event/fit/fit2025/",
 					"cfp_published": true,
@@ -567,6 +593,24 @@
 			"conference_key": "MOPTA",
 			"conference_name": "Modeling and Optimization: Theory and Applications",
 			"editions": [
+				{
+					"year": 2026,
+					"official_site": "https://coral.ise.lehigh.edu/mopta2026/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "abstract_submission_deadline",
+							"start_at_utc": "2026-04-15T00:00:00Z",
+							"source_url": "https://coral.ise.lehigh.edu/mopta2026/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2026-08-18T00:00:00Z",
+							"end_at_utc": "2026-08-19T23:59:59Z",
+							"source_url": "https://coral.ise.lehigh.edu/mopta2026/"
+						}
+					]
+				},
 				{
 					"year": 2025,
 					"official_site": "https://coral.ise.lehigh.edu/mopta2025/",
@@ -714,6 +758,24 @@
 							"source_url": "https://www.siam.org/conferences-events/siam-conferences/soda26/"
 						}
 					]
+				},
+				{
+					"year": 2027,
+					"official_site": "https://www.siam.org/conferences-events/siam-conferences/soda27/",
+					"cfp_published": true,
+					"events": [
+						{
+							"event_type": "submission_deadline",
+							"start_at_utc": "2026-07-09T00:00:00Z",
+							"source_url": "https://www.siam.org/conferences-events/siam-conferences/soda27/"
+						},
+						{
+							"event_type": "conference",
+							"start_at_utc": "2027-01-24T00:00:00Z",
+							"end_at_utc": "2027-01-27T23:59:59Z",
+							"source_url": "https://www.siam.org/conferences-events/siam-conferences/soda27/"
+						}
+					]
 				}
 			],
 			"series_official_url": "https://www.siam.org/conferences-events/siam-conferences/soda26/"
@@ -811,6 +873,19 @@
 			"conference_key": "AAAI",
 			"conference_name": "The Association for the Advancement of Artificial Intelligence",
 			"editions": [
+				{
+					"year": 2027,
+					"official_site": "https://aaai.org/conference/aaai/aaai-27/",
+					"cfp_published": false,
+					"events": [
+						{
+							"event_type": "conference",
+							"start_at_utc": "2027-02-16T00:00:00Z",
+							"end_at_utc": "2027-02-23T23:59:59Z",
+							"source_url": "https://aaai.org/conference/aaai/"
+						}
+					]
+				},
 				{
 					"year": 2026,
 					"official_site": "https://aaai.org/conference/aaai/aaai-26/",

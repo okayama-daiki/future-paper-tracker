@@ -390,7 +390,18 @@
 }
 
 .deadlineMeta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
 	margin-top: 8px;
+}
+
+.deadlineNote,
+.eventNote {
+	margin-top: 6px;
+	color: #667381;
+	font-size: 0.78rem;
+	line-height: 1.45;
 }
 
 .tag {
@@ -419,9 +430,15 @@
 	border-color: #9ca7b3;
 }
 
+.tag.estimated {
+	color: #55616f;
+	border-color: #9ca7b3;
+}
+
 .expiredRow .tag.full,
 .expiredRow .tag.submission,
-.expiredRow .tag.abstract {
+.expiredRow .tag.abstract,
+.expiredRow .tag.estimated {
 	color: #8f99a3;
 	border-color: #c7cfd6;
 }
@@ -505,6 +522,11 @@
 	font-size: 0.74rem;
 	color: #667381;
 	background: #fffdf8;
+}
+
+.expiredRow .deadlineNote,
+.expiredRow .eventNote {
+	color: #8f99a3;
 }
 
 .emptyState {

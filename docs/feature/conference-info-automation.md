@@ -52,6 +52,8 @@
         - `start_at_utc`
         - `end_at_utc` (optional)
         - `source_url`
+        - `estimated` (optional, true only when derived from a previous edition)
+        - `estimated_from_year` (optional)
 
 ## 7. Timezone Rules
 
@@ -95,6 +97,9 @@ Issue本文の最小内容:
 - 例外: 締切直前1か月は週1回だけ再確認する（締切延長等の追従のため）。
 - 強制再取得が必要な場合は `manual_force_refresh=true` で次回実行時に再検索する。
 - CfP未公開の会議のみ日次チェックを継続する。
+- 未来 edition の公式ページは見つかったが主要締切が未公開の場合、直近の過去 edition を基に推定締切を生成してよい。
+- 推定締切は `estimated=true` とし、`estimated_from_year` を保持する。
+- 推定締切は UI 上で `?` と `ESTIMATED` タグを付け、公式締切が公開されたら必ず置き換える。
 
 ## 12. Model Strategy
 
