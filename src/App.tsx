@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import "./App.css";
 import rawData from "../data/conferences.json";
 import type { ConferencesDataFile, EventRecord } from "./types/conferences";
@@ -29,6 +29,7 @@ type DisplayRow = {
 const data = rawData as ConferencesDataFile;
 const GITHUB_REPO_URL = "https://github.com/okayama-daiki/future-paper-tracker";
 const BUY_ME_A_COFFEE_URL = "https://buymeacoffee.com/daikiokayama";
+const ROWS_PER_PAGE = 20;
 
 function readConferenceIdFromUrl(): string | null {
 	if (typeof window === "undefined") {
@@ -198,6 +199,39 @@ function getPastConferenceEntries(
 		.sort((a, b) => (b.conferenceYear ?? 0) - (a.conferenceYear ?? 0));
 }
 
+function buildPaginationItems(
+	currentPage: number,
+	totalPages: number,
+): Array<number | string> {
+	if (totalPages <= 7) {
+		return Array.from({ length: totalPages }, (_, index) => index + 1);
+	}
+
+	const pages = new Set<number>([
+		1,
+		totalPages,
+		currentPage - 1,
+		currentPage,
+		currentPage + 1,
+	]);
+	const sortedPages = [...pages]
+		.filter((page) => page >= 1 && page <= totalPages)
+		.sort((a, b) => a - b);
+
+	const items: Array<number | string> = [];
+	let previousPage: number | null = null;
+
+	for (const page of sortedPages) {
+		if (previousPage !== null && page - previousPage > 1) {
+			items.push(`ellipsis-${previousPage}-${page}`);
+		}
+		items.push(page);
+		previousPage = page;
+	}
+
+	return items;
+}
+
 function SiteFooter() {
 	const year = new Date().getUTCFullYear();
 
@@ -232,6 +266,8 @@ function App() {
 		string | null
 	>(() => readConferenceIdFromUrl());
 	const [now, setNow] = useState(() => Date.now());
+	const [currentPage, setCurrentPage] = useState(1);
+	const tableSectionRef = useRef<HTMLElement | null>(null);
 
 	useEffect(() => {
 		const onPopState = () => {
@@ -290,6 +326,25 @@ function App() {
 		});
 	}, [rows, query]);
 
+	const totalPages = Math.max(
+		1,
+		Math.ceil(filteredRows.length / ROWS_PER_PAGE),
+	);
+	const visiblePage = Math.min(currentPage, totalPages);
+
+	const paginatedRows = useMemo(() => {
+		const startIndex = (visiblePage - 1) * ROWS_PER_PAGE;
+		return filteredRows.slice(startIndex, startIndex + ROWS_PER_PAGE);
+	}, [filteredRows, visiblePage]);
+
+	const pageStart =
+		filteredRows.length === 0 ? 0 : (visiblePage - 1) * ROWS_PER_PAGE + 1;
+	const pageEnd = Math.min(visiblePage * ROWS_PER_PAGE, filteredRows.length);
+	const paginationItems = useMemo(
+		() => buildPaginationItems(visiblePage, totalPages),
+		[visiblePage, totalPages],
+	);
+
 	const selectedConference = selectedConferenceId
 		? (conferenceEntryMap.get(selectedConferenceId) ?? null)
 		: null;
@@ -306,6 +361,18 @@ function App() {
 		}
 		updateConferenceInUrl(null, "replace");
 		setSelectedConferenceId(null);
+	};
+
+	const goToPage = (page: number) => {
+		const nextPage = Math.max(1, Math.min(page, totalPages));
+		if (nextPage === visiblePage) {
+			return;
+		}
+		setCurrentPage(nextPage);
+		tableSectionRef.current?.scrollIntoView({
+			block: "start",
+			behavior: "smooth",
+		});
 	};
 
 	if (selectedConference) {
@@ -552,18 +619,26 @@ function App() {
 					<span>Search</span>
 					<input
 						value={query}
-						onChange={(event) => setQuery(event.target.value)}
+						onChange={(event) => {
+							setQuery(event.target.value);
+							setCurrentPage(1);
+						}}
 						placeholder="conference name / abbreviation"
 					/>
 				</label>
 			</section>
 
-			<section className="tableWrap panel">
+			<section ref={tableSectionRef} className="tableWrap panel">
 				<div className="sectionHeading sectionHeadingTight">
 					<div>
 						<p className="sectionEyebrow">Queue</p>
 						<h2>Deadline board</h2>
 					</div>
+					<p className="sectionHint">
+						{filteredRows.length === 0
+							? "No visible deadlines."
+							: `Showing ${pageStart}-${pageEnd} of ${filteredRows.length}.`}
+					</p>
 				</div>
 				<div className="tableScroller">
 					<table className="dataTable">
@@ -584,7 +659,7 @@ function App() {
 									</td>
 								</tr>
 							) : (
-								filteredRows.map((row) => {
+								paginatedRows.map((row) => {
 									const tag = deadlineTag(row.eventType);
 									const isPastDeadline = isPastUtc(row.startAtUtc, now);
 									return (
@@ -632,6 +707,52 @@ function App() {
 						</tbody>
 					</table>
 				</div>
+				{totalPages > 1 ? (
+					<nav className="pagination" aria-label="Deadline pages">
+						<button
+							type="button"
+							className="paginationButton"
+							onClick={() => goToPage(visiblePage - 1)}
+							disabled={visiblePage === 1}
+						>
+							Previous
+						</button>
+						<div className="paginationNumbers">
+							{paginationItems.map((item) =>
+								typeof item === "number" ? (
+									<button
+										key={item}
+										type="button"
+										className={`paginationButton paginationNumber ${
+											item === visiblePage ? "paginationButtonActive" : ""
+										}`}
+										onClick={() => goToPage(item)}
+										disabled={item === visiblePage}
+										aria-current={item === visiblePage ? "page" : undefined}
+									>
+										{item}
+									</button>
+								) : (
+									<span
+										key={item}
+										className="paginationEllipsis"
+										aria-hidden="true"
+									>
+										...
+									</span>
+								),
+							)}
+						</div>
+						<button
+							type="button"
+							className="paginationButton"
+							onClick={() => goToPage(visiblePage + 1)}
+							disabled={visiblePage === totalPages}
+						>
+							Next
+						</button>
+					</nav>
+				) : null}
 			</section>
 			<footer className="footer panel">
 				<div className="sectionHeading sectionHeadingTight">
