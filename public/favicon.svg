@@ -1,0 +1,18 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="64"
+  height="64"
+  viewBox="0 0 64 64"
+  fill="none"
+>
+  <title>Future Paper Tracker</title>
+  <rect width="64" height="64" fill="#F4EFE6" />
+  <rect x="9" y="9" width="46" height="46" fill="#FAF7F1" stroke="#11161B" stroke-width="2.5" />
+  <path d="M9 19.5H55" stroke="#11161B" stroke-width="2.5" />
+  <path d="M19 9V19.5" stroke="#11161B" stroke-width="2.5" />
+  <path d="M45 9V19.5" stroke="#11161B" stroke-width="2.5" />
+  <path d="M17 28H47" stroke="#11161B" stroke-width="2.5" />
+  <path d="M17 35H47" stroke="#11161B" stroke-width="2.5" />
+  <path d="M17 42H33" stroke="#11161B" stroke-width="2.5" />
+  <path d="M39 40.5L43 44.5L50 30" stroke="#A32721" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter" />
+</svg>
