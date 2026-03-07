@@ -39,6 +39,7 @@ MVPではカレンダー表示・地図表示は対象外（将来拡張）。
 
 - 投稿関連締切（例: `full_paper_submission_deadline`, `submission_deadline`, `abstract_submission_deadline`）
 - 開催日（`conference`）
+- 開催地・会場（`venue`）
 - そのほか取れるイベント（`notification`, `camera_ready` など）は可能な限り保持する。
 
 一覧表示で使う主要締切の優先順位:
@@ -72,6 +73,7 @@ MVPではカレンダー表示・地図表示は対象外（将来拡張）。
     - 情報源リンク
     - 締切タグ（`FULL PAPER` / `SUBMISSION` / `ABSTRACT`）
 - 推定締切は `?` と `ESTIMATED` タグ、元にした edition 年の注記を出す。
+- 会場が取得できている場合は一覧・詳細で表示する。
 - 一覧の並び順は主要締切日時の降順（上ほど新しい締切）。
 - 会議名クリックで詳細ページへ遷移。
 - 詳細ページでは以下を表示:

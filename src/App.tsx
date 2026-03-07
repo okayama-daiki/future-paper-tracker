@@ -12,6 +12,8 @@ type ConferenceEntry = {
 	seriesOfficialSite: string;
 	editionOfficialSite: string;
 	cfpPublished: boolean;
+	venue?: string;
+	venueSourceUrl?: string;
 	events: EventRecord[];
 };
 
@@ -21,6 +23,7 @@ type DisplayRow = {
 	conferenceKey: string;
 	conferenceName: string;
 	editionOfficialSite: string;
+	venue?: string;
 	eventType: string;
 	startAtUtc: string;
 	endAtUtc?: string;
@@ -198,6 +201,8 @@ function buildConferenceEntries(
 				seriesOfficialSite: series.series_official_url,
 				editionOfficialSite: edition.official_site,
 				cfpPublished: edition.cfp_published,
+				venue: edition.venue,
+				venueSourceUrl: edition.venue_source_url,
 				events: edition.events,
 			});
 		});
@@ -302,6 +307,7 @@ function selectPrimaryDeadline(
 		conferenceKey: conference.conferenceKey,
 		conferenceName: conference.conferenceName,
 		editionOfficialSite: conference.editionOfficialSite,
+		venue: conference.venue,
 		eventType: selected.event_type,
 		startAtUtc: selected.start_at_utc,
 		endAtUtc: selected.end_at_utc,
@@ -592,6 +598,22 @@ function App() {
 								<span className="detailLabel">CfP published</span>
 								<span>{selectedConference.cfpPublished ? "Yes" : "No"}</span>
 							</li>
+							{selectedConference.venue ? (
+								<li>
+									<span className="detailLabel">Venue</span>
+									{selectedConference.venueSourceUrl ? (
+										<a
+											href={selectedConference.venueSourceUrl}
+											target="_blank"
+											rel="noreferrer"
+										>
+											{selectedConference.venue}
+										</a>
+									) : (
+										<span>{selectedConference.venue}</span>
+									)}
+								</li>
+							) : null}
 						</ul>
 					</section>
 
@@ -819,6 +841,9 @@ function App() {
 													<strong>{row.displayKey}</strong>
 												</button>
 												<div className="sub">{row.conferenceName}</div>
+												{row.venue ? (
+													<div className="sub subMuted">{row.venue}</div>
+												) : null}
 											</td>
 											<td>
 												<span className="dateValue">

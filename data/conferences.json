@@ -1,5 +1,5 @@
 {
-	"generated_at": "2026-03-07T17:34:41.897Z",
+	"generated_at": "2026-03-07T17:47:50.661Z",
 	"mode": "full-list-web-fetched",
 	"conferences": [
 		{
@@ -32,7 +32,9 @@
 							"end_at_utc": "2026-07-10T23:59:59Z",
 							"source_url": "https://www.podc.org/"
 						}
-					]
+					],
+					"venue": "Royal Holloway, University of London, Egham, England",
+					"venue_source_url": "https://icalppodcspaa2026.cs.rhul.ac.uk/local/"
 				}
 			],
 			"series_official_url": "https://www.podc.org/"
@@ -67,7 +69,9 @@
 							"end_at_utc": "2026-06-11T23:59:59Z",
 							"source_url": "https://sirocco2026.webspace.durham.ac.uk/news/"
 						}
-					]
+					],
+					"venue": "Durham University, Durham, United Kingdom",
+					"venue_source_url": "https://sirocco2026.webspace.durham.ac.uk/"
 				}
 			],
 			"series_official_url": "https://sirocco.hiit.fi"
@@ -102,7 +106,9 @@
 							"end_at_utc": "2025-09-19T23:59:59Z",
 							"source_url": "https://algo-conference.org/2025/waoa/"
 						}
-					]
+					],
+					"venue": "Faculty of Physics, University of Warsaw, Warsaw, Poland",
+					"venue_source_url": "https://algo-conference.org/2025/"
 				}
 			],
 			"series_official_url": "https://algo-conference.org/"
@@ -142,7 +148,9 @@
 							"end_at_utc": "2026-05-24T23:59:59Z",
 							"source_url": "https://math.ouc.edu.cn/aaac2026/"
 						}
-					]
+					],
+					"venue": "Academic Conference Center, Ocean University of China (Yushan Campus), Qingdao, China",
+					"venue_source_url": "https://math.ouc.edu.cn/aaac2026/"
 				},
 				{
 					"year": 2025,
@@ -170,7 +178,9 @@
 							"end_at_utc": "2025-06-01T23:59:59Z",
 							"source_url": "https://conference.cs.cityu.edu.hk/aaac2025/"
 						}
-					]
+					],
+					"venue": "City University of Hong Kong, Hong Kong, China",
+					"venue_source_url": "https://conference.cs.cityu.edu.hk/aaac2025/"
 				}
 			],
 			"series_official_url": "http://asia-algo-comp.org"
@@ -195,7 +205,9 @@
 							"end_at_utc": "2025-08-20T23:59:59Z",
 							"source_url": "https://waac-alg-comp.github.io/2025/"
 						}
-					]
+					],
+					"venue": "Frontier Research in Applied Sciences Building, Hokkaido University, Sapporo, Japan",
+					"venue_source_url": "https://waac-alg-comp.github.io/2025/"
 				}
 			],
 			"series_official_url": "https://waac-alg-comp.github.io"
@@ -253,7 +265,9 @@
 							"end_at_utc": "2026-09-17T23:59:59Z",
 							"source_url": "https://jsiam.org/jsiam_archive/past_meetings/annual2026/"
 						}
-					]
+					],
+					"venue": "福岡国際会議場",
+					"venue_source_url": "https://jsiam.org/jsiam_archive/past_meetings/annual2026/"
 				},
 				{
 					"year": 2025,
@@ -276,7 +290,9 @@
 							"end_at_utc": "2025-09-04T23:59:59Z",
 							"source_url": "https://jsiam.org/annual2025/"
 						}
-					]
+					],
+					"venue": "東京理科大学 神楽坂キャンパス",
+					"venue_source_url": "https://jsiam.org/annual2025/"
 				}
 			],
 			"series_official_url": "https://jsiam.org/jsiam_archive/past_meetings"
@@ -306,7 +322,9 @@
 							"end_at_utc": "2026-03-06T23:59:59Z",
 							"source_url": "https://orsj.org/2026s/"
 						}
-					]
+					],
+					"venue": "麗澤大学（校舎さつき）",
+					"venue_source_url": "https://orsj.org/2026s/"
 				}
 			],
 			"series_official_url": "https://orsj.org/nc-dummy"
@@ -331,7 +349,9 @@
 							"end_at_utc": "2025-09-12T23:59:59Z",
 							"source_url": "https://orsj.org/2025f/"
 						}
-					]
+					],
+					"venue": "広島大学",
+					"venue_source_url": "https://orsj.org/2025f/"
 				}
 			],
 			"series_official_url": "https://orsj.org/nc-dummy"
@@ -361,7 +381,9 @@
 							"end_at_utc": "2025-07-25T23:59:59Z",
 							"source_url": "https://la-symposium.github.io/2025/summer.html"
 						}
-					]
+					],
+					"venue": "アイーナ・いわて県民情報交流センター 会議室803",
+					"venue_source_url": "https://la-symposium.github.io/2025/summer.html"
 				}
 			],
 			"series_official_url": "https://la-symposium.github.io/index.html"
@@ -391,7 +413,9 @@
 							"end_at_utc": "2026-01-28T23:59:59Z",
 							"source_url": "https://la-symposium.github.io/2025/winter.html"
 						}
-					]
+					],
+					"venue": "京都大学数理解析研究所 420号室",
+					"venue_source_url": "https://la-symposium.github.io/2025/winter.html"
 				}
 			],
 			"series_official_url": "https://la-symposium.github.io/index.html"
@@ -411,7 +435,9 @@
 							"end_at_utc": "2025-10-17T23:59:59Z",
 							"source_url": "https://orsj.org/ramp/ramp2025/webopen"
 						}
-					]
+					],
+					"venue": "九州大学西新プラザ",
+					"venue_source_url": "https://orsj.org/ramp/ramp2025/webopen"
 				}
 			],
 			"series_official_url": "https://orsj.org/ramp/"
@@ -436,7 +462,9 @@
 							"end_at_utc": "2025-06-01T23:59:59Z",
 							"source_url": "https://orsj.org/raota/"
 						}
-					]
+					],
+					"venue": "筑波大学 筑波キャンパス 春日地区 春日講堂",
+					"venue_source_url": "https://orsj.org/raota/#tsukuba25"
 				}
 			],
 			"series_official_url": "https://orsj.org/raota/"
@@ -456,7 +484,9 @@
 							"end_at_utc": "2026-09-04T23:59:59Z",
 							"source_url": "https://www.ipsj.or.jp/event/fit/fit2026/index.html"
 						}
-					]
+					],
+					"venue": "北九州学術研究都市（北九州市立大学、九州工業大学、早稲田大学）",
+					"venue_source_url": "https://www.ipsj.or.jp/event/fit/fit2026/index.html"
 				},
 				{
 					"year": 2025,
@@ -479,7 +509,9 @@
 							"end_at_utc": "2025-09-05T23:59:59Z",
 							"source_url": "https://www.ipsj.or.jp/event/fit/fit2025/"
 						}
-					]
+					],
+					"venue": "北海道科学大学（北海道札幌市手稲区前田7条15丁目4番1号）",
+					"venue_source_url": "https://www.ipsj.or.jp/event/fit/fit2025/"
 				}
 			],
 			"series_official_url": "https://www.ipsj.or.jp/event/fit/fit.html"
@@ -499,7 +531,9 @@
 							"end_at_utc": "2026-05-21T23:59:59Z",
 							"source_url": "https://www.mixedinteger.org/2026"
 						}
-					]
+					],
+					"venue": "University of Connecticut - Stamford Campus, Stamford, Connecticut, USA",
+					"venue_source_url": "https://www.mixedinteger.org/2026"
 				}
 			],
 			"series_official_url": "https://www.mixedinteger.org/"
@@ -534,7 +568,9 @@
 							"end_at_utc": "2026-06-19T23:59:59Z",
 							"source_url": "https://events.math.unipd.it/ipco2026/"
 						}
-					]
+					],
+					"venue": "University of Padova, Padova, Italy",
+					"venue_source_url": "https://events.math.unipd.it/ipco2026/"
 				}
 			],
 			"series_official_url": "https://mathopt.zib.de/?nav=ipco"
@@ -564,7 +600,9 @@
 							"end_at_utc": "2026-07-17T23:59:59Z",
 							"source_url": "https://www.ifors.org/call-for-papers-ifors-2026/"
 						}
-					]
+					],
+					"venue": "University of Vienna, Vienna, Austria",
+					"venue_source_url": "https://www.ifors.org/call-for-papers-ifors-2026/"
 				}
 			],
 			"series_official_url": "https://www.ifors.org/"
@@ -584,7 +622,9 @@
 							"end_at_utc": "2025-07-24T23:59:59Z",
 							"source_url": "https://www.kurims.kyoto-u.ac.jp/coss/coss2025/coss2025.html"
 						}
-					]
+					],
+					"venue": "京都大学数理解析研究所 4階420号室",
+					"venue_source_url": "https://www.kurims.kyoto-u.ac.jp/coss/coss2025/coss2025.html"
 				}
 			],
 			"series_official_url": "https://www.kurims.kyoto-u.ac.jp/coss/coss2025/coss2025.html"
@@ -609,7 +649,9 @@
 							"end_at_utc": "2026-08-19T23:59:59Z",
 							"source_url": "https://coral.ise.lehigh.edu/mopta2026/"
 						}
-					]
+					],
+					"venue": "Rauch Business Center, Lehigh University, Bethlehem, Pennsylvania, USA",
+					"venue_source_url": "https://coral.ise.lehigh.edu/mopta2026/"
 				},
 				{
 					"year": 2025,
@@ -622,7 +664,9 @@
 							"end_at_utc": "2025-06-20T23:59:59Z",
 							"source_url": "https://coral.ise.lehigh.edu/mopta2025/"
 						}
-					]
+					],
+					"venue": "Teatro Micaelense, Ponta Delgada, Azores, Portugal",
+					"venue_source_url": "https://coral.ise.lehigh.edu/mopta2025/"
 				}
 			],
 			"series_official_url": "https://coral.ise.lehigh.edu/mopta2026/"
@@ -642,7 +686,9 @@
 							"end_at_utc": "2026-09-04T23:59:59Z",
 							"source_url": "https://algo-conference.org/2026/"
 						}
-					]
+					],
+					"venue": "L'Aquila, Italy",
+					"venue_source_url": "https://algo-conference.org/2026/"
 				}
 			],
 			"series_official_url": "https://algo-conference.org/"
@@ -672,7 +718,9 @@
 							"end_at_utc": "2025-09-14T23:59:59Z",
 							"source_url": "https://sokoban.cn/yang/cjcdcggg2025/"
 						}
-					]
+					],
+					"venue": "Guangdong University of Foreign Studies (Bai Yun Mountain Campus), First Teaching Building, Guangzhou, China",
+					"venue_source_url": "https://sokoban.cn/yang/cjcdcggg2025/venue.php"
 				}
 			],
 			"series_official_url": "http://www.alg.cei.uec.ac.jp/itohiro/JCDCGG/"
@@ -692,7 +740,9 @@
 							"end_at_utc": "2026-11-04T23:59:59Z",
 							"source_url": "https://www.informs.org/Meetings-Conferences/INFORMS-Conference-Calendar/2026-INFORMS-Annual-Meeting"
 						}
-					]
+					],
+					"venue": "New Orleans, Louisiana, USA",
+					"venue_source_url": "https://meetings.informs.org/wordpress/annual/"
 				}
 			],
 			"series_official_url": "https://www.informs.org/Meetings-Conferences/INFORMS-Conference-Calendar"
@@ -732,7 +782,9 @@
 							"end_at_utc": "2026-07-17T23:59:59Z",
 							"source_url": "https://www.issac-conference.org/2026/"
 						}
-					]
+					],
+					"venue": "Oldenburg, Germany",
+					"venue_source_url": "https://www.issac-conference.org/2026/"
 				}
 			],
 			"series_official_url": "https://www.issac-conference.org"
@@ -757,7 +809,9 @@
 							"end_at_utc": "2026-01-14T23:59:59Z",
 							"source_url": "https://www.siam.org/conferences-events/siam-conferences/soda26/"
 						}
-					]
+					],
+					"venue": "Philadelphia, Pennsylvania, USA",
+					"venue_source_url": "https://www.siam.org/conferences-events/siam-conferences/soda26/"
 				},
 				{
 					"year": 2027,
@@ -775,7 +829,9 @@
 							"end_at_utc": "2027-01-27T23:59:59Z",
 							"source_url": "https://www.siam.org/conferences-events/siam-conferences/soda27/"
 						}
-					]
+					],
+					"venue": "Philadelphia, Pennsylvania, USA",
+					"venue_source_url": "https://www.siam.org/conferences-events/siam-conferences/soda27/"
 				}
 			],
 			"series_official_url": "https://www.siam.org/conferences-events/siam-conferences/soda26/"
@@ -810,7 +866,9 @@
 							"end_at_utc": "2025-12-17T23:59:59Z",
 							"source_url": "https://focs.computer.org/"
 						}
-					]
+					],
+					"venue": "PARKROYAL Darling Harbour, Sydney, Australia",
+					"venue_source_url": "https://focs.computer.org/2025/venue/"
 				}
 			],
 			"series_official_url": "https://focs.computer.org/"
@@ -845,7 +903,9 @@
 							"end_at_utc": "2026-06-26T23:59:59Z",
 							"source_url": "https://acm-stoc.org/stoc2026/"
 						}
-					]
+					],
+					"venue": "Salt Lake City, Utah, USA",
+					"venue_source_url": "https://acm-stoc.org/stoc2026/"
 				}
 			],
 			"series_official_url": "https://acm-stoc.org"
@@ -864,7 +924,9 @@
 							"start_at_utc": "2025-06-24T00:00:00Z",
 							"source_url": "https://www.siam.org/conferences-events/siam-conferences/acda25/"
 						}
-					]
+					],
+					"venue": "Montreal Convention Center, Montreal, Quebec, Canada",
+					"venue_source_url": "https://www.siam.org/conferences-events/siam-conferences/acda25/"
 				}
 			],
 			"series_official_url": "https://www.siam.org/conferences-events/siam-conferences/acda25/"
@@ -884,7 +946,9 @@
 							"end_at_utc": "2027-02-23T23:59:59Z",
 							"source_url": "https://aaai.org/conference/aaai/"
 						}
-					]
+					],
+					"venue": "Montréal, Québec, Canada",
+					"venue_source_url": "https://aaai.org/conference/aaai/"
 				},
 				{
 					"year": 2026,
@@ -922,7 +986,9 @@
 							"end_at_utc": "2026-01-27T23:59:59Z",
 							"source_url": "https://aaai.org/conference/aaai/aaai-26/"
 						}
-					]
+					],
+					"venue": "Singapore EXPO, Singapore",
+					"venue_source_url": "https://aaai.org/conference/aaai/aaai-26/"
 				}
 			],
 			"series_official_url": "https://aaai.org/conference/aaai/"
@@ -962,7 +1028,9 @@
 							"end_at_utc": "2026-06-19T23:59:59Z",
 							"source_url": "https://swat2026.compute.dtu.dk/"
 						}
-					]
+					],
+					"venue": "IDA Conference, Ingeniørernes Hus, Copenhagen, Denmark",
+					"venue_source_url": "https://swat2026.compute.dtu.dk/"
 				}
 			],
 			"series_official_url": "https://swat2026.compute.dtu.dk/"
@@ -997,7 +1065,9 @@
 							"end_at_utc": "2026-03-06T23:59:59Z",
 							"source_url": "https://mozart.diei.unipg.it/walcom2026/cfp.html"
 						}
-					]
+					],
+					"venue": "Department of Engineering, University of Perugia, Perugia, Italy",
+					"venue_source_url": "https://mozart.diei.unipg.it/walcom2026/venue.html"
 				}
 			],
 			"series_official_url": "https://www.walcom-conference.org/"
@@ -1037,11 +1107,16 @@
 							"end_at_utc": "2026-07-10T23:59:59Z",
 							"source_url": "https://icalppodcspaa2026.cs.rhul.ac.uk/icalp/"
 						}
-					]
+					],
+					"venue": "Royal Holloway, University of London, Egham Hill, Egham, Surrey TW20 0EX, United Kingdom",
+					"venue_source_url": "https://icalppodcspaa2026.cs.rhul.ac.uk/local/"
 				}
 			],
 			"series_official_url": "https://eatcs.org/index.php/future-icalps"
 		}
 	],
-	"pending_conference_keys": ["COMP", "RAMP"]
+	"pending_conference_keys": [
+		"COMP",
+		"RAMP"
+	]
 }

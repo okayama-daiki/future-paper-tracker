@@ -11,6 +11,8 @@ export type EditionRecord = {
 	year: number;
 	official_site: string;
 	cfp_published: boolean;
+	venue?: string;
+	venue_source_url?: string;
 	events: EventRecord[];
 };
 

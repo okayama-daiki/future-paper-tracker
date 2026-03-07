@@ -389,6 +389,10 @@
 	line-height: 1.55;
 }
 
+.subMuted {
+	color: #667381;
+}
+
 .deadlineMeta {
 	display: flex;
 	flex-wrap: wrap;

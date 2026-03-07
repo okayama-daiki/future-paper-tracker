@@ -47,6 +47,8 @@
     - `year` (e.g. `2026`)
     - `official_site`
     - `cfp_published`
+    - `venue` (optional)
+    - `venue_source_url` (optional)
     - `events[]`
         - `event_type` (e.g. `full_paper_submission_deadline`, `submission_deadline`, `notification`, `camera_ready`, `conference`)
         - `start_at_utc`
