@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import "./App.css";
 import { ConferenceDetailPage } from "./components/ConferenceDetailPage";
 import { ConferenceListPage } from "./components/ConferenceListPage";
@@ -35,6 +35,18 @@ function App() {
 	const selectedConference = selectedConferenceId
 		? (conferenceEntryMap.get(selectedConferenceId) ?? null)
 		: null;
+
+	useEffect(() => {
+		if (selectedConferenceId === null) {
+			return;
+		}
+
+		window.scrollTo({
+			top: 0,
+			left: 0,
+			behavior: "auto",
+		});
+	}, [selectedConferenceId]);
 
 	const handleQueryChange = (nextQuery: string) => {
 		setQuery(nextQuery);
