@@ -1,33 +1,33 @@
-conference_key,display_name,aliases,enabled,series_index_url,current_known_url,notes
-PODC,ACM Symposium on Principles of Distributed Computing,podc,true,https://www.podc.org/,https://www.podc.org/,""
-SIROCCO,International Colloquium on Structural Information and Communication Complexity,sirocco,true,https://sirocco.hiit.fi,https://sirocco2026.webspace.durham.ac.uk/,""
-WAOA,The Workshop on Approximation and Online Algorithms,,true,https://algo-conference.org/,https://algo-conference.org/2025/waoa/,""
-AAAC,Annual Meeting of Asian Association for Algorithms and Computation,aaac,true,http://asia-algo-comp.org,https://math.ouc.edu.cn/aaac2026/,""
-WAAC,Japan–Korea/Korea–Japan Joint Workshop on Algorithms and Computation,,true,https://waac-alg-comp.github.io,https://waac-alg-comp.github.io/2025/,""
-SIGAL,情報処理学会アルゴリズム研究会,,true,http://www.ipsj-sigal.or.jp/,http://www.ipsj-sigal.or.jp/,""
-COMP,電子情報通信学会コンピュテーション研究会,,true,https://www.ieice.org/~comp/,https://www.ieice.org/~comp/,""
-JSIAM,日本応用数理学会年会,,true,https://jsiam.org/jsiam_archive/past_meetings,https://jsiam.org/jsiam_archive/past_meetings/annual2026/,""
-ORSJ-spring,OR学会 春季研究発表会,,true,https://orsj.org/nc-dummy,https://orsj.org/2026s/,""
-ORSJ-autumn,OR学会 秋季研究発表会,,true,https://orsj.org/nc-dummy,https://orsj.org/2025f/,""
-LA-summer,夏のLAシンポジウム,,true,https://la-symposium.github.io/index.html,https://la-symposium.github.io/2025/summer.html,""
-LA-winter,冬のLAシンポジウム,,true,https://la-symposium.github.io/index.html,https://la-symposium.github.io/2025/winter.html,""
-RAMP,RAMP　数理最適化シンポジウム,,true,https://orsj.org/ramp/,https://sites.google.com/view/ramp2025/,""
-RAOTA,日本OR学会研究部会：最適化の理論とアルゴリズム,raota,true,https://orsj.org/raota/,https://orsj.org/raota/,""
-FIT,情報科学技術フォーラム,,true,https://www.ipsj.or.jp/event/fit/fit.html,https://www.ipsj.or.jp/event/fit/fit2026/index.html,""
-MIP,The Mixed Integer Programming Workshop,,true,https://www.mixedinteger.org/,https://www.mixedinteger.org/2026,""
-IPCO,Integer Programming and Combinatorial Optimization,,true,https://mathopt.zib.de/?nav=ipco,https://events.math.unipd.it/ipco2026/,""
-IFORS,International Federation of Operational Research Societies,,true,https://www.ifors.org/,https://www.ifors.org/call-for-papers-ifors-2026/,""
-COSS,RIMS 共同研究「組合せ最適化セミナー」,,true,https://www.kurims.kyoto-u.ac.jp/coss/coss2025/coss2025.html,https://www.kurims.kyoto-u.ac.jp/coss/coss2025/coss2025.html,""
-MOPTA,Modeling and Optimization: Theory and Applications,mopta,true,https://coral.ise.lehigh.edu/mopta2026/,https://coral.ise.lehigh.edu/mopta2025/,""
-ALGO,Annual Meeting Combining the Premier Algorithmic Conference,,true,https://algo-conference.org/,https://algo-conference.org/2026/,""
-JCDCGGG,"the Japan Conference on Discrete and Computational Geometry, Graphs, and Games",,true,http://www.alg.cei.uec.ac.jp/itohiro/JCDCGG/,https://sokoban.cn/yang/cjcdcggg2025/,""
-INFORMS,INFORMS Annual Meeting,informs,true,https://www.informs.org/Meetings-Conferences/INFORMS-Conference-Calendar,https://meetings.informs.org/wordpress/annual/,""
-ISSAC,The International Symposium on Symbolic and Algebraic Computation,,true,https://www.issac-conference.org,https://www.issac-conference.org/2026/,""
-SODA,ACM-SIAM Symposium on Discrete Algorithms,soda,true,https://www.siam.org/conferences-events/siam-conferences/soda26/,https://www.siam.org/conferences-events/siam-conferences/soda26/,""
-FOCS,The IEEE Symposium on Foundations of Computer Science,focs,true,https://focs.computer.org/,https://focs.computer.org/,""
-STOC,ACM Symposium on Theory of Computing,stoc,true,https://acm-stoc.org,https://acm-stoc.org/stoc2026/,""
-ACDA,SIAM Conference on Applied and Computational Discrete Algorithms,,true,https://www.siam.org/conferences-events/siam-conferences/acda25/,https://www.siam.org/conferences-events/siam-conferences/acda25/,""
-AAAI,The Association for the Advancement of Artificial Intelligence,aaai,true,https://aaai.org/conference/aaai/,https://aaai.org/conference/aaai/aaai-27/,""
-SWAT,Scandinavian Symposium on Algorithm Theory,swat,true,https://swat2026.compute.dtu.dk/,https://swat2026.compute.dtu.dk/,""
-WALCOM,International Conference and Workshops on Algorithms and Computation,walcom,true,https://www.walcom-conference.org/,https://mozart.diei.unipg.it/walcom2026/,""
-ICALP,"International Colloquium on Automata, Languages, and Programming",,true,https://eatcs.org/index.php/future-icalps,https://icalppodcspaa2026.cs.rhul.ac.uk/icalp/,""
+id,name,url,enabled
+PODC,ACM Symposium on Principles of Distributed Computing,https://www.podc.org/,true
+SIROCCO,International Colloquium on Structural Information and Communication Complexity,https://sirocco.hiit.fi,true
+WAOA,The Workshop on Approximation and Online Algorithms,https://algo-conference.org/,true
+AAAC,Annual Meeting of Asian Association for Algorithms and Computation,http://asia-algo-comp.org,true
+WAAC,Japan–Korea/Korea–Japan Joint Workshop on Algorithms and Computation,https://waac-alg-comp.github.io,true
+SIGAL,情報処理学会アルゴリズム研究会,http://www.ipsj-sigal.or.jp/,true
+COMP,電子情報通信学会コンピュテーション研究会,https://www.ieice.org/~comp/,true
+JSIAM,日本応用数理学会年会,https://jsiam.org/jsiam_archive/past_meetings,true
+ORSJ-spring,OR学会 春季研究発表会,https://orsj.org/nc-dummy,true
+ORSJ-autumn,OR学会 秋季研究発表会,https://orsj.org/nc-dummy,true
+LA-summer,夏のLAシンポジウム,https://la-symposium.github.io/index.html,true
+LA-winter,冬のLAシンポジウム,https://la-symposium.github.io/index.html,true
+RAMP,RAMP　数理最適化シンポジウム,https://orsj.org/ramp/,true
+RAOTA,日本OR学会研究部会：最適化の理論とアルゴリズム,https://orsj.org/raota/,true
+FIT,情報科学技術フォーラム,https://www.ipsj.or.jp/event/fit/fit.html,true
+MIP,The Mixed Integer Programming Workshop,https://www.mixedinteger.org/,true
+IPCO,Integer Programming and Combinatorial Optimization,https://mathopt.zib.de/?nav=ipco,true
+IFORS,International Federation of Operational Research Societies,https://www.ifors.org/,true
+COSS,RIMS 共同研究「組合せ最適化セミナー」,https://www.kurims.kyoto-u.ac.jp/coss/coss2025/coss2025.html,true
+MOPTA,Modeling and Optimization: Theory and Applications,https://coral.ise.lehigh.edu/mopta2026/,true
+ALGO,Annual Meeting Combining the Premier Algorithmic Conference,https://algo-conference.org/,true
+JCDCGGG,"the Japan Conference on Discrete and Computational Geometry, Graphs, and Games",http://www.alg.cei.uec.ac.jp/itohiro/JCDCGG/,true
+INFORMS,INFORMS Annual Meeting,https://www.informs.org/Meetings-Conferences/INFORMS-Conference-Calendar,true
+ISSAC,The International Symposium on Symbolic and Algebraic Computation,https://www.issac-conference.org,true
+SODA,ACM-SIAM Symposium on Discrete Algorithms,https://www.siam.org/conferences-events/siam-conferences/soda26/,true
+FOCS,The IEEE Symposium on Foundations of Computer Science,https://focs.computer.org/,true
+STOC,ACM Symposium on Theory of Computing,https://acm-stoc.org,true
+ACDA,SIAM Conference on Applied and Computational Discrete Algorithms,https://www.siam.org/conferences-events/siam-conferences/acda25/,true
+AAAI,The Association for the Advancement of Artificial Intelligence,https://aaai.org/conference/aaai/,true
+SWAT,Scandinavian Symposium on Algorithm Theory,https://swat2026.compute.dtu.dk/,true
+WALCOM,International Conference and Workshops on Algorithms and Computation,https://www.walcom-conference.org/,true
+ICALP,"International Colloquium on Automata, Languages, and Programming",https://eatcs.org/index.php/future-icalps,true
