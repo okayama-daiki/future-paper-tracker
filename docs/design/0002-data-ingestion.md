@@ -273,7 +273,7 @@ enabled な全 ConferenceSeries をループ
 
 - `ConferenceSeries.id` — `varchar(50)` の文字列 PK（例: `PODC`, `STOC`）
 - `ConferenceSeries.enabled` — 追跡対象かどうかのフラグを追加
-- `Conference.id` — `varchar(50)` の文字列 PK。命名規則は `{series_id}-{year}`（例: `PODC-2026`）。年複数回開催の場合は `{series_id}-{year}`（例: `LA-summer-2025`）
+- `Conference.id` — `varchar(50)` の文字列 PK。命名規則は `{series_id}-{year}`（例: `PODC-2026`）。年複数回開催の場合は、季節・回などの識別子を `series_id` 自体に含める（例: `LA-summer`）ことで、同じ `{series_id}-{year}` の形式（例: `LA-summer-2025`）で自然に区別できる
 
 ```mermaid
 erDiagram
