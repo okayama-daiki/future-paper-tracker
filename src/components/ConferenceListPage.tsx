@@ -184,8 +184,9 @@ export function ConferenceListPage({
 														onOpenConference(row.conferenceEntryId)
 													}
 												>
-													<strong>{row.conferenceName}</strong>
+													<strong>{row.displayKey}</strong>
 												</button>
+												<div className="sub">{row.conferenceName}</div>
 												{dateAtVenue ? (
 													<div className="sub subMuted">{dateAtVenue}</div>
 												) : null}

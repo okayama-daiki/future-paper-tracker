@@ -10,9 +10,9 @@
 				{
 					"id": "PODC-2026",
 					"series_id": "PODC",
-					"name": "ACM Symposium on Principles of Distributed Computing 2026",
+					"name": "The 45th ACM Symposium on Principles of Distributed Computing",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 45,
 					"url": "https://www.podc.org/",
 					"venue": "Royal Holloway, University of London, Egham, England",
 					"start_at_utc": "2026-07-06T00:00:00Z",
@@ -53,9 +53,9 @@
 				{
 					"id": "SIROCCO-2026",
 					"series_id": "SIROCCO",
-					"name": "International Colloquium on Structural Information and Communication Complexity 2026",
+					"name": "The 33rd International Colloquium on Structural Information and Communication Complexity",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 33,
 					"url": "https://sirocco2026.webspace.durham.ac.uk/",
 					"venue": "Durham University, Durham, United Kingdom",
 					"start_at_utc": "2026-06-09T00:00:00Z",
@@ -96,9 +96,9 @@
 				{
 					"id": "WAOA-2025",
 					"series_id": "WAOA",
-					"name": "The Workshop on Approximation and Online Algorithms 2025",
+					"name": "The 23rd Workshop on Approximation and Online Algorithms",
 					"year": 2025,
-					"ordinal_no": null,
+					"ordinal_no": 23,
 					"url": "https://algo-conference.org/2025/waoa/",
 					"venue": "Faculty of Physics, University of Warsaw, Warsaw, Poland",
 					"start_at_utc": "2025-09-18T00:00:00Z",
@@ -139,9 +139,9 @@
 				{
 					"id": "AAAC-2026",
 					"series_id": "AAAC",
-					"name": "Annual Meeting of Asian Association for gorithms and Computation 2026",
+					"name": "The 17th Annual Meeting of Asian Association for Algorithms and Computation",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 17,
 					"url": "https://math.ouc.edu.cn/aaac2026/",
 					"venue": "Academic Conference Center, Ocean University of China (Yushan Campus), Qingdao, China",
 					"start_at_utc": "2026-05-23T00:00:00Z",
@@ -180,9 +180,9 @@
 				{
 					"id": "AAAC-2025",
 					"series_id": "AAAC",
-					"name": "Annual Meeting of Asian Association for gorithms and Computation 2025",
+					"name": "The 16th Annual Meeting of Asian Association for Algorithms and Computation",
 					"year": 2025,
-					"ordinal_no": null,
+					"ordinal_no": 16,
 					"url": "https://conference.cs.cityu.edu.hk/aaac2025/",
 					"venue": "City University of Hong Kong, Hong Kong, China",
 					"start_at_utc": "2025-05-31T00:00:00Z",
@@ -223,9 +223,9 @@
 				{
 					"id": "WAAC-2025",
 					"series_id": "WAAC",
-					"name": "Japan–Korea/Korea–Japan Joint Workshop on Algorithms and Computation 2025",
+					"name": "The 25th Japan–Korea Joint Workshop on Algorithms and Computation",
 					"year": 2025,
-					"ordinal_no": null,
+					"ordinal_no": 25,
 					"url": "https://waac-alg-comp.github.io/2025/",
 					"venue": "Frontier Research in Applied Sciences Building, Hokkaido University, Sapporo, Japan",
 					"start_at_utc": "2025-08-19T00:00:00Z",
@@ -254,9 +254,9 @@
 				{
 					"id": "SIGAL-2026",
 					"series_id": "SIGAL",
-					"name": "情報処理学会アルゴリズム研究会 2026",
+					"name": "第208回アルゴリズム研究発表会",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 208,
 					"url": "http://www.ipsj-sigal.or.jp/",
 					"venue": null,
 					"start_at_utc": "2026-05-20T00:00:00Z",
@@ -285,7 +285,7 @@
 				{
 					"id": "COMP-2026",
 					"series_id": "COMP",
-					"name": "電子情報通信学会コンピュテーション研究会 2026",
+					"name": "電子情報通信学会コンピュテーション研究会 2026年度",
 					"year": 2026,
 					"ordinal_no": null,
 					"url": "https://www.ieice.org/~comp/",
@@ -306,7 +306,7 @@
 				{
 					"id": "JSIAM-2026",
 					"series_id": "JSIAM",
-					"name": "日本応用数理学会年会 2026",
+					"name": "日本応用数理学会2026年度年会",
 					"year": 2026,
 					"ordinal_no": null,
 					"url": "https://jsiam.org/jsiam_archive/past_meetings/annual2026/",
@@ -319,7 +319,7 @@
 				{
 					"id": "JSIAM-2025",
 					"series_id": "JSIAM",
-					"name": "日本応用数理学会年会 2025",
+					"name": "日本応用数理学会2025年度年会",
 					"year": 2025,
 					"ordinal_no": null,
 					"url": "https://jsiam.org/annual2025/",
@@ -356,7 +356,7 @@
 				{
 					"id": "ORSJ-spring-2026",
 					"series_id": "ORSJ-spring",
-					"name": "OR学会 春季研究発表会 2026",
+					"name": "日本オペレーションズ・リサーチ学会2026年春季大会",
 					"year": 2026,
 					"ordinal_no": null,
 					"url": "https://orsj.org/2026s/",
@@ -393,7 +393,7 @@
 				{
 					"id": "ORSJ-autumn-2025",
 					"series_id": "ORSJ-autumn",
-					"name": "OR学会 秋季研究発表会 2025",
+					"name": "日本オペレーションズ・リサーチ学会2025年秋季研究発表会",
 					"year": 2025,
 					"ordinal_no": null,
 					"url": "https://orsj.org/2025f/",
@@ -424,7 +424,7 @@
 				{
 					"id": "LA-summer-2025",
 					"series_id": "LA-summer",
-					"name": "夏のLAシンポジウム 2025",
+					"name": "2025年度 夏のLAシンポジウム",
 					"year": 2025,
 					"ordinal_no": null,
 					"url": "https://la-symposium.github.io/2025/summer.html",
@@ -461,7 +461,7 @@
 				{
 					"id": "LA-winter-2026",
 					"series_id": "LA-winter",
-					"name": "冬のLAシンポジウム 2026",
+					"name": "2025年度 冬のLAシンポジウム",
 					"year": 2026,
 					"ordinal_no": null,
 					"url": "https://la-symposium.github.io/2025/winter.html",
@@ -498,9 +498,9 @@
 				{
 					"id": "RAMP-2025",
 					"series_id": "RAMP",
-					"name": "RAMP　数理最適化シンポジウム 2025",
+					"name": "第37回RAMP数理最適化シンポジウム",
 					"year": 2025,
-					"ordinal_no": null,
+					"ordinal_no": 37,
 					"url": "https://orsj.org/ramp/ramp2025/webopen",
 					"venue": "九州大学西新プラザ",
 					"start_at_utc": "2025-10-16T00:00:00Z",
@@ -519,7 +519,7 @@
 				{
 					"id": "RAOTA-2025",
 					"series_id": "RAOTA",
-					"name": "日本OR学会研究部会：最適化の理論とアルゴリズム 2025",
+					"name": "最適化の理論とアルゴリズム：未来を担う若手研究者の集い 2025",
 					"year": 2025,
 					"ordinal_no": null,
 					"url": "https://orsj.org/raota/#tsukuba25",
@@ -550,9 +550,9 @@
 				{
 					"id": "FIT-2026",
 					"series_id": "FIT",
-					"name": "情報科学技術フォーラム 2026",
+					"name": "第25回情報科学技術フォーラム (FIT2026)",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 25,
 					"url": "https://www.ipsj.or.jp/event/fit/fit2026/index.html",
 					"venue": "北九州学術研究都市（北九州市立大学、九州工業大学、早稲田大学）",
 					"start_at_utc": "2026-09-02T00:00:00Z",
@@ -563,9 +563,9 @@
 				{
 					"id": "FIT-2025",
 					"series_id": "FIT",
-					"name": "情報科学技術フォーラム 2025",
+					"name": "第24回情報科学技術フォーラム (FIT2025)",
 					"year": 2025,
-					"ordinal_no": null,
+					"ordinal_no": 24,
 					"url": "https://www.ipsj.or.jp/event/fit/fit2025/",
 					"venue": "北海道科学大学（北海道札幌市手稲区前田7条15丁目4番1号）",
 					"start_at_utc": "2025-09-03T00:00:00Z",
@@ -600,9 +600,9 @@
 				{
 					"id": "MIP-2026",
 					"series_id": "MIP",
-					"name": "The Mixed Integer Programming Workshop 2026",
+					"name": "The 23rd Mixed Integer Programming Workshop",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 23,
 					"url": "https://www.mixedinteger.org/2026",
 					"venue": "University of Connecticut - Stamford Campus, Stamford, Connecticut, USA",
 					"start_at_utc": "2026-05-18T00:00:00Z",
@@ -621,9 +621,9 @@
 				{
 					"id": "IPCO-2026",
 					"series_id": "IPCO",
-					"name": "Integer Programming and Combinatorial Optimization 2026",
+					"name": "The 27th Conference on Integer Programming and Combinatorial Optimization",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 27,
 					"url": "https://events.math.unipd.it/ipco2026/",
 					"venue": "University of Padova, Padova, Italy",
 					"start_at_utc": "2026-06-17T00:00:00Z",
@@ -664,9 +664,9 @@
 				{
 					"id": "IFORS-2026",
 					"series_id": "IFORS",
-					"name": "International Federation of Operational Research Societies 2026",
+					"name": "The 24th Conference of the International Federation of Operational Research Societies",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 24,
 					"url": "https://www.ifors.org/call-for-papers-ifors-2026/",
 					"venue": "University of Vienna, Vienna, Austria",
 					"start_at_utc": "2026-07-12T00:00:00Z",
@@ -701,7 +701,7 @@
 				{
 					"id": "COSS-2025",
 					"series_id": "COSS",
-					"name": "RIMS 共同研究「組合せ最適化セミナー」 2025",
+					"name": "RIMS共同研究「組合せ最適化セミナー」2025",
 					"year": 2025,
 					"ordinal_no": null,
 					"url": "https://www.kurims.kyoto-u.ac.jp/coss/coss2025/coss2025.html",
@@ -722,9 +722,9 @@
 				{
 					"id": "MOPTA-2026",
 					"series_id": "MOPTA",
-					"name": "Modeling and Optimization: Theory and Applications 2026",
+					"name": "The 20th Modeling and Optimization: Theory and Applications",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 20,
 					"url": "https://coral.ise.lehigh.edu/mopta2026/",
 					"venue": "Rauch Business Center, Lehigh University, Bethlehem, Pennsylvania, USA",
 					"start_at_utc": "2026-08-18T00:00:00Z",
@@ -745,9 +745,9 @@
 				{
 					"id": "MOPTA-2025",
 					"series_id": "MOPTA",
-					"name": "Modeling and Optimization: Theory and Applications 2025",
+					"name": "The 19th Modeling and Optimization: Theory and Applications",
 					"year": 2025,
-					"ordinal_no": null,
+					"ordinal_no": 19,
 					"url": "https://coral.ise.lehigh.edu/mopta2025/",
 					"venue": "Teatro Micaelense, Ponta Delgada, Azores, Portugal",
 					"start_at_utc": "2025-06-17T00:00:00Z",
@@ -766,7 +766,7 @@
 				{
 					"id": "ALGO-2026",
 					"series_id": "ALGO",
-					"name": "Annual Meeting Combining the Premier Algorithmic Conference 2026",
+					"name": "ALGO 2026",
 					"year": 2026,
 					"ordinal_no": null,
 					"url": "https://algo-conference.org/2026/",
@@ -787,9 +787,9 @@
 				{
 					"id": "JCDCGGG-2025",
 					"series_id": "JCDCGGG",
-					"name": "the Japan Conference on Discrete and Computational Geometry, Graphs, and Games 2025",
+					"name": "The 27th China-Japan Conference on Discrete and Computational Geometry, Graphs, and Games",
 					"year": 2025,
-					"ordinal_no": null,
+					"ordinal_no": 27,
 					"url": "https://sokoban.cn/yang/cjcdcggg2025/",
 					"venue": "Guangdong University of Foreign Studies (Bai Yun Mountain Campus), First Teaching Building, Guangzhou, China",
 					"start_at_utc": "2025-09-12T00:00:00Z",
@@ -824,7 +824,7 @@
 				{
 					"id": "INFORMS-2026",
 					"series_id": "INFORMS",
-					"name": "INFORMS Annual Meeting 2026",
+					"name": "2026 INFORMS Annual Meeting",
 					"year": 2026,
 					"ordinal_no": null,
 					"url": "https://meetings.informs.org/wordpress/annual/",
@@ -845,9 +845,9 @@
 				{
 					"id": "ISSAC-2026",
 					"series_id": "ISSAC",
-					"name": "The International Symposium on Symbolic and Algebraic Computation 2026",
+					"name": "The 51st International Symposium on Symbolic and Algebraic Computation",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 51,
 					"url": "https://www.issac-conference.org/2026/",
 					"venue": "Oldenburg, Germany",
 					"start_at_utc": "2026-07-13T00:00:00Z",
@@ -894,9 +894,9 @@
 				{
 					"id": "SODA-2026",
 					"series_id": "SODA",
-					"name": "ACM-SIAM Symposium on Discrete Algorithms 2026",
+					"name": "The 37th ACM-SIAM Symposium on Discrete Algorithms",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 37,
 					"url": "https://www.siam.org/conferences-events/siam-conferences/soda26/",
 					"venue": "Philadelphia, Pennsylvania, USA",
 					"start_at_utc": "2026-01-11T00:00:00Z",
@@ -917,9 +917,9 @@
 				{
 					"id": "SODA-2027",
 					"series_id": "SODA",
-					"name": "ACM-SIAM Symposium on Discrete Algorithms 2027",
+					"name": "The 38th ACM-SIAM Symposium on Discrete Algorithms",
 					"year": 2027,
-					"ordinal_no": null,
+					"ordinal_no": 38,
 					"url": "https://www.siam.org/conferences-events/siam-conferences/soda27/",
 					"venue": "Philadelphia, Pennsylvania, USA",
 					"start_at_utc": "2027-01-24T00:00:00Z",
@@ -948,9 +948,9 @@
 				{
 					"id": "FOCS-2025",
 					"series_id": "FOCS",
-					"name": "The IEEE Symposium on Foundations of Computer Science 2025",
+					"name": "The 66th IEEE Symposium on Foundations of Computer Science",
 					"year": 2025,
-					"ordinal_no": null,
+					"ordinal_no": 66,
 					"url": "https://focs.computer.org/",
 					"venue": "PARKROYAL Darling Harbour, Sydney, Australia",
 					"start_at_utc": "2025-12-14T00:00:00Z",
@@ -991,9 +991,9 @@
 				{
 					"id": "STOC-2026",
 					"series_id": "STOC",
-					"name": "ACM Symposium on Theory of Computing 2026",
+					"name": "The 58th ACM Symposium on Theory of Computing",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 58,
 					"url": "https://acm-stoc.org/stoc2026/",
 					"venue": "Salt Lake City, Utah, USA",
 					"start_at_utc": "2026-06-22T00:00:00Z",
@@ -1034,9 +1034,9 @@
 				{
 					"id": "ACDA-2025",
 					"series_id": "ACDA",
-					"name": "SIAM Conference on Applied and Computational Discrete Algorithms 2025",
+					"name": "The 2nd SIAM Conference on Applied and Computational Discrete Algorithms",
 					"year": 2025,
-					"ordinal_no": null,
+					"ordinal_no": 2,
 					"url": "https://www.siam.org/conferences-events/siam-conferences/acda25/",
 					"venue": "Montreal Convention Center, Montreal, Quebec, Canada",
 					"start_at_utc": null,
@@ -1065,9 +1065,9 @@
 				{
 					"id": "AAAI-2027",
 					"series_id": "AAAI",
-					"name": "The Association for the Advancement of Artificial Intelligence 2027",
+					"name": "The 41st AAAI Conference on Artificial Intelligence",
 					"year": 2027,
-					"ordinal_no": null,
+					"ordinal_no": 41,
 					"url": "https://aaai.org/conference/aaai/aaai-27/",
 					"venue": "Montréal, Québec, Canada",
 					"start_at_utc": "2027-02-16T00:00:00Z",
@@ -1078,9 +1078,9 @@
 				{
 					"id": "AAAI-2026",
 					"series_id": "AAAI",
-					"name": "The Association for the Advancement of Artificial Intelligence 2026",
+					"name": "The 40th Annual AAAI Conference on Artificial Intelligence",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 40,
 					"url": "https://aaai.org/conference/aaai/aaai-26/",
 					"venue": "Singapore EXPO, Singapore",
 					"start_at_utc": "2026-01-20T00:00:00Z",
@@ -1133,9 +1133,9 @@
 				{
 					"id": "SWAT-2026",
 					"series_id": "SWAT",
-					"name": "Scandinavian Symposium on Algorithm Theory 2026",
+					"name": "The 20th Scandinavian Symposium on Algorithm Theory",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 20,
 					"url": "https://swat2026.compute.dtu.dk/",
 					"venue": "IDA Conference, Ingeniørernes Hus, Copenhagen, Denmark",
 					"start_at_utc": "2026-06-17T00:00:00Z",
@@ -1182,9 +1182,9 @@
 				{
 					"id": "WALCOM-2026",
 					"series_id": "WALCOM",
-					"name": "International Conference and Workshops on Algorithms and Computation 2026",
+					"name": "The 20th International Conference and Workshops on Algorithms and Computation",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 20,
 					"url": "https://mozart.diei.unipg.it/walcom2026/",
 					"venue": "Department of Engineering, University of Perugia, Perugia, Italy",
 					"start_at_utc": "2026-03-04T00:00:00Z",
@@ -1225,9 +1225,9 @@
 				{
 					"id": "ICALP-2026",
 					"series_id": "ICALP",
-					"name": "International Colloquium on Automata, Languages, and Programming 2026",
+					"name": "The 53rd EATCS International Colloquium on Automata, Languages, and Programming",
 					"year": 2026,
-					"ordinal_no": null,
+					"ordinal_no": 53,
 					"url": "https://icalppodcspaa2026.cs.rhul.ac.uk/icalp/",
 					"venue": "Royal Holloway, University of London, Egham Hill, Egham, Surrey TW20 0EX, United Kingdom",
 					"start_at_utc": "2026-07-07T00:00:00Z",
@@ -1270,97 +1270,487 @@
 			"name": "European Symposium on Algorithms",
 			"url": "https://algo-conference.org/esa/",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "ESA-2025",
+					"series_id": "ESA",
+					"name": "The 33rd European Symposium on Algorithms",
+					"year": 2025,
+					"ordinal_no": 33,
+					"url": "https://algo-conference.org/2025/esa/",
+					"venue": "Faculty of Physics, University of Warsaw, Warsaw, Poland",
+					"start_at_utc": "2025-09-15T00:00:00Z",
+					"end_at_utc": "2025-09-17T23:59:59Z",
+					"milestones": [
+						{
+							"type": "full_paper_submission_deadline",
+							"at_utc": "2025-04-23T11:59:59Z",
+							"source_url": "https://algo-conference.org/2025/esa/",
+							"is_estimated": false
+						},
+						{
+							"type": "notification",
+							"at_utc": "2025-06-23T00:00:00Z",
+							"source_url": "https://algo-conference.org/2025/esa/",
+							"is_estimated": false
+						},
+						{
+							"type": "camera_ready",
+							"at_utc": "2025-07-07T00:00:00Z",
+							"source_url": "https://algo-conference.org/2025/esa/",
+							"is_estimated": false
+						}
+					],
+					"call_for_paper": {
+						"source_url": "https://algo-conference.org/2025/esa/",
+						"page_count": null
+					}
+				}
+			]
 		},
 		{
 			"id": "ISAAC",
 			"name": "International Symposium on Algorithms and Computation",
 			"url": "https://www.kurims.kyoto-u.ac.jp/isaac/ISAAC.html",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "ISAAC-2025",
+					"series_id": "ISAAC",
+					"name": "The 36th International Symposium on Algorithms and Computation",
+					"year": 2025,
+					"ordinal_no": 36,
+					"url": "https://isaac2025.csie.ncku.edu.tw/",
+					"venue": "Tainan, Taiwan",
+					"start_at_utc": "2025-12-08T00:00:00Z",
+					"end_at_utc": "2025-12-10T23:59:59Z",
+					"milestones": [
+						{
+							"type": "full_paper_submission_deadline",
+							"at_utc": "2025-06-30T11:59:59Z",
+							"source_url": "https://isaac2025.csie.ncku.edu.tw/",
+							"is_estimated": false
+						},
+						{
+							"type": "notification",
+							"at_utc": "2025-08-30T00:00:00Z",
+							"source_url": "https://isaac2025.csie.ncku.edu.tw/",
+							"is_estimated": false
+						},
+						{
+							"type": "camera_ready",
+							"at_utc": "2025-09-21T00:00:00Z",
+							"source_url": "https://isaac2025.csie.ncku.edu.tw/",
+							"is_estimated": false
+						}
+					],
+					"call_for_paper": {
+						"source_url": "https://isaac2025.csie.ncku.edu.tw/",
+						"page_count": null
+					}
+				}
+			]
 		},
 		{
 			"id": "SoCG",
 			"name": "The International Symposium on Computational Geometry",
 			"url": "https://computational-geometry.org/cg-week/socg/",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "SoCG-2026",
+					"series_id": "SoCG",
+					"name": "The 42nd International Symposium on Computational Geometry",
+					"year": 2026,
+					"ordinal_no": 42,
+					"url": "https://computational-geometry.org/cg-week/socg/",
+					"venue": null,
+					"start_at_utc": null,
+					"end_at_utc": null,
+					"milestones": [],
+					"call_for_paper": null
+				}
+			]
 		},
 		{
 			"id": "ITCS",
 			"name": "Innovations in Theoretical Computer Science",
 			"url": "http://itcs-conf.org/index.html",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "ITCS-2026",
+					"series_id": "ITCS",
+					"name": "The 17th Innovations in Theoretical Computer Science Conference",
+					"year": 2026,
+					"ordinal_no": 17,
+					"url": "http://itcs-conf.org/itcs2026/itcs2026.html",
+					"venue": "Bocconi University, Milan, Italy",
+					"start_at_utc": "2026-01-27T00:00:00Z",
+					"end_at_utc": "2026-01-30T23:59:59Z",
+					"milestones": [
+						{
+							"type": "abstract_submission_deadline",
+							"at_utc": "2025-09-04T23:59:00Z",
+							"source_url": "http://itcs-conf.org/index.html",
+							"is_estimated": false
+						},
+						{
+							"type": "full_paper_submission_deadline",
+							"at_utc": "2025-09-06T23:59:00Z",
+							"source_url": "http://itcs-conf.org/index.html",
+							"is_estimated": false
+						},
+						{
+							"type": "notification",
+							"at_utc": "2025-11-10T00:00:00Z",
+							"source_url": "http://itcs-conf.org/index.html",
+							"is_estimated": false
+						}
+					],
+					"call_for_paper": {
+						"source_url": "http://itcs-conf.org/index.html",
+						"page_count": null
+					}
+				}
+			]
 		},
 		{
 			"id": "APPROX",
 			"name": "International Conference on Approximation Algorithms for Combinatorial Optimization Problems",
 			"url": "https://approxconference.com",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "APPROX-2026",
+					"series_id": "APPROX",
+					"name": "The 29th International Conference on Approximation Algorithms for Combinatorial Optimization Problems",
+					"year": 2026,
+					"ordinal_no": 29,
+					"url": "https://approxconference.com",
+					"venue": null,
+					"start_at_utc": null,
+					"end_at_utc": null,
+					"milestones": [
+						{
+							"type": "full_paper_submission_deadline",
+							"at_utc": "2026-05-06T11:59:59Z",
+							"source_url": "https://approxconference.com",
+							"is_estimated": false
+						},
+						{
+							"type": "notification",
+							"at_utc": "2026-06-25T00:00:00Z",
+							"source_url": "https://approxconference.com",
+							"is_estimated": false
+						},
+						{
+							"type": "camera_ready",
+							"at_utc": "2026-07-12T00:00:00Z",
+							"source_url": "https://approxconference.com",
+							"is_estimated": false
+						}
+					],
+					"call_for_paper": {
+						"source_url": "https://approxconference.com",
+						"page_count": null
+					}
+				},
+				{
+					"id": "APPROX-2025",
+					"series_id": "APPROX",
+					"name": "The 28th International Conference on Approximation Algorithms for Combinatorial Optimization Problems",
+					"year": 2025,
+					"ordinal_no": 28,
+					"url": "https://approxconference.com/approx-2025/",
+					"venue": "UC Berkeley, Berkeley, California, USA",
+					"start_at_utc": "2025-08-11T00:00:00Z",
+					"end_at_utc": "2025-08-13T23:59:59Z",
+					"milestones": [
+						{
+							"type": "full_paper_submission_deadline",
+							"at_utc": "2025-05-08T11:59:59Z",
+							"source_url": "https://approxconference.com/approx-2025/",
+							"is_estimated": false
+						},
+						{
+							"type": "notification",
+							"at_utc": "2025-07-01T00:00:00Z",
+							"source_url": "https://approxconference.com/approx-2025/",
+							"is_estimated": false
+						},
+						{
+							"type": "camera_ready",
+							"at_utc": "2025-07-15T00:00:00Z",
+							"source_url": "https://approxconference.com/approx-2025/",
+							"is_estimated": false
+						}
+					],
+					"call_for_paper": {
+						"source_url": "https://approxconference.com/approx-2025/",
+						"page_count": null
+					}
+				}
+			]
 		},
 		{
 			"id": "RANDOM",
 			"name": "International Conference on Randomization and Computation",
 			"url": "https://randomconference.com",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "RANDOM-2025",
+					"series_id": "RANDOM",
+					"name": "The 29th International Conference on Randomization and Computation",
+					"year": 2025,
+					"ordinal_no": 29,
+					"url": "https://randomconference.com",
+					"venue": "UC Berkeley, Berkeley, California, USA",
+					"start_at_utc": "2025-08-11T00:00:00Z",
+					"end_at_utc": "2025-08-13T23:59:59Z",
+					"milestones": [
+						{
+							"type": "full_paper_submission_deadline",
+							"at_utc": "2025-05-08T11:59:59Z",
+							"source_url": "https://randomconference.com",
+							"is_estimated": false
+						},
+						{
+							"type": "notification",
+							"at_utc": "2025-07-01T00:00:00Z",
+							"source_url": "https://randomconference.com",
+							"is_estimated": false
+						},
+						{
+							"type": "camera_ready",
+							"at_utc": "2025-07-15T00:00:00Z",
+							"source_url": "https://randomconference.com",
+							"is_estimated": false
+						}
+					],
+					"call_for_paper": {
+						"source_url": "https://randomconference.com",
+						"page_count": null
+					}
+				}
+			]
 		},
 		{
 			"id": "IPEC",
 			"name": "International Symposium on Parameterized and Exact Computation",
 			"url": "https://algo-conference.org",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "IPEC-2025",
+					"series_id": "IPEC",
+					"name": "The 20th International Symposium on Parameterized and Exact Computation",
+					"year": 2025,
+					"ordinal_no": 20,
+					"url": "https://algo-conference.org/2025/ipec/",
+					"venue": "Faculty of Physics, University of Warsaw, Warsaw, Poland",
+					"start_at_utc": "2025-09-17T00:00:00Z",
+					"end_at_utc": "2025-09-19T23:59:59Z",
+					"milestones": [
+						{
+							"type": "abstract_submission_deadline",
+							"at_utc": "2025-06-27T11:59:59Z",
+							"source_url": "https://algo-conference.org/2025/ipec/",
+							"is_estimated": false
+						},
+						{
+							"type": "full_paper_submission_deadline",
+							"at_utc": "2025-06-30T11:59:59Z",
+							"source_url": "https://algo-conference.org/2025/ipec/",
+							"is_estimated": false
+						},
+						{
+							"type": "notification",
+							"at_utc": "2025-08-07T11:59:59Z",
+							"source_url": "https://algo-conference.org/2025/ipec/",
+							"is_estimated": false
+						}
+					],
+					"call_for_paper": {
+						"source_url": "https://algo-conference.org/2025/ipec/",
+						"page_count": null
+					}
+				}
+			]
 		},
 		{
 			"id": "DISC",
 			"name": "International Symposium on Distributed Computing",
 			"url": "https://www.disc-conference.org/wp/",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "DISC-2026",
+					"series_id": "DISC",
+					"name": "The 40th International Symposium on Distributed Computing",
+					"year": 2026,
+					"ordinal_no": 40,
+					"url": "https://www.disc-conference.org/wp/",
+					"venue": "Rome, Italy",
+					"start_at_utc": "2026-11-09T00:00:00Z",
+					"end_at_utc": "2026-11-13T23:59:59Z",
+					"milestones": [],
+					"call_for_paper": null
+				}
+			]
 		},
 		{
 			"id": "SPAA",
 			"name": "ACM Symposium on Parallelism in Algorithms and Architectures",
 			"url": "https://spaa.acm.org",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "SPAA-2026",
+					"series_id": "SPAA",
+					"name": "The 38th ACM Symposium on Parallelism in Algorithms and Architectures",
+					"year": 2026,
+					"ordinal_no": 38,
+					"url": "https://spaa.acm.org",
+					"venue": "Royal Holloway, University of London, London, UK",
+					"start_at_utc": "2026-07-06T00:00:00Z",
+					"end_at_utc": "2026-07-10T23:59:59Z",
+					"milestones": [
+						{
+							"type": "abstract_submission_deadline",
+							"at_utc": "2026-02-20T11:59:59Z",
+							"source_url": "https://spaa.acm.org",
+							"is_estimated": false
+						},
+						{
+							"type": "full_paper_submission_deadline",
+							"at_utc": "2026-02-27T11:59:59Z",
+							"source_url": "https://spaa.acm.org",
+							"is_estimated": false
+						},
+						{
+							"type": "notification",
+							"at_utc": "2026-05-15T00:00:00Z",
+							"source_url": "https://spaa.acm.org",
+							"is_estimated": false
+						},
+						{
+							"type": "camera_ready",
+							"at_utc": "2026-06-05T00:00:00Z",
+							"source_url": "https://spaa.acm.org",
+							"is_estimated": false
+						}
+					],
+					"call_for_paper": {
+						"source_url": "https://spaa.acm.org",
+						"page_count": null
+					}
+				}
+			]
 		},
 		{
 			"id": "OPODIS",
 			"name": "International Conference on Principles of Distributed Systems",
 			"url": "https://opodis.net",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "OPODIS-2025",
+					"series_id": "OPODIS",
+					"name": "The 29th International Conference on Principles of Distributed Systems",
+					"year": 2025,
+					"ordinal_no": 29,
+					"url": "https://opodis.net",
+					"venue": "Iași, Romania",
+					"start_at_utc": "2025-12-15T00:00:00Z",
+					"end_at_utc": "2025-12-17T23:59:59Z",
+					"milestones": [],
+					"call_for_paper": null
+				}
+			]
 		},
 		{
 			"id": "ISMP",
 			"name": "International Symposium on Mathematical Programming",
-			"url": "https://www.ismp.or.kr/html/",
+			"url": "https://www.mathopt.org/ISMP-Conferences",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "ISMP-2027",
+					"series_id": "ISMP",
+					"name": "The 25th International Symposium on Mathematical Programming",
+					"year": 2027,
+					"ordinal_no": 25,
+					"url": "https://www.mathopt.org/ISMP-Conferences",
+					"venue": null,
+					"start_at_utc": null,
+					"end_at_utc": null,
+					"milestones": [],
+					"call_for_paper": null
+				}
+			]
 		},
 		{
 			"id": "EURO",
-			"name": "International Conference on Operations Research",
+			"name": "European Conference on Operational Research",
 			"url": "https://www.euro-online.org/web/pages/100/conferences",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "EURO-2025",
+					"series_id": "EURO",
+					"name": "The 34th European Conference on Operational Research",
+					"year": 2025,
+					"ordinal_no": 34,
+					"url": "https://euro2025.euro-online.org/",
+					"venue": "University of Leeds, Leeds, UK",
+					"start_at_utc": "2025-06-22T00:00:00Z",
+					"end_at_utc": "2025-06-25T23:59:59Z",
+					"milestones": [],
+					"call_for_paper": null
+				}
+			]
 		},
 		{
 			"id": "CPAIOR",
 			"name": "International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research",
 			"url": "https://cpaior.org",
 			"enabled": true,
-			"conferences": []
+			"conferences": [
+				{
+					"id": "CPAIOR-2026",
+					"series_id": "CPAIOR",
+					"name": "The 23rd International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research",
+					"year": 2026,
+					"ordinal_no": 23,
+					"url": "https://cpaior.org",
+					"venue": "Rabat, Morocco",
+					"start_at_utc": "2026-05-26T00:00:00Z",
+					"end_at_utc": "2026-05-29T23:59:59Z",
+					"milestones": [],
+					"call_for_paper": null
+				},
+				{
+					"id": "CPAIOR-2025",
+					"series_id": "CPAIOR",
+					"name": "The 22nd International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research",
+					"year": 2025,
+					"ordinal_no": 22,
+					"url": "https://cpaior.org",
+					"venue": "Melbourne, Australia",
+					"start_at_utc": "2025-11-10T00:00:00Z",
+					"end_at_utc": "2025-11-13T23:59:59Z",
+					"milestones": [],
+					"call_for_paper": null
+				}
+			]
 		},
 		{
 			"id": "TSUKUBA",
 			"name": "未来を担う若手研究者の集い（つくば合宿）",
 			"url": "https://orsj.org/raota/",
-			"enabled": true,
+			"enabled": false,
 			"conferences": []
 		}
 	]

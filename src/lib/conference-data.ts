@@ -61,7 +61,7 @@ export function buildConferenceEntries(
 			id: conf.id,
 			conferenceId: conf.id,
 			seriesId: series.id,
-			conferenceName: series.name,
+			conferenceName: conf.name,
 			displayKey: `${series.id} ${conf.year}`,
 			conferenceYear: conf.year,
 			seriesUrl: series.url,
