@@ -1,28 +1,30 @@
-import type { ConferencesDataFile, EventRecord } from "../types/conferences";
+import type {
+	ConferencesDataFile,
+	MilestoneRecord,
+} from "../types/conferences";
 import type { ConferenceEntry, DeadlineRow, DeadlineTone } from "../types/view";
-import { shiftUtcByEditionYears } from "./date";
 
-const FULL_PAPER_EVENT_TYPES = new Set([
+const FULL_PAPER_MILESTONE_TYPES = new Set([
 	"full_paper_submission",
 	"full_paper_submission_deadline",
 ]);
 
-export function formatEventType(eventType: string): string {
-	return eventType
+export function formatMilestoneType(milestoneType: string): string {
+	return milestoneType
 		.split("_")
 		.map((part) => part.charAt(0).toUpperCase() + part.slice(1))
 		.join(" ");
 }
 
-export function deadlineTag(eventType: string): {
+export function deadlineTag(milestoneType: string): {
 	label: string;
 	tone: DeadlineTone;
 } {
-	if (FULL_PAPER_EVENT_TYPES.has(eventType)) {
+	if (FULL_PAPER_MILESTONE_TYPES.has(milestoneType)) {
 		return { label: "FULL PAPER", tone: "full" };
 	}
 
-	switch (eventType) {
+	switch (milestoneType) {
 		case "submission_deadline":
 			return { label: "SUBMISSION", tone: "submission" };
 		case "abstract_submission_deadline":
@@ -32,12 +34,12 @@ export function deadlineTag(eventType: string): {
 	}
 }
 
-export function deadlinePriority(eventType: string): number {
-	if (FULL_PAPER_EVENT_TYPES.has(eventType)) {
+export function deadlinePriority(milestoneType: string): number {
+	if (FULL_PAPER_MILESTONE_TYPES.has(milestoneType)) {
 		return 0;
 	}
 
-	switch (eventType) {
+	switch (milestoneType) {
 		case "submission_deadline":
 			return 1;
 		case "abstract_submission_deadline":
@@ -47,26 +49,28 @@ export function deadlinePriority(eventType: string): number {
 	}
 }
 
-export function isDeadlineEventType(eventType: string): boolean {
-	return deadlinePriority(eventType) !== Number.POSITIVE_INFINITY;
+export function isDeadlineMilestoneType(milestoneType: string): boolean {
+	return deadlinePriority(milestoneType) !== Number.POSITIVE_INFINITY;
 }
 
 export function buildConferenceEntries(
 	dataFile: ConferencesDataFile,
 ): ConferenceEntry[] {
-	return dataFile.conferences.flatMap((series) =>
-		series.editions.map((edition, editionIndex) => ({
-			id: `${series.conference_key}::${edition.year}::${editionIndex}`,
-			conferenceKey: series.conference_key,
-			conferenceName: series.conference_name,
-			displayKey: `${series.conference_key} ${edition.year}`,
-			conferenceYear: edition.year,
-			seriesOfficialSite: series.series_official_url,
-			editionOfficialSite: edition.official_site,
-			cfpPublished: edition.cfp_published,
-			venue: edition.venue,
-			venueSourceUrl: edition.venue_source_url,
-			events: edition.events,
+	return dataFile.conference_series.flatMap((series) =>
+		series.conferences.map((conf) => ({
+			id: conf.id,
+			conferenceId: conf.id,
+			seriesId: series.id,
+			conferenceName: series.name,
+			displayKey: `${series.id} ${conf.year}`,
+			conferenceYear: conf.year,
+			seriesUrl: series.url,
+			conferenceUrl: conf.url,
+			venue: conf.venue,
+			startAtUtc: conf.start_at_utc,
+			endAtUtc: conf.end_at_utc,
+			milestones: conf.milestones,
+			hasCallForPaper: conf.call_for_paper !== null,
 		})),
 	);
 }
@@ -77,30 +81,33 @@ export function buildConferenceEntryMap(
 	return new Map(conferenceEntries.map((entry) => [entry.id, entry]));
 }
 
-function sortEventsChronologically(events: EventRecord[]): EventRecord[] {
-	return [...events].sort(
-		(a, b) =>
-			new Date(a.start_at_utc).getTime() - new Date(b.start_at_utc).getTime(),
+function sortMilestonesChronologically(
+	milestones: MilestoneRecord[],
+): MilestoneRecord[] {
+	return [...milestones].sort(
+		(a, b) => new Date(a.at_utc).getTime() - new Date(b.at_utc).getTime(),
 	);
 }
 
-function sortDeadlineCandidates(events: EventRecord[]): EventRecord[] {
-	return [...events].sort((a, b) => {
+function sortDeadlineCandidates(
+	milestones: MilestoneRecord[],
+): MilestoneRecord[] {
+	return [...milestones].sort((a, b) => {
 		const priorityComparison =
-			deadlinePriority(a.event_type) - deadlinePriority(b.event_type);
+			deadlinePriority(a.type) - deadlinePriority(b.type);
 		if (priorityComparison !== 0) {
 			return priorityComparison;
 		}
 
-		return (
-			new Date(a.start_at_utc).getTime() - new Date(b.start_at_utc).getTime()
-		);
+		return new Date(a.at_utc).getTime() - new Date(b.at_utc).getTime();
 	});
 }
 
-function findPrimaryDeadlineEvent(events: EventRecord[]): EventRecord | null {
-	const candidates = events.filter(
-		(event) => isDeadlineEventType(event.event_type) && !event.estimated,
+function findPrimaryDeadlineMilestone(
+	milestones: MilestoneRecord[],
+): MilestoneRecord | null {
+	const candidates = milestones.filter(
+		(m) => isDeadlineMilestoneType(m.type) && !m.is_estimated,
 	);
 
 	if (candidates.length === 0) {
@@ -110,11 +117,11 @@ function findPrimaryDeadlineEvent(events: EventRecord[]): EventRecord | null {
 	return sortDeadlineCandidates(candidates)[0];
 }
 
-function findEstimatedPrimaryDeadlineEvent(
-	events: EventRecord[],
-): EventRecord | null {
-	const candidates = events.filter(
-		(event) => isDeadlineEventType(event.event_type) && event.estimated,
+function findEstimatedPrimaryDeadlineMilestone(
+	milestones: MilestoneRecord[],
+): MilestoneRecord | null {
+	const candidates = milestones.filter(
+		(m) => isDeadlineMilestoneType(m.type) && m.is_estimated,
 	);
 
 	if (candidates.length === 0) {
@@ -127,15 +134,15 @@ function findEstimatedPrimaryDeadlineEvent(
 function buildEstimatedPrimaryDeadline(
 	conference: ConferenceEntry,
 	allEntries: ConferenceEntry[],
-): EventRecord | null {
-	const existingEstimatedPrimaryDeadline = findEstimatedPrimaryDeadlineEvent(
-		conference.events,
+): MilestoneRecord | null {
+	const existingEstimated = findEstimatedPrimaryDeadlineMilestone(
+		conference.milestones,
 	);
-	if (existingEstimatedPrimaryDeadline) {
-		return existingEstimatedPrimaryDeadline;
+	if (existingEstimated) {
+		return existingEstimated;
 	}
 
-	if (conference.cfpPublished || conference.conferenceYear === null) {
+	if (conference.hasCallForPaper) {
 		return null;
 	}
 	const currentYear = conference.conferenceYear;
@@ -143,61 +150,49 @@ function buildEstimatedPrimaryDeadline(
 	const previousEdition = allEntries
 		.filter(
 			(entry) =>
-				entry.conferenceKey === conference.conferenceKey &&
+				entry.seriesId === conference.seriesId &&
 				entry.id !== conference.id &&
-				entry.conferenceYear !== null &&
 				entry.conferenceYear < currentYear,
 		)
-		.sort((a, b) => (b.conferenceYear ?? 0) - (a.conferenceYear ?? 0))
-		.find((entry) => findPrimaryDeadlineEvent(entry.events) !== null);
+		.sort((a, b) => b.conferenceYear - a.conferenceYear)
+		.find((entry) => findPrimaryDeadlineMilestone(entry.milestones) !== null);
 
-	if (!previousEdition || previousEdition.conferenceYear === null) {
+	if (!previousEdition) {
 		return null;
 	}
 
-	const previousPrimaryDeadline = findPrimaryDeadlineEvent(
-		previousEdition.events,
+	const previousPrimary = findPrimaryDeadlineMilestone(
+		previousEdition.milestones,
 	);
-	if (!previousPrimaryDeadline) {
+	if (!previousPrimary) {
 		return null;
 	}
 
 	const editionYearOffset = currentYear - previousEdition.conferenceYear;
+	const shiftedDate = new Date(previousPrimary.at_utc);
+	shiftedDate.setUTCFullYear(shiftedDate.getUTCFullYear() + editionYearOffset);
 
 	return {
-		event_type: previousPrimaryDeadline.event_type,
-		start_at_utc: shiftUtcByEditionYears(
-			previousPrimaryDeadline.start_at_utc,
-			editionYearOffset,
-		),
-		end_at_utc: previousPrimaryDeadline.end_at_utc
-			? shiftUtcByEditionYears(
-					previousPrimaryDeadline.end_at_utc,
-					editionYearOffset,
-				)
-			: undefined,
-		source_url: previousPrimaryDeadline.source_url,
-		estimated: true,
-		estimated_from_year: previousEdition.conferenceYear,
+		type: previousPrimary.type,
+		at_utc: shiftedDate.toISOString().replace(".000Z", "Z"),
+		source_url: previousPrimary.source_url,
+		is_estimated: true,
 	};
 }
 
-export function buildDisplayEvents(
+export function buildDisplayMilestones(
 	conference: ConferenceEntry,
 	allEntries: ConferenceEntry[],
-): EventRecord[] {
-	const events = [...conference.events];
-	if (findPrimaryDeadlineEvent(events) === null) {
-		const estimatedPrimaryDeadline = buildEstimatedPrimaryDeadline(
-			conference,
-			allEntries,
-		);
-		if (estimatedPrimaryDeadline) {
-			events.push(estimatedPrimaryDeadline);
+): MilestoneRecord[] {
+	const milestones = [...conference.milestones];
+	if (findPrimaryDeadlineMilestone(milestones) === null) {
+		const estimated = buildEstimatedPrimaryDeadline(conference, allEntries);
+		if (estimated) {
+			milestones.push(estimated);
 		}
 	}
 
-	return sortEventsChronologically(events);
+	return sortMilestonesChronologically(milestones);
 }
 
 export function buildDeadlineRows(
@@ -205,24 +200,24 @@ export function buildDeadlineRows(
 ): DeadlineRow[] {
 	const rows = conferenceEntries.map<DeadlineRow | null>((conference) => {
 		const selected =
-			findPrimaryDeadlineEvent(conference.events) ??
+			findPrimaryDeadlineMilestone(conference.milestones) ??
 			buildEstimatedPrimaryDeadline(conference, conferenceEntries);
 		if (!selected) {
 			return null;
 		}
 
 		const row: DeadlineRow = {
-			conferenceId: conference.id,
+			conferenceEntryId: conference.id,
 			displayKey: conference.displayKey,
-			conferenceKey: conference.conferenceKey,
+			seriesId: conference.seriesId,
 			conferenceName: conference.conferenceName,
-			editionOfficialSite: conference.editionOfficialSite,
+			conferenceUrl: conference.conferenceUrl,
 			venue: conference.venue,
-			eventType: selected.event_type,
-			startAtUtc: selected.start_at_utc,
-			endAtUtc: selected.end_at_utc,
-			estimated: selected.estimated ?? false,
-			estimatedFromYear: selected.estimated_from_year,
+			startAtUtc: conference.startAtUtc,
+			endAtUtc: conference.endAtUtc,
+			milestoneType: selected.type,
+			milestoneAtUtc: selected.at_utc,
+			estimated: selected.is_estimated,
 		};
 		return row;
 	});
@@ -230,7 +225,8 @@ export function buildDeadlineRows(
 
 	return definedRows.sort((a, b) => {
 		const dateComparison =
-			new Date(b.startAtUtc).getTime() - new Date(a.startAtUtc).getTime();
+			new Date(b.milestoneAtUtc).getTime() -
+			new Date(a.milestoneAtUtc).getTime();
 		if (dateComparison !== 0) {
 			return dateComparison;
 		}
@@ -250,7 +246,7 @@ export function filterDeadlineRows(
 	return rows.filter((row) => {
 		return (
 			row.displayKey.toLowerCase().includes(lower) ||
-			row.conferenceKey.toLowerCase().includes(lower) ||
+			row.seriesId.toLowerCase().includes(lower) ||
 			row.conferenceName.toLowerCase().includes(lower)
 		);
 	});
@@ -261,17 +257,13 @@ export function getPastConferenceEntries(
 	allEntries: ConferenceEntry[],
 ): ConferenceEntry[] {
 	const currentYear = current.conferenceYear;
-	if (currentYear === null) {
-		return [];
-	}
 
 	return allEntries
 		.filter(
 			(entry) =>
 				entry.id !== current.id &&
-				entry.conferenceKey === current.conferenceKey &&
-				entry.conferenceYear !== null &&
+				entry.seriesId === current.seriesId &&
 				entry.conferenceYear < currentYear,
 		)
-		.sort((a, b) => (b.conferenceYear ?? 0) - (a.conferenceYear ?? 0));
+		.sort((a, b) => b.conferenceYear - a.conferenceYear);
 }

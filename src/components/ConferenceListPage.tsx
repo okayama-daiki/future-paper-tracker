@@ -11,7 +11,6 @@ type ConferenceListPageProps = {
 	rows: DeadlineRow[];
 	trackedSeriesCount: number;
 	trackedEditionCount: number;
-	pendingConferenceKeys: string[];
 	query: string;
 	currentPage: number;
 	now: number;
@@ -30,12 +29,41 @@ function SummaryCard({ label, value }: { label: string; value: number }) {
 	);
 }
 
+function formatDateAtVenue(row: DeadlineRow): string | null {
+	const parts: string[] = [];
+	if (row.startAtUtc) {
+		const start = new Date(row.startAtUtc);
+		if (!Number.isNaN(start.getTime())) {
+			const y = start.getUTCFullYear();
+			const m = String(start.getUTCMonth() + 1).padStart(2, "0");
+			const d = String(start.getUTCDate()).padStart(2, "0");
+			let dateStr = `${y}-${m}-${d}`;
+			if (row.endAtUtc) {
+				const end = new Date(row.endAtUtc);
+				if (!Number.isNaN(end.getTime())) {
+					const em = String(end.getUTCMonth() + 1).padStart(2, "0");
+					const ed = String(end.getUTCDate()).padStart(2, "0");
+					if (end.getUTCFullYear() === y) {
+						dateStr = `${y}-${m}-${d} – ${em}-${ed}`;
+					} else {
+						dateStr = `${y}-${m}-${d} – ${end.getUTCFullYear()}-${em}-${ed}`;
+					}
+				}
+			}
+			parts.push(dateStr);
+		}
+	}
+	if (row.venue) {
+		parts.push(row.venue);
+	}
+	return parts.length > 0 ? parts.join(" @ ") : null;
+}
+
 export function ConferenceListPage({
 	generatedAt,
 	rows,
 	trackedSeriesCount,
 	trackedEditionCount,
-	pendingConferenceKeys,
 	query,
 	currentPage,
 	now,
@@ -44,12 +72,19 @@ export function ConferenceListPage({
 	onOpenConference,
 	onGoToPage,
 }: ConferenceListPageProps) {
-	const filteredRows = useMemo(() => filterDeadlineRows(rows, query), [rows, query]);
+	const filteredRows = useMemo(
+		() => filterDeadlineRows(rows, query),
+		[rows, query],
+	);
 	const openConferenceCount = useMemo(
-		() => filteredRows.filter((row) => !isPastUtc(row.startAtUtc, now)).length,
+		() =>
+			filteredRows.filter((row) => !isPastUtc(row.milestoneAtUtc, now)).length,
 		[filteredRows, now],
 	);
-	const totalPages = Math.max(1, Math.ceil(filteredRows.length / ROWS_PER_PAGE));
+	const totalPages = Math.max(
+		1,
+		Math.ceil(filteredRows.length / ROWS_PER_PAGE),
+	);
 	const visiblePage = Math.min(currentPage, totalPages);
 	const paginatedRows = useMemo(() => {
 		const startIndex = (visiblePage - 1) * ROWS_PER_PAGE;
@@ -76,10 +111,6 @@ export function ConferenceListPage({
 					<SummaryCard label="Open conferences" value={openConferenceCount} />
 					<SummaryCard label="Tracked editions" value={trackedEditionCount} />
 					<SummaryCard label="Tracked series" value={trackedSeriesCount} />
-					<SummaryCard
-						label="Pending keys"
-						value={pendingConferenceKeys.length}
-					/>
 				</div>
 				<div className="heroMeta">
 					<span className="metaChip">Generated {formatUtc(generatedAt)}</span>
@@ -136,53 +167,45 @@ export function ConferenceListPage({
 								</tr>
 							) : (
 								paginatedRows.map((row) => {
-									const tag = deadlineTag(row.eventType);
-									const isPastDeadline = isPastUtc(row.startAtUtc, now);
+									const tag = deadlineTag(row.milestoneType);
+									const isPastDeadline = isPastUtc(row.milestoneAtUtc, now);
+									const dateAtVenue = formatDateAtVenue(row);
 
 									return (
 										<tr
-											key={`${row.conferenceId}-${row.eventType}-${row.startAtUtc}`}
+											key={`${row.conferenceEntryId}-${row.milestoneType}-${row.milestoneAtUtc}`}
 											className={isPastDeadline ? "expiredRow" : undefined}
 										>
 											<td>
 												<button
 													type="button"
 													className="conferenceLink"
-													onClick={() => onOpenConference(row.conferenceId)}
+													onClick={() =>
+														onOpenConference(row.conferenceEntryId)
+													}
 												>
-													<strong>{row.displayKey}</strong>
+													<strong>{row.conferenceName}</strong>
 												</button>
-												<div className="sub">{row.conferenceName}</div>
-												{row.venue ? (
-													<div className="sub subMuted">{row.venue}</div>
+												{dateAtVenue ? (
+													<div className="sub subMuted">{dateAtVenue}</div>
 												) : null}
 											</td>
 											<td>
 												<span className="dateValue">
-													{formatUtc(row.startAtUtc)}
+													{formatUtc(row.milestoneAtUtc)}
 													{row.estimated ? " ?" : ""}
 												</span>
-												{row.endAtUtc ? (
-													<div className="dateRange">
-														to {formatUtc(row.endAtUtc)}
-													</div>
-												) : null}
 												<div className="deadlineMeta">
 													<span className={`tag ${tag.tone}`}>{tag.label}</span>
 													{row.estimated ? (
 														<span className="tag estimated">ESTIMATED</span>
 													) : null}
 												</div>
-												{row.estimated && row.estimatedFromYear ? (
-													<div className="deadlineNote">
-														Based on {row.conferenceKey} {row.estimatedFromYear}.
-													</div>
-												) : null}
 											</td>
 											<td>
 												<a
 													className="sourceLink"
-													href={row.editionOfficialSite}
+													href={row.conferenceUrl}
 													target="_blank"
 													rel="noreferrer"
 												>
@@ -244,25 +267,6 @@ export function ConferenceListPage({
 				) : null}
 			</section>
 
-			<footer className="footer panel">
-				<div className="sectionHeading sectionHeadingTight">
-					<div>
-						<p className="sectionEyebrow">Backlog</p>
-						<h2>Pending conference keys</h2>
-					</div>
-				</div>
-				{pendingConferenceKeys.length === 0 ? (
-					<p className="emptyState">No pending conference keys.</p>
-				) : (
-					<div className="pendingList">
-						{pendingConferenceKeys.map((conferenceKey) => (
-							<span key={conferenceKey} className="pendingChip">
-								{conferenceKey}
-							</span>
-						))}
-					</div>
-				)}
-			</footer>
 			<SiteFooter />
 		</main>
 	);

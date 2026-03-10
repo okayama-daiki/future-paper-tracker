@@ -20,13 +20,3 @@ export function isPastUtc(iso: string, now: number): boolean {
 	}
 	return timestamp < now;
 }
-
-export function shiftUtcByEditionYears(iso: string, yearOffset: number): string {
-	const date = new Date(iso);
-	if (Number.isNaN(date.getTime())) {
-		return iso;
-	}
-
-	date.setUTCFullYear(date.getUTCFullYear() + yearOffset);
-	return date.toISOString().replace(".000Z", "Z");
-}

@@ -1,31 +1,33 @@
-import type { EventRecord } from "./conferences";
+import type { MilestoneRecord } from "./conferences";
 
 export type DeadlineTone = "full" | "submission" | "abstract";
 
 export type ConferenceEntry = {
 	id: string;
-	conferenceKey: string;
+	conferenceId: string;
+	seriesId: string;
 	conferenceName: string;
 	displayKey: string;
-	conferenceYear: number | null;
-	seriesOfficialSite: string;
-	editionOfficialSite: string;
-	cfpPublished: boolean;
-	venue?: string;
-	venueSourceUrl?: string;
-	events: EventRecord[];
+	conferenceYear: number;
+	seriesUrl: string;
+	conferenceUrl: string;
+	venue: string | null;
+	startAtUtc: string | null;
+	endAtUtc: string | null;
+	milestones: MilestoneRecord[];
+	hasCallForPaper: boolean;
 };
 
 export type DeadlineRow = {
-	conferenceId: string;
+	conferenceEntryId: string;
 	displayKey: string;
-	conferenceKey: string;
+	seriesId: string;
 	conferenceName: string;
-	editionOfficialSite: string;
-	venue?: string;
-	eventType: string;
-	startAtUtc: string;
-	endAtUtc?: string;
+	conferenceUrl: string;
+	venue: string | null;
+	startAtUtc: string | null;
+	endAtUtc: string | null;
+	milestoneType: string;
+	milestoneAtUtc: string;
 	estimated: boolean;
-	estimatedFromYear?: number;
 };

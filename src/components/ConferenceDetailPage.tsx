@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import type { ConferenceEntry } from "../types/view";
 import {
-	buildDisplayEvents,
-	formatEventType,
+	buildDisplayMilestones,
+	formatMilestoneType,
 	getPastConferenceEntries,
-	isDeadlineEventType,
+	isDeadlineMilestoneType,
 } from "../lib/conference-data";
 import { formatUtc, isPastUtc } from "../lib/date";
 import { SiteFooter } from "./SiteFooter";
@@ -18,6 +18,35 @@ type ConferenceDetailPageProps = {
 	onOpenConference: (conferenceId: string) => void;
 };
 
+function formatConferenceDates(conference: ConferenceEntry): string | null {
+	if (!conference.startAtUtc) return null;
+	const start = new Date(conference.startAtUtc);
+	if (Number.isNaN(start.getTime())) return null;
+
+	const y = start.getUTCFullYear();
+	const m = String(start.getUTCMonth() + 1).padStart(2, "0");
+	const d = String(start.getUTCDate()).padStart(2, "0");
+	let dateStr = `${y}-${m}-${d}`;
+
+	if (conference.endAtUtc) {
+		const end = new Date(conference.endAtUtc);
+		if (!Number.isNaN(end.getTime())) {
+			const em = String(end.getUTCMonth() + 1).padStart(2, "0");
+			const ed = String(end.getUTCDate()).padStart(2, "0");
+			if (end.getUTCFullYear() === y) {
+				dateStr = `${y}-${m}-${d} – ${em}-${ed}`;
+			} else {
+				dateStr = `${y}-${m}-${d} – ${end.getUTCFullYear()}-${em}-${ed}`;
+			}
+		}
+	}
+
+	if (conference.venue) {
+		return `${dateStr} @ ${conference.venue}`;
+	}
+	return dateStr;
+}
+
 export function ConferenceDetailPage({
 	conference,
 	allConferences,
@@ -26,18 +55,23 @@ export function ConferenceDetailPage({
 	onBack,
 	onOpenConference,
 }: ConferenceDetailPageProps) {
-	const displayEvents = useMemo(
-		() => buildDisplayEvents(conference, allConferences),
+	const displayMilestones = useMemo(
+		() => buildDisplayMilestones(conference, allConferences),
 		[conference, allConferences],
 	);
 	const sourceLinks = useMemo(
-		() => Array.from(new Set(displayEvents.map((event) => event.source_url))),
-		[displayEvents],
+		() =>
+			Array.from(
+				new Set(displayMilestones.map((milestone) => milestone.source_url)),
+			),
+		[displayMilestones],
 	);
 	const pastConferenceEntries = useMemo(
 		() => getPastConferenceEntries(conference, allConferences),
 		[conference, allConferences],
 	);
+
+	const dateAtVenue = formatConferenceDates(conference);
 
 	return (
 		<main className="page">
@@ -48,25 +82,28 @@ export function ConferenceDetailPage({
 					</button>
 					<a
 						className="heroLink"
-						href={conference.editionOfficialSite}
+						href={conference.conferenceUrl}
 						target="_blank"
 						rel="noreferrer"
 					>
 						Open site
 					</a>
 				</div>
-				<p className="eyebrow">{conference.conferenceKey} edition</p>
+				<p className="eyebrow">{conference.seriesId} edition</p>
 				<h1>{conference.displayKey}</h1>
 				<p className="heroText">{conference.conferenceName}</p>
+				{dateAtVenue ? <p className="heroText">{dateAtVenue}</p> : null}
 				<div className="heroMeta">
 					<span className="metaChip">Generated {formatUtc(generatedAt)}</span>
-					<span className="metaChip">{displayEvents.length} tracked events</span>
+					<span className="metaChip">
+						{displayMilestones.length} tracked milestones
+					</span>
 					<span
 						className={`metaChip ${
-							conference.cfpPublished ? "metaChipLive" : "metaChipMuted"
+							conference.hasCallForPaper ? "metaChipLive" : "metaChipMuted"
 						}`}
 					>
-						CfP {conference.cfpPublished ? "published" : "not published"}
+						CfP {conference.hasCallForPaper ? "published" : "not published"}
 					</span>
 				</div>
 			</header>
@@ -82,42 +119,24 @@ export function ConferenceDetailPage({
 					<ul className="detailList">
 						<li>
 							<span className="detailLabel">Series official site</span>
-							<a
-								href={conference.seriesOfficialSite}
-								target="_blank"
-								rel="noreferrer"
-							>
-								{conference.seriesOfficialSite}
+							<a href={conference.seriesUrl} target="_blank" rel="noreferrer">
+								{conference.seriesUrl}
 							</a>
 						</li>
 						<li>
 							<span className="detailLabel">Edition official site</span>
 							<a
-								href={conference.editionOfficialSite}
+								href={conference.conferenceUrl}
 								target="_blank"
 								rel="noreferrer"
 							>
-								{conference.editionOfficialSite}
+								{conference.conferenceUrl}
 							</a>
-						</li>
-						<li>
-							<span className="detailLabel">CfP published</span>
-							<span>{conference.cfpPublished ? "Yes" : "No"}</span>
 						</li>
 						{conference.venue ? (
 							<li>
 								<span className="detailLabel">Venue</span>
-								{conference.venueSourceUrl ? (
-									<a
-										href={conference.venueSourceUrl}
-										target="_blank"
-										rel="noreferrer"
-									>
-										{conference.venue}
-									</a>
-								) : (
-									<span>{conference.venue}</span>
-								)}
+								<span>{conference.venue}</span>
 							</li>
 						) : null}
 					</ul>
@@ -174,62 +193,54 @@ export function ConferenceDetailPage({
 				<div className="sectionHeading">
 					<div>
 						<p className="sectionEyebrow">Timeline</p>
-						<h2>Events</h2>
+						<h2>Milestones</h2>
 					</div>
 				</div>
 				<div className="tableScroller">
 					<table className="dataTable">
 						<thead>
 							<tr>
-								<th>Event</th>
+								<th>Milestone</th>
 								<th>Time (UTC)</th>
-								<th>Conference site</th>
+								<th>Source</th>
 							</tr>
 						</thead>
 						<tbody>
-							{displayEvents.map((event) => {
+							{displayMilestones.map((milestone) => {
 								const isPastDeadline =
-									isDeadlineEventType(event.event_type) &&
-									isPastUtc(event.start_at_utc, now);
+									isDeadlineMilestoneType(milestone.type) &&
+									isPastUtc(milestone.at_utc, now);
 
 								return (
 									<tr
-										key={`${event.event_type}-${event.start_at_utc}-${event.source_url}`}
+										key={`${milestone.type}-${milestone.at_utc}-${milestone.source_url}`}
 										className={isPastDeadline ? "expiredRow" : undefined}
 									>
 										<td>
 											<div className="eventTitle">
 												<span className="eventLabel">
-													{formatEventType(event.event_type)}
+													{formatMilestoneType(milestone.type)}
 												</span>
-												<code className="eventCode">{event.event_type}</code>
-												{event.estimated ? (
-													<div className="eventNote">
-														Estimated from {conference.conferenceKey}{" "}
-														{event.estimated_from_year}
-													</div>
+												<code className="eventCode">{milestone.type}</code>
+												{milestone.is_estimated ? (
+													<div className="eventNote">Estimated</div>
 												) : null}
 											</div>
 										</td>
 										<td>
 											<span className="dateValue">
-												{formatUtc(event.start_at_utc)}
-												{event.estimated ? " ?" : ""}
+												{formatUtc(milestone.at_utc)}
+												{milestone.is_estimated ? " ?" : ""}
 											</span>
-											{event.end_at_utc ? (
-												<div className="dateRange">
-													to {formatUtc(event.end_at_utc)}
-												</div>
-											) : null}
 										</td>
 										<td>
 											<a
 												className="sourceLink"
-												href={conference.editionOfficialSite}
+												href={milestone.source_url}
 												target="_blank"
 												rel="noreferrer"
 											>
-												Open site
+												Open source
 											</a>
 										</td>
 									</tr>

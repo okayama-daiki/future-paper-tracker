@@ -32,6 +32,9 @@ function App() {
 		[conferenceEntries],
 	);
 
+	const trackedSeriesCount = conferencesData.conference_series.length;
+	const trackedEditionCount = conferenceEntries.length;
+
 	const selectedConference = selectedConferenceId
 		? (conferenceEntryMap.get(selectedConferenceId) ?? null)
 		: null;
@@ -78,9 +81,8 @@ function App() {
 		<ConferenceListPage
 			generatedAt={conferencesData.generated_at}
 			rows={deadlineRows}
-			trackedSeriesCount={conferencesData.conferences.length}
-			trackedEditionCount={conferenceEntries.length}
-			pendingConferenceKeys={conferencesData.pending_conference_keys}
+			trackedSeriesCount={trackedSeriesCount}
+			trackedEditionCount={trackedEditionCount}
 			query={query}
 			currentPage={currentPage}
 			now={now}

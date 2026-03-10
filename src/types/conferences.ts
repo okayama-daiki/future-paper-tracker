@@ -1,31 +1,38 @@
-export type EventRecord = {
-	event_type: string;
-	start_at_utc: string;
-	end_at_utc?: string;
+export type MilestoneRecord = {
+	type: string;
+	at_utc: string;
 	source_url: string;
-	estimated?: boolean;
-	estimated_from_year?: number;
+	is_estimated: boolean;
 };
 
-export type EditionRecord = {
+export type CallForPaperRecord = {
+	source_url: string;
+	page_count: number | null;
+};
+
+export type ConferenceRecord = {
+	id: string;
+	series_id: string;
+	name: string;
 	year: number;
-	official_site: string;
-	cfp_published: boolean;
-	venue?: string;
-	venue_source_url?: string;
-	events: EventRecord[];
+	ordinal_no: number | null;
+	url: string;
+	venue: string | null;
+	start_at_utc: string | null;
+	end_at_utc: string | null;
+	milestones: MilestoneRecord[];
+	call_for_paper: CallForPaperRecord | null;
 };
 
 export type ConferenceSeriesRecord = {
-	conference_key: string;
-	conference_name: string;
-	series_official_url: string;
-	editions: EditionRecord[];
+	id: string;
+	name: string;
+	url: string;
+	enabled: boolean;
+	conferences: ConferenceRecord[];
 };
 
 export type ConferencesDataFile = {
 	generated_at: string;
-	mode: string;
-	conferences: ConferenceSeriesRecord[];
-	pending_conference_keys: string[];
+	conference_series: ConferenceSeriesRecord[];
 };
