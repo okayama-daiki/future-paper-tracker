@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-07T17:47:50.661Z",
+  "generated_at": "2026-04-05T12:00:03.617Z",
   "conference_series": [
     {
       "id": "PODC",
@@ -41,6 +41,38 @@
             "source_url": "https://www.podc.org/",
             "page_count": null
           }
+        },
+        {
+          "id": "PODC-2027",
+          "series_id": "PODC",
+          "name": "ACM Symposium on Principles of Distributed Computing 2027",
+          "year": 2027,
+          "ordinal_no": 46,
+          "url": "https://www.podc.org/",
+          "venue": null,
+          "start_at_utc": "2027-07-06T00:00:00.000Z",
+          "end_at_utc": null,
+          "milestones": [
+            {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2027-02-12T11:59:59.000Z",
+              "source_url": "https://www.podc.org/",
+              "is_estimated": true
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2027-02-17T11:59:59.000Z",
+              "source_url": "https://www.podc.org/",
+              "is_estimated": true
+            },
+            {
+              "type": "notification",
+              "at_utc": "2027-04-30T11:59:59.000Z",
+              "source_url": "https://www.podc.org/",
+              "is_estimated": true
+            }
+          ],
+          "call_for_paper": null
         }
       ]
     },
