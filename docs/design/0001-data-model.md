@@ -14,14 +14,14 @@
 ## Decision Log
 
 - `Series -> Conference` を採用
-    - 年 1 回開催の会議と複数回開催される会議を同じ構造で扱うため
+  - 年 1 回開催の会議と複数回開催される会議を同じ構造で扱うため
 - `Conference` と `CallForPaper` は `0 or 1` 関係にする
-    - 会議によって Call for Paper が存在しないケースを許容するため
+  - 会議によって Call for Paper が存在しないケースを許容するため
 - `ConferenceSeries` ではなく、`Conference` が `CallForPaper` を所有する
-    - Call for Paper の情報源 (`source_url`) を会議ごとに保持できるようにするため
+  - Call for Paper の情報源 (`source_url`) を会議ごとに保持できるようにするため
 - `Milestone.is_estimated` を採用
-    - スケジューリングのために未公開の締め切りを推定することが求められるケースがあるため
-    - is_estimated が true の場合は、source_url は過去会議のウェブサイトへの URL になる
+  - スケジューリングのために未公開の締め切りを推定することが求められるケースがあるため
+  - is_estimated が true の場合は、source_url は過去会議のウェブサイトへの URL になる
 
 ### ER Diagram
 
