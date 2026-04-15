@@ -6,7 +6,7 @@ import type { Conference, ConferenceSeries } from "utils";
 import type { LLMConfig } from "./llm-parse.js";
 import { ExtractedConferenceSchema } from "./llm-parse.js";
 import { crawl } from "./crawl.js";
-import { searchDuckDuckGo } from "./search.js";
+import { search } from "./search.js";
 
 export interface AgentResult {
   conference: Partial<Conference>;
@@ -36,7 +36,7 @@ export async function runAgent(
     stopWhen: stepCountIs(10),
     system: [
       `You are a research assistant gathering call-for-papers information for "${series.name}".`,
-      `Your goal is to find confirmed dates for the ${targetConf.year} edition.`,
+      `Your goal is to find confirmed dates for the ${targetConf.year} edition ONLY.`,
       `Conference series URL: ${series.url}`,
       "",
       "Steps:",
@@ -45,6 +45,11 @@ export async function runAgent(
       "3. Once you have enough information, call submit_conference_data with the extracted data.",
       "4. If a field is not found in the pages, omit it.",
       "5. Set confidence to how certain you are (0.0–1.0).",
+      "",
+      "CRITICAL RULES:",
+      `- Only submit data that explicitly refers to the ${targetConf.year} edition.`,
+      `- If you only find information about a different year (e.g. ${targetConf.year - 1}), do NOT call submit_conference_data.`,
+      "- When in doubt about the year, do not submit.",
     ].join("\n"),
     prompt: `Find call for papers information for ${series.name} ${targetConf.year}.`,
     tools: {
@@ -54,7 +59,7 @@ export async function runAgent(
           query: z.string().describe("The search query"),
         }),
         execute: async (input) => {
-          const results = await searchDuckDuckGo(input.query);
+          const results = await search(input.query);
           return results.map((r) => ({ url: r.url, title: r.title, snippet: r.snippet }));
         },
       }),
@@ -78,6 +83,18 @@ export async function runAgent(
         inputSchema: ExtractedConferenceSchema,
         execute: async (data) => {
           const { confidence, ...fields } = data;
+          // Reject submissions for the wrong year
+          if (fields.year !== undefined && fields.year !== targetConf.year) {
+            return `Rejected: data is for ${fields.year}, but target is ${targetConf.year}. Do not submit unless you find ${targetConf.year} data.`;
+          }
+          // Reject if milestones all fall in a year other than target
+          if (fields.milestones && fields.milestones.length > 0) {
+            const years = fields.milestones.map((m) => new Date(m.at_utc).getFullYear());
+            const mostCommonYear = years.sort((a, b) => a - b).at(Math.floor(years.length / 2))!;
+            if (mostCommonYear !== targetConf.year && mostCommonYear !== targetConf.year - 1) {
+              return `Rejected: milestone dates suggest year ${mostCommonYear}, not ${targetConf.year}. Do not submit unless you find ${targetConf.year} data.`;
+            }
+          }
           llmConfidence = confidence;
           submittedConference = {
             ...(fields.name && { name: fields.name }),

@@ -1,0 +1,7 @@
+export TINY_SERP_API_URL="https://lyg4qcs6mp4tmt63lpk6bumlju0gfxmq.lambda-url.ap-northeast-1.on.aws/search"
+# export LLM_PROVIDER="anthropic"
+# export LLM_MODEL="claude-haiku-4-5"
+# export LLM_BASE_URL="http://localhost:11434"
+export LLM_PROVIDER="openai"
+export LLM_MODEL="gpt-5.4-mini"
+export LLM_API_KEY="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"

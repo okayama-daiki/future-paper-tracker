@@ -7,9 +7,9 @@ export interface SearchResult {
 }
 
 /**
- * Searches DuckDuckGo directly without an external search proxy.
+ * Searches DuckDuckGo directly via HTML scraping.
  */
-export async function searchDuckDuckGo(query: string): Promise<SearchResult[]> {
+export async function search(query: string): Promise<SearchResult[]> {
   const searchUrl = new URL("https://html.duckduckgo.com/html/");
   searchUrl.searchParams.set("q", query);
 

@@ -9,17 +9,22 @@ export const SUBMISSION_DEADLINE_TYPES = new Set([
 ]);
 
 /**
- * A conference is considered actionable (future) as long as at least one
- * submission deadline is in the future. If no submission deadlines exist,
- * falls back to end_at_utc.
+ * A conference is considered actionable (not yet over) as long as it has not ended.
+ * Priority: end_at_utc → start_at_utc → earliest submission deadline.
  */
 export function isActionable(conf: Conference, now: Date): boolean {
+  if (conf.end_at_utc) {
+    return new Date(conf.end_at_utc) > now;
+  }
+  if (conf.start_at_utc) {
+    return new Date(conf.start_at_utc) > now;
+  }
+  // No dates at all: fall back to whether any submission deadline is in the future
   const deadlines = conf.milestones.filter((m) => SUBMISSION_DEADLINE_TYPES.has(m.type));
   if (deadlines.length > 0) {
     return deadlines.some((m) => new Date(m.at_utc) > now);
   }
-  const end = conf.end_at_utc ? new Date(conf.end_at_utc) : null;
-  return end === null || end > now;
+  return true;
 }
 
 /**
