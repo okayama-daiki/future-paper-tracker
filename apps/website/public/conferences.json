@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-15T13:37:33.885Z",
+  "generated_at": "2026-04-15T13:45:04.092Z",
   "conference_series": [
     {
       "id": "PODC",
@@ -386,22 +386,43 @@
         {
           "id": "WAAC-2026",
           "series_id": "WAAC",
-          "name": "Japan–Korea/Korea–Japan Joint Workshop on Algorithms and Computation 2026",
+          "name": "Japan–Korea/Korea–Japan Joint Workshop on Algorithms and Computation",
           "year": 2026,
           "ordinal_no": 26,
-          "url": "https://waac-alg-comp.github.io",
-          "venue": null,
-          "start_at_utc": "2026-08-19T00:00:00.000Z",
-          "end_at_utc": null,
+          "url": "https://algo.postech.ac.kr/workshops/waac26/",
+          "venue": "Pusan National University, Busan, Korea",
+          "start_at_utc": "2026-08-19T00:00:00Z",
+          "end_at_utc": "2026-08-20T23:59:59Z",
           "milestones": [
             {
               "type": "submission_deadline",
-              "at_utc": "2026-05-25T14:59:59.000Z",
-              "source_url": "https://waac-alg-comp.github.io",
-              "is_estimated": true
+              "at_utc": "2026-05-08T14:59:59Z",
+              "source_url": "https://algo.postech.ac.kr/workshops/waac26/",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2026-06-09T00:00:00Z",
+              "source_url": "https://algo.postech.ac.kr/workshops/waac26/",
+              "is_estimated": false
+            },
+            {
+              "type": "registration_deadline",
+              "at_utc": "2026-07-10T00:00:00Z",
+              "source_url": "https://algo.postech.ac.kr/workshops/waac26/",
+              "is_estimated": false
+            },
+            {
+              "type": "camera_ready",
+              "at_utc": "2026-07-28T00:00:00Z",
+              "source_url": "https://algo.postech.ac.kr/workshops/waac26/",
+              "is_estimated": false
             }
           ],
-          "call_for_paper": null
+          "call_for_paper": {
+            "source_url": "https://algo.postech.ac.kr/workshops/waac26/WAAC2026_CFP.pdf",
+            "page_count": null
+          }
         }
       ]
     },
