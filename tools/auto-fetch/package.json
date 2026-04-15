@@ -1,0 +1,30 @@
+{
+  "name": "auto-fetch",
+  "version": "0.0.0",
+  "private": true,
+  "bin": {
+    "auto-fetch": "./src/cli.ts"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "vp exec tsc -p tsconfig.build.json",
+    "start": "vp run build && node dist/cli.js",
+    "test": "vp test",
+    "check": "vp check"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.66",
+    "@ai-sdk/openai": "^3.0.50",
+    "@mozilla/readability": "^0.5.0",
+    "ai": "^6.0.146",
+    "linkedom": "^0.18.9",
+    "utils": "workspace:*",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/mozilla__readability": "^0.4.2",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}
