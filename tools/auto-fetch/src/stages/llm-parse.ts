@@ -19,24 +19,24 @@ export const MilestoneSchema = z.object({
     "registration_deadline",
   ]),
   at_utc: z.string().describe("ISO 8601 UTC datetime, e.g. 2026-02-17T11:59:59Z"),
-  source_url: z.string().url(),
+  source_url: z.string(),
 });
 
 export const CallForPaperSchema = z.object({
-  source_url: z.string().url(),
+  source_url: z.string(),
   page_count: z.number().int().positive().nullable(),
 });
 
 export const ExtractedConferenceSchema = z.object({
-  name: z.string().optional(),
-  year: z.number().int().optional(),
-  ordinal_no: z.number().int().nullable().optional(),
-  url: z.string().url().optional(),
-  venue: z.string().nullable().optional(),
-  start_at_utc: z.string().nullable().optional(),
-  end_at_utc: z.string().nullable().optional(),
-  milestones: z.array(MilestoneSchema).optional(),
-  call_for_paper: CallForPaperSchema.nullable().optional(),
+  name: z.string().nullable(),
+  year: z.number().int().nullable(),
+  ordinal_no: z.number().int().nullable(),
+  url: z.string().nullable(),
+  venue: z.string().nullable(),
+  start_at_utc: z.string().nullable(),
+  end_at_utc: z.string().nullable(),
+  milestones: z.array(MilestoneSchema).nullable(),
+  call_for_paper: CallForPaperSchema.nullable(),
   confidence: z
     .number()
     .min(0)
@@ -97,14 +97,14 @@ export class AISdkLLMParser implements LLMParser {
     const { confidence, ...fields } = extracted;
 
     const conference: Partial<Conference> = {
-      ...(fields.name && { name: fields.name }),
-      ...(fields.year && { year: fields.year }),
+      ...(fields.name != null && { name: fields.name }),
+      ...(fields.year != null && { year: fields.year }),
       ...(fields.ordinal_no !== undefined && { ordinal_no: fields.ordinal_no }),
-      ...(fields.url && { url: fields.url }),
+      ...(fields.url != null && { url: fields.url }),
       ...(fields.venue !== undefined && { venue: fields.venue }),
       ...(fields.start_at_utc !== undefined && { start_at_utc: fields.start_at_utc }),
       ...(fields.end_at_utc !== undefined && { end_at_utc: fields.end_at_utc }),
-      ...(fields.milestones && {
+      ...(fields.milestones != null && {
         milestones: fields.milestones.map((m) => ({
           ...m,
           is_estimated: false,
