@@ -45,7 +45,7 @@
         {
           "id": "PODC-2027",
           "series_id": "PODC",
-          "name": "ACM Symposium on Principles of Distributed Computing",
+          "name": "The 46th ACM Symposium on Principles of Distributed Computing",
           "year": 2027,
           "ordinal_no": 46,
           "url": "https://www.podc.org/",
@@ -88,9 +88,9 @@
         {
           "id": "SIROCCO-2026",
           "series_id": "SIROCCO",
-          "name": "International Colloquium on Structural Information and Communication Complexity",
+          "name": "The 33rd International Colloquium on Structural Information and Communication Complexity",
           "year": 2026,
-          "ordinal_no": 25,
+          "ordinal_no": 33,
           "url": "https://sirocco.hiit.fi",
           "venue": "Durham, UK",
           "start_at_utc": "2026-02-17T00:00:00Z",
@@ -123,7 +123,7 @@
         {
           "id": "SIROCCO-2027",
           "series_id": "SIROCCO",
-          "name": "International Colloquium on Structural Information and Communication Complexity",
+          "name": "The 34th International Colloquium on Structural Information and Communication Complexity",
           "year": 2027,
           "ordinal_no": 34,
           "url": "https://sirocco.hiit.fi",
@@ -198,7 +198,7 @@
         {
           "id": "WAOA-2026",
           "series_id": "WAOA",
-          "name": "The Workshop on Approximation and Online Algorithms",
+          "name": "The 24th Workshop on Approximation and Online Algorithms",
           "year": 2026,
           "ordinal_no": 24,
           "url": "https://algo-conference.org/",
@@ -386,7 +386,7 @@
         {
           "id": "WAAC-2026",
           "series_id": "WAAC",
-          "name": "Japan–Korea/Korea–Japan Joint Workshop on Algorithms and Computation",
+          "name": "The 26th Japan–Korea/Korea–Japan Joint Workshop on Algorithms and Computation",
           "year": 2026,
           "ordinal_no": 26,
           "url": "https://algo.postech.ac.kr/workshops/waac26/",
@@ -683,26 +683,10 @@
           "ordinal_no": null,
           "url": "https://orsj.org/nc-dummy",
           "venue": "京都大学（吉田キャンパス）",
-          "start_at_utc": "2026-12-17T10:29:58.500Z",
-          "end_at_utc": "2026-09-11T00:00:00Z",
-          "milestones": [
-            {
-              "type": "submission_deadline",
-              "at_utc": "2026-01-19T14:59:59Z",
-              "source_url": "https://orsj.org/2026s/conference/submission/",
-              "is_estimated": false
-            },
-            {
-              "type": "abstract_submission_deadline",
-              "at_utc": "2026-01-27T14:59:59Z",
-              "source_url": "https://orsj.org/2026s/conference/submission/",
-              "is_estimated": false
-            }
-          ],
-          "call_for_paper": {
-            "source_url": "https://orsj.org/2026s/conference/submission/",
-            "page_count": null
-          }
+          "start_at_utc": "2026-09-11T00:00:00Z",
+          "end_at_utc": null,
+          "milestones": [],
+          "call_for_paper": null
         }
       ]
     },
@@ -897,60 +881,6 @@
       ]
     },
     {
-      "id": "RAOTA",
-      "name": "日本OR学会研究部会：最適化の理論とアルゴリズム",
-      "url": "https://orsj.org/raota/",
-      "enabled": true,
-      "conferences": [
-        {
-          "id": "RAOTA-2025",
-          "series_id": "RAOTA",
-          "name": "最適化の理論とアルゴリズム：未来を担う若手研究者の集い 2025",
-          "year": 2025,
-          "ordinal_no": null,
-          "url": "https://orsj.org/raota/#tsukuba25",
-          "venue": "筑波大学 筑波キャンパス 春日地区 春日講堂",
-          "start_at_utc": "2025-05-31T00:00:00Z",
-          "end_at_utc": "2025-06-01T23:59:59Z",
-          "milestones": [
-            {
-              "type": "submission_deadline",
-              "at_utc": "2025-04-30T14:59:00Z",
-              "source_url": "https://orsj.org/raota/",
-              "is_estimated": false
-            }
-          ],
-          "call_for_paper": {
-            "source_url": "https://orsj.org/raota/#tsukuba25",
-            "page_count": null
-          }
-        },
-        {
-          "id": "RAOTA-2026",
-          "series_id": "RAOTA",
-          "name": "日本OR学会研究部会：最適化の理論とアルゴリズム",
-          "year": 2026,
-          "ordinal_no": 12,
-          "url": "https://orsj.org/raota/",
-          "venue": "国立情報学研究所 (NII) 12 階 1208 号室",
-          "start_at_utc": "2026-02-23T04:30:00Z",
-          "end_at_utc": "2026-02-23T09:00:00Z",
-          "milestones": [
-            {
-              "type": "submission_deadline",
-              "at_utc": "2025-04-30T14:59:00Z",
-              "source_url": "https://orsj.org/raota/",
-              "is_estimated": false
-            }
-          ],
-          "call_for_paper": {
-            "source_url": "https://orsj.org/raota/",
-            "page_count": null
-          }
-        }
-      ]
-    },
-    {
       "id": "FIT",
       "name": "情報科学技術フォーラム",
       "url": "https://www.ipsj.or.jp/event/fit/fit.html",
@@ -1031,9 +961,9 @@
         {
           "id": "MIP-2026",
           "series_id": "MIP",
-          "name": "The Mixed Integer Programming Workshop",
+          "name": "The 23rd Mixed Integer Programming Workshop",
           "year": 2026,
-          "ordinal_no": 45,
+          "ordinal_no": 23,
           "url": "https://www.mixedinteger.org/",
           "venue": "University of Connecticut",
           "start_at_utc": "2026-05-18T00:00:00Z",
@@ -1090,7 +1020,7 @@
         {
           "id": "IPCO-2027",
           "series_id": "IPCO",
-          "name": "Integer Programming and Combinatorial Optimization 2027",
+          "name": "The 28th Integer Programming and Combinatorial Optimization",
           "year": 2027,
           "ordinal_no": 28,
           "url": "https://mathopt.zib.de/?nav=ipco",
@@ -1159,7 +1089,7 @@
         {
           "id": "IFORS-2027",
           "series_id": "IFORS",
-          "name": "International Federation of Operational Research Societies",
+          "name": "The 25th International Federation of Operational Research Societies",
           "year": 2027,
           "ordinal_no": 25,
           "url": "https://www.ifors.org/",
@@ -1214,9 +1144,9 @@
         {
           "id": "MOPTA-2026",
           "series_id": "MOPTA",
-          "name": "Modeling and Optimization: Theory and Applications",
+          "name": "Modeling and Optimization: Theory and Applications (MOPTA) 2026",
           "year": 2026,
-          "ordinal_no": 20,
+          "ordinal_no": null,
           "url": "https://coral.ise.lehigh.edu/mopta2026/",
           "venue": "Bethlehem, Pennsylvania",
           "start_at_utc": "2026-08-18T00:00:00Z",
@@ -1243,9 +1173,9 @@
         {
           "id": "MOPTA-2025",
           "series_id": "MOPTA",
-          "name": "The 19th Modeling and Optimization: Theory and Applications",
+          "name": "Modeling and Optimization: Theory and Applications (MOPTA) 2025",
           "year": 2025,
-          "ordinal_no": 19,
+          "ordinal_no": null,
           "url": "https://coral.ise.lehigh.edu/mopta2025/",
           "venue": "Teatro Micaelense, Ponta Delgada, Azores, Portugal",
           "start_at_utc": "2025-06-17T00:00:00Z",
@@ -1264,9 +1194,9 @@
         {
           "id": "ALGO-2026",
           "series_id": "ALGO",
-          "name": "ALGO",
+          "name": "Annual Meeting Combining the Premier Algorithmic Conference 2026",
           "year": 2026,
-          "ordinal_no": 2026,
+          "ordinal_no": null,
           "url": "https://algo-conference.org/",
           "venue": "L’Aquila, Italy",
           "start_at_utc": "2026-08-31T00:00:00Z",
@@ -1441,7 +1371,7 @@
         {
           "id": "ISSAC-2027",
           "series_id": "ISSAC",
-          "name": "The International Symposium on Symbolic and Algebraic Computation",
+          "name": "The 52nd International Symposium on Symbolic and Algebraic Computation",
           "year": 2027,
           "ordinal_no": 52,
           "url": "https://www.issac-conference.org",
@@ -1576,7 +1506,7 @@
         {
           "id": "FOCS-2026",
           "series_id": "FOCS",
-          "name": "The IEEE Symposium on Foundations of Computer Science",
+          "name": "The 67th IEEE Symposium on Foundations of Computer Science",
           "year": 2026,
           "ordinal_no": 67,
           "url": "https://focs.computer.org/",
@@ -1605,9 +1535,9 @@
         {
           "id": "FOCS-2027",
           "series_id": "FOCS",
-          "name": "The IEEE Symposium on Foundations of Computer Science 2027",
+          "name": "The 68th IEEE Symposium on Foundations of Computer Science",
           "year": 2027,
-          "ordinal_no": 67,
+          "ordinal_no": 68,
           "url": "https://focs.computer.org/",
           "venue": null,
           "start_at_utc": "2027-12-14T00:00:00.000Z",
@@ -1680,7 +1610,7 @@
         {
           "id": "STOC-2027",
           "series_id": "STOC",
-          "name": "ACM Symposium on Theory of Computing",
+          "name": "The 59th ACM Symposium on Theory of Computing",
           "year": 2027,
           "ordinal_no": 59,
           "url": "https://acm-stoc.org/",
@@ -1746,9 +1676,9 @@
         {
           "id": "ACDA-2026",
           "series_id": "ACDA",
-          "name": "SIAM Conference on Applied and Computational Discrete Algorithms",
+          "name": "SIAM Conference on Applied and Computational Discrete Algorithms 2026",
           "year": 2026,
-          "ordinal_no": 27,
+          "ordinal_no": null,
           "url": "https://www.siam.org/conferences-events/siam-conferences/acda27/",
           "venue": "Pittsburgh, PA, United States",
           "start_at_utc": "2027-02-22T00:00:00Z",
@@ -1783,7 +1713,7 @@
         {
           "id": "AAAI-2027",
           "series_id": "AAAI",
-          "name": "The Association for the Advancement of Artificial Intelligence",
+          "name": "The 41st Association for the Advancement of Artificial Intelligence",
           "year": 2027,
           "ordinal_no": 41,
           "url": "https://aaai.org/conference/aaai/aaai-27/",
@@ -1932,7 +1862,7 @@
         {
           "id": "SWAT-2027",
           "series_id": "SWAT",
-          "name": "Scandinavian Symposium on Algorithm Theory 2027",
+          "name": "The 21st Scandinavian Symposium on Algorithm Theory",
           "year": 2027,
           "ordinal_no": 21,
           "url": "https://swat2026.compute.dtu.dk/",
@@ -2013,7 +1943,7 @@
         {
           "id": "WALCOM-2027",
           "series_id": "WALCOM",
-          "name": "International Conference and Workshops on Algorithms and Computation 2027",
+          "name": "The 21st International Conference and Workshops on Algorithms and Computation",
           "year": 2027,
           "ordinal_no": 21,
           "url": "https://www.walcom-conference.org/",
@@ -2094,7 +2024,7 @@
         {
           "id": "ICALP-2027",
           "series_id": "ICALP",
-          "name": "International Colloquium on Automata, Languages, and Programming 2027",
+          "name": "The 54th International Colloquium on Automata, Languages, and Programming",
           "year": 2027,
           "ordinal_no": 54,
           "url": "https://eatcs.org/index.php/future-icalps",
@@ -2175,7 +2105,7 @@
         {
           "id": "ESA-2026",
           "series_id": "ESA",
-          "name": "European Symposium on Algorithms",
+          "name": "The 34th European Symposium on Algorithms",
           "year": 2026,
           "ordinal_no": 34,
           "url": "https://algo-conference.org/2026/esa/",
@@ -2259,7 +2189,7 @@
         {
           "id": "ISAAC-2026",
           "series_id": "ISAAC",
-          "name": "International Symposium on Algorithms and Computation",
+          "name": "The 37th International Symposium on Algorithms and Computation",
           "year": 2026,
           "ordinal_no": 37,
           "url": "https://www.kurims.kyoto-u.ac.jp/isaac/ISAAC.html",
@@ -2308,7 +2238,7 @@
         {
           "id": "SoCG-2026",
           "series_id": "SoCG",
-          "name": "The International Symposium on Computational Geometry",
+          "name": "The 42nd International Symposium on Computational Geometry",
           "year": 2026,
           "ordinal_no": 42,
           "url": "https://computational-geometry.org/cg-week/socg/",
@@ -2380,7 +2310,7 @@
         {
           "id": "ITCS-2027",
           "series_id": "ITCS",
-          "name": "Innovations in Theoretical Computer Science 2027",
+          "name": "The 18th Innovations in Theoretical Computer Science",
           "year": 2027,
           "ordinal_no": 18,
           "url": "http://itcs-conf.org/index.html",
@@ -2533,7 +2463,7 @@
         {
           "id": "RANDOM-2026",
           "series_id": "RANDOM",
-          "name": "International Conference on Randomization and Computation",
+          "name": "The 30th International Conference on Randomization and Computation",
           "year": 2026,
           "ordinal_no": 30,
           "url": "https://randomconference.com",
@@ -2617,7 +2547,7 @@
         {
           "id": "IPEC-2026",
           "series_id": "IPEC",
-          "name": "International Symposium on Parameterized and Exact Computation",
+          "name": "The 21st International Symposium on Parameterized and Exact Computation",
           "year": 2026,
           "ordinal_no": 21,
           "url": "https://algo-conference.org/2026/ipec/",
@@ -2666,7 +2596,7 @@
         {
           "id": "DISC-2026",
           "series_id": "DISC",
-          "name": "International Symposium on Distributed Computing",
+          "name": "The 40th International Symposium on Distributed Computing",
           "year": 2026,
           "ordinal_no": 40,
           "url": "https://www.disc-conference.org/wp/",
@@ -2728,7 +2658,7 @@
         {
           "id": "SPAA-2027",
           "series_id": "SPAA",
-          "name": "ACM Symposium on Parallelism in Algorithms and Architectures 2027",
+          "name": "The 39th ACM Symposium on Parallelism in Algorithms and Architectures",
           "year": 2027,
           "ordinal_no": 39,
           "url": "https://spaa.acm.org",
@@ -2787,9 +2717,9 @@
         {
           "id": "OPODIS-2024",
           "series_id": "OPODIS",
-          "name": "International Conference on Principles of Distributed Systems",
+          "name": "The 28th International Conference on Principles of Distributed Systems",
           "year": 2024,
-          "ordinal_no": 45,
+          "ordinal_no": 28,
           "url": "https://opodis.net",
           "venue": "Lucca, Italy",
           "start_at_utc": "2024-12-11T00:00:00Z",
@@ -2895,7 +2825,7 @@
         {
           "id": "CPAIOR-2026",
           "series_id": "CPAIOR",
-          "name": "International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research",
+          "name": "The 23rd International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research",
           "year": 2026,
           "ordinal_no": 23,
           "url": "https://cpaior.org",
@@ -2937,8 +2867,55 @@
       "id": "TSUKUBA",
       "name": "未来を担う若手研究者の集い（つくば合宿）",
       "url": "https://orsj.org/raota/",
-      "enabled": false,
-      "conferences": []
+      "enabled": true,
+      "conferences": [
+        {
+          "id": "TSUKUBA-2025",
+          "series_id": "TSUKUBA",
+          "name": "最適化の理論とアルゴリズム：未来を担う若手研究者の集い 2025",
+          "year": 2025,
+          "ordinal_no": null,
+          "url": "https://orsj.org/raota/#tsukuba25",
+          "venue": "筑波大学 筑波キャンパス 春日地区 春日講堂",
+          "start_at_utc": "2025-05-31T00:00:00Z",
+          "end_at_utc": "2025-06-01T23:59:59Z",
+          "milestones": [
+            {
+              "type": "submission_deadline",
+              "at_utc": "2025-04-30T14:59:00Z",
+              "source_url": "https://orsj.org/raota/",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://orsj.org/raota/#tsukuba25",
+            "page_count": null
+          }
+        },
+        {
+          "id": "TSUKUBA-2026",
+          "series_id": "TSUKUBA",
+          "name": "未来を担う若手研究者の集い（つくば合宿）2026",
+          "year": 2026,
+          "ordinal_no": 12,
+          "url": "https://orsj.org/raota/",
+          "venue": "国立情報学研究所 (NII) 12 階 1208 号室",
+          "start_at_utc": "2026-02-23T04:30:00Z",
+          "end_at_utc": "2026-02-23T09:00:00Z",
+          "milestones": [
+            {
+              "type": "submission_deadline",
+              "at_utc": "2025-04-30T14:59:00Z",
+              "source_url": "https://orsj.org/raota/",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://orsj.org/raota/",
+            "page_count": null
+          }
+        }
+      ]
     }
   ]
 }

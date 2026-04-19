@@ -2,6 +2,21 @@ import type { Conference, ConferenceSeries, Milestone, MilestoneType } from "uti
 
 const TWELVE_MONTHS_MS = 12 * 30 * 24 * 60 * 60 * 1000;
 
+function ordinalSuffix(n: number): string {
+  const v = n % 100;
+  if (v >= 11 && v <= 13) return "th";
+  switch (n % 10) {
+    case 1:
+      return "st";
+    case 2:
+      return "nd";
+    case 3:
+      return "rd";
+    default:
+      return "th";
+  }
+}
+
 /** Milestone types considered "submission deadlines" — used as the anchor. */
 const DEADLINE_TYPES = new Set<MilestoneType>([
   "abstract_submission_deadline",
@@ -66,11 +81,15 @@ export function generateEstimated(
   const lastConf = past[past.length - 1]!;
   const year = startAtUtc ? startAtUtc.getFullYear() : predictedAnchor.getFullYear();
   const ordinal_no = lastConf.ordinal_no !== null ? lastConf.ordinal_no + 1 : null;
+  const name =
+    ordinal_no !== null
+      ? `The ${ordinal_no}${ordinalSuffix(ordinal_no)} ${series.name.replace(/^The /, "")}`
+      : `${series.name} ${year}`;
 
   const conference: Conference = {
     id: `${series.id}-${year}`,
     series_id: series.id,
-    name: `${series.name} ${year}`,
+    name,
     year,
     ordinal_no,
     url: series.url,
