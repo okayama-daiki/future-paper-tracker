@@ -9,8 +9,7 @@
     "preview": "vp preview"
   },
   "dependencies": {
-    "preact": "catalog:",
-    "utils": "workspace:*"
+    "preact": "catalog:"
   },
   "devDependencies": {
     "typescript": "~5.9.3",

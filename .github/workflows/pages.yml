@@ -1,82 +1,88 @@
 name: Pages
 
 on:
-    pull_request:
-    push:
-        branches:
-            - main
-    workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
-    contents: read
+  contents: read
 
 concurrency:
-    group: pages-${{ github.ref }}
-    cancel-in-progress: true
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-    verify:
-        name: Verify
-        runs-on: ubuntu-latest
+  verify:
+    name: Verify
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v6.0.2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
 
-            - name: Setup Bun
-              uses: oven-sh/setup-bun@v2.1.3
-              with:
-                  bun-version: latest
+      - name: Setup vp
+        uses: voidzero-dev/setup-vp@v1
+        with:
+          node-version: "22"
+          cache: true
 
-            - name: Install dependencies
-              run: bun install --frozen-lockfile
+      - name: Install dependencies
+        run: vp install --frozen-lockfile
 
-            - name: Lint
-              run: bun run lint
+      - name: Lint
+        run: vp lint
 
-            - name: Build
-              run: bun run build
+      - name: Format
+        run: vp fmt --check
 
-    deploy:
-        name: Deploy to GitHub Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        needs: verify
-        runs-on: ubuntu-latest
+      - name: Test
+        run: vp test --passWithNoTests
 
-        permissions:
-            contents: read
-            pages: write
-            id-token: write
+      - name: Build
+        run: vp run build -r
 
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: verify
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v6.0.2
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
-            - name: Setup Bun
-              uses: oven-sh/setup-bun@v2.1.3
-              with:
-                  bun-version: latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
-            - name: Setup Pages
-              uses: actions/configure-pages@v5.0.0
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
 
-            - name: Install dependencies
-              run: bun install --frozen-lockfile
+      - name: Setup vp
+        uses: voidzero-dev/setup-vp@v1
+        with:
+          node-version: "22"
+          cache: true
 
-            - name: Build for Pages
-              run: |
-                  bunx tsc -b
-                  bunx vite build
+      - name: Setup Pages
+        uses: actions/configure-pages@v5.0.0
 
-            - name: Upload Pages artifact
-              uses: actions/upload-pages-artifact@v4.0.0
-              with:
-                  path: dist
+      - name: Install dependencies
+        run: vp install --frozen-lockfile
 
-            - name: Deploy
-              id: deployment
-              uses: actions/deploy-pages@v4.0.5
+      - name: Build for Pages
+        run: vp run build -r
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4.0.0
+        with:
+          path: apps/website/dist
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4.0.5
