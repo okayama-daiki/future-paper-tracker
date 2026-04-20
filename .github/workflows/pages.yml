@@ -42,7 +42,7 @@ jobs:
         run: vp test --passWithNoTests
 
       - name: Build
-        run: vp run build -r
+        run: vp run website#build
 
   deploy:
     name: Deploy to GitHub Pages
@@ -76,7 +76,7 @@ jobs:
         run: vp install --frozen-lockfile
 
       - name: Build for Pages
-        run: vp run build -r
+        run: vp run website#build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4.0.0
