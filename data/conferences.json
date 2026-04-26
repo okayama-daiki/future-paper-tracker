@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T10:39:20Z",
+  "generated_at": "2026-04-26T22:21:47Z",
   "conference_series": [
     {
       "id": "PODC",
@@ -2103,9 +2103,9 @@
           "year": 2026,
           "ordinal_no": 34,
           "url": "https://algo-conference.org/2026/esa/",
-          "venue": null,
-          "start_at_utc": "2026-09-15T00:00:00.000Z",
-          "end_at_utc": null,
+          "venue": "L’Aquila, Italy",
+          "start_at_utc": "2026-08-31T00:00:00Z",
+          "end_at_utc": "2026-09-04T23:59:59Z",
           "milestones": [
             {
               "type": "abstract_submission_deadline",
