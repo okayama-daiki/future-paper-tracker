@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T08:06:13Z",
+  "generated_at": "2026-04-26T08:41:26Z",
   "conference_series": [
     {
       "id": "PODC",
@@ -2235,12 +2235,40 @@
           "name": "The 42nd International Symposium on Computational Geometry",
           "year": 2026,
           "ordinal_no": 42,
-          "url": "https://computational-geometry.org/cg-week/socg/",
-          "venue": null,
-          "start_at_utc": null,
-          "end_at_utc": null,
-          "milestones": [],
-          "call_for_paper": null
+          "url": "https://cgweek26.computational-geometry.org/",
+          "venue": "Rutgers University, College Avenue Campus, New Brunswick, NJ, USA",
+          "start_at_utc": "2026-06-02T00:00:00Z",
+          "end_at_utc": "2026-06-05T23:59:59Z",
+          "milestones": [
+            {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2025-11-25T23:59:59Z",
+              "source_url": "https://cgweek26.computational-geometry.org/contribute/",
+              "is_estimated": false
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2025-12-02T23:59:59Z",
+              "source_url": "https://cgweek26.computational-geometry.org/contribute/",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2026-02-05T23:59:59Z",
+              "source_url": "https://cgweek26.computational-geometry.org/contribute/",
+              "is_estimated": false
+            },
+            {
+              "type": "camera_ready",
+              "at_utc": "2026-03-24T23:59:59Z",
+              "source_url": "https://cgweek26.computational-geometry.org/contribute/",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://cgweek26.computational-geometry.org/contribute/",
+            "page_count": null
+          }
         },
         {
           "id": "SoCG-2025",
@@ -2255,6 +2283,49 @@
           "milestones": [],
           "call_for_paper": {
             "source_url": "https://socg25.github.io/socg.html",
+            "page_count": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "CCCG",
+      "name": "The Canadian Conference on Computational Geometry",
+      "url": "https://cccg.ca/",
+      "enabled": true,
+      "conferences": [
+        {
+          "id": "CCCG-2026",
+          "series_id": "CCCG",
+          "name": "The 38th Canadian Conference on Computational Geometry",
+          "year": 2026,
+          "ordinal_no": 38,
+          "url": "https://sites.google.com/view/cccg-2026/home",
+          "venue": "Lakehead University, Orillia, Ontario, Canada",
+          "start_at_utc": "2026-08-12T00:00:00Z",
+          "end_at_utc": "2026-08-14T23:59:59Z",
+          "milestones": [
+            {
+              "type": "submission_deadline",
+              "at_utc": "2026-05-01T11:59:59Z",
+              "source_url": "https://sites.google.com/view/cccg-2026/important-dates",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2026-06-07T11:59:59Z",
+              "source_url": "https://sites.google.com/view/cccg-2026/important-dates",
+              "is_estimated": false
+            },
+            {
+              "type": "camera_ready",
+              "at_utc": "2026-07-01T11:59:59Z",
+              "source_url": "https://sites.google.com/view/cccg-2026/important-dates",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://sites.google.com/view/cccg-2026/call-for-papers",
             "page_count": null
           }
         }

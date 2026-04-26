@@ -85,4 +85,11 @@ For GitHub Actions, consider using [`voidzero-dev/setup-vp`](https://github.com/
 
 - [ ] Run `vp install` after pulling remote changes and before getting started.
 - [ ] Run `vp check` and `vp test` to validate changes.
+
+## Repository-Specific Notes
+
+- Conference data automation is documented in `docs/codex-automation.md`.
+- Use `vp run automation:list-targets` to choose conference-series work for child agents.
+- Use `vp run automation:describe-target -- <SERIES_ID_OR_NAME> --markdown` to resolve a series to the conference that should be checked next.
+- `data/conferences.json` and `apps/website/public/conferences.json` are hard-linked. Edit `data/conferences.json` only.
 <!--VITE PLUS END-->
