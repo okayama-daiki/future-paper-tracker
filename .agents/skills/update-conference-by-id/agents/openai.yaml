@@ -1,0 +1,6 @@
+interface:
+  display_name: "Update Conference"
+  short_description: "Update one conference by ID"
+  default_prompt: "Update a conference entry in future-paper-tracker by conference-id using official sources and validate data/conferences.json."
+policy:
+  allow_implicit_invocation: false
