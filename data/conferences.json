@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T08:41:26Z",
+  "generated_at": "2026-04-26T10:39:20Z",
   "conference_series": [
     {
       "id": "PODC",
@@ -1615,24 +1615,24 @@
             {
               "type": "submission_deadline",
               "at_utc": "2026-11-04T21:59:00.000Z",
-              "source_url": "https://acm-stoc.org",
+              "source_url": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
               "is_estimated": true
             },
             {
               "type": "notification",
               "at_utc": "2027-02-01T00:00:00.000Z",
-              "source_url": "https://acm-stoc.org",
+              "source_url": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
               "is_estimated": true
             },
             {
               "type": "camera_ready",
               "at_utc": "2027-03-31T00:00:00.000Z",
-              "source_url": "https://acm-stoc.org",
+              "source_url": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
               "is_estimated": true
             }
           ],
           "call_for_paper": {
-            "source_url": "https://www.ourglocal.com/wikicfp/?conid=2&year=2027",
+            "source_url": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
             "page_count": null
           }
         }
