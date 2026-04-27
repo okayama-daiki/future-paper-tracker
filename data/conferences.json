@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T10:39:20Z",
+  "generated_at": "2026-04-27T01:50:17Z",
   "conference_series": [
     {
       "id": "PODC",
@@ -2810,9 +2810,9 @@
           "year": 2027,
           "ordinal_no": 25,
           "url": "https://www.mathopt.org/ISMP-Conferences",
-          "venue": null,
-          "start_at_utc": null,
-          "end_at_utc": null,
+          "venue": "Amsterdam, Netherlands",
+          "start_at_utc": "2027-07-25T00:00:00Z",
+          "end_at_utc": "2027-07-30T23:59:59Z",
           "milestones": [],
           "call_for_paper": null
         },
