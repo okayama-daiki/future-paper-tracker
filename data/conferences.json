@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T10:39:20Z",
+  "generated_at": "2026-04-27T01:49:36Z",
   "conference_series": [
     {
       "id": "PODC",
@@ -2664,12 +2664,34 @@
           "name": "The 40th International Symposium on Distributed Computing",
           "year": 2026,
           "ordinal_no": 40,
-          "url": "https://www.disc-conference.org/wp/",
-          "venue": "Rome, Italy",
+          "url": "https://www.disc-conference.org/wp/disc2026/",
+          "venue": "Chiostro in San Pietro in Vincoli, Sapienza Engineering Faculty, Via Eudossiana 18, 00184 Roma RM, Italy",
           "start_at_utc": "2026-11-09T00:00:00Z",
           "end_at_utc": "2026-11-13T23:59:59Z",
-          "milestones": [],
-          "call_for_paper": null
+          "milestones": [
+            {
+              "type": "registration_deadline",
+              "at_utc": "2026-05-28T11:59:59Z",
+              "source_url": "https://www.disc-conference.org/wp/disc2026/call-for-papers/",
+              "is_estimated": false
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2026-06-02T11:59:59Z",
+              "source_url": "https://www.disc-conference.org/wp/disc2026/call-for-papers/",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2026-08-05T00:00:00Z",
+              "source_url": "https://www.disc-conference.org/wp/disc2026/call-for-papers/",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://www.disc-conference.org/wp/disc2026/call-for-papers/",
+            "page_count": 1
+          }
         }
       ]
     },
