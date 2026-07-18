@@ -93,17 +93,17 @@ const __dirname = path.dirname(__filename);
 
 export const repoRoot = path.resolve(__dirname, "..", "..");
 export const conferencesDataPath = path.join(repoRoot, "data", "conferences.json");
+export const conferencesPublicPath = path.join(
+  repoRoot,
+  "apps",
+  "website",
+  "public",
+  "conferences.json",
+);
 export const conferencesConfigPath = path.join(repoRoot, "config", "conferences.csv");
 
 export function isoNowWithoutMilliseconds(date = new Date()): string {
   return date.toISOString().replace(/\.\d{3}Z$/, "Z");
-}
-
-export function branchTimestamp(date = new Date()): string {
-  return isoNowWithoutMilliseconds(date)
-    .replace(/[-:]/g, "")
-    .replace(/\.\d{3}/g, "")
-    .replace("Z", "z");
 }
 
 export async function loadConferenceData(): Promise<ConferencesData> {
@@ -276,12 +276,8 @@ export function describeConference(conference: Conference, now = new Date()): Se
   };
 }
 
-export function buildBranchName(
-  seriesId: string,
-  conferenceId = "bootstrap",
-  now = new Date(),
-): string {
-  return `automation/${seriesId.toLowerCase()}/${conferenceId.toLowerCase()}-${branchTimestamp(now)}`;
+export function buildBranchName(seriesId: string, conferenceId = "bootstrap"): string {
+  return `automation/${seriesId.toLowerCase()}/${conferenceId.toLowerCase()}`;
 }
 
 export function buildPrTitle(

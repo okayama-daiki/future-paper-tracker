@@ -91,5 +91,7 @@ For GitHub Actions, consider using [`voidzero-dev/setup-vp`](https://github.com/
 - Conference data automation is documented in `docs/codex-automation.md`.
 - Use `vp run automation:list-targets` to choose conference-series work for child agents.
 - Use `vp run automation:describe-target -- <SERIES_ID_OR_NAME> --markdown` to resolve a series to the conference that should be checked next.
+- Before creating a conference automation branch and again immediately before opening its PR, run `vp run automation:check-open-pr -- <SERIES_ID_OR_CONFERENCE_ID> --markdown`. Stop if an open PR already targets that conference, and always use the stable suggested branch without a timestamp suffix.
+- Use `vp run automation:update-conferences -- --dry-run` to preview the deterministic, no-AI weekly update.
 - `data/conferences.json` and `apps/website/public/conferences.json` are hard-linked. Edit `data/conferences.json` only.
 <!--VITE PLUS END-->

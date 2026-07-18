@@ -36,13 +36,11 @@ function TypeBadge({ type }: { type: MilestoneType }) {
 function Row({ row }: { row: DeadlineRow }) {
   const days = daysUntil(row.milestone.at_utc);
   const status = deadlineStatus(days);
-  const cfp = row.conference.call_for_paper;
-  const seriesHref = cfp?.source_url ?? row.conference.url;
 
   return (
     <tr class={`${styles.row} ${styles[status]}`}>
       <td class={styles.colSeries}>
-        <a href={seriesHref} target="_blank" rel="noopener">
+        <a href={row.conference.url} target="_blank" rel="noopener">
           {row.seriesId}
         </a>
         {row.conference.name && <div class={styles.seriesName}>{row.conference.name}</div>}

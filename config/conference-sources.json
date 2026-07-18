@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "tcs-conf",
+      "kind": "tcs_conf",
+      "role": "discovery",
+      "url_template": "https://tcs-conf.github.io/",
+      "series_ids": [
+        "STOC",
+        "FOCS",
+        "SODA",
+        "ICALP",
+        "ESA",
+        "ISAAC",
+        "SoCG",
+        "CCCG",
+        "ITCS",
+        "SWAT",
+        "ISSAC",
+        "WALCOM",
+        "APPROX",
+        "RANDOM",
+        "IPEC",
+        "WAOA",
+        "ACDA",
+        "PODC",
+        "DISC",
+        "SPAA",
+        "SIROCCO",
+        "OPODIS",
+        "IPCO",
+        "EURO",
+        "CPAIOR",
+        "ALGO",
+        "AAAI"
+      ]
+    },
+    {
+      "id": "sigal-home",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "http://www.ipsj-sigal.or.jp/",
+      "series_ids": ["SIGAL"]
+    },
+    {
+      "id": "ieice-comp",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://www.ieice.org/~comp/",
+      "series_ids": ["COMP"]
+    },
+    {
+      "id": "ieice-ken",
+      "kind": "ieice_ken",
+      "role": "discovery",
+      "url_template": "https://ken.ieice.org/ken/program/index.php?instsoc=IEICE",
+      "series_ids": ["COMP"],
+      "aliases": ["COMP", "コンピュテーション"]
+    },
+    {
+      "id": "jcdcggg-home",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "http://www.alg.cei.uec.ac.jp/itohiro/JCDCGG/",
+      "series_ids": ["JCDCGGG"]
+    },
+    {
+      "id": "la-summer",
+      "kind": "github_pages",
+      "role": "official",
+      "url_template": "https://la-symposium.github.io/${year}/summer.html",
+      "series_ids": ["LA-summer"]
+    },
+    {
+      "id": "la-winter",
+      "kind": "github_pages",
+      "role": "official",
+      "url_template": "https://la-symposium.github.io/${year}/winter.html",
+      "series_ids": ["LA-winter"]
+    },
+    {
+      "id": "fit",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://www.ipsj.or.jp/event/fit/fit${year}/index.html",
+      "series_ids": ["FIT"]
+    },
+    {
+      "id": "coss",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://www.kurims.kyoto-u.ac.jp/coss/coss${year}/coss${year}.html",
+      "series_ids": ["COSS"]
+    },
+    {
+      "id": "jsiam-annual",
+      "kind": "wordpress_rest",
+      "role": "official",
+      "url_template": "https://jsiam.org/wp-json/wp/v2/jsiam_archive?slug=annual${year}",
+      "series_ids": ["JSIAM"]
+    },
+    {
+      "id": "orsj-spring",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://orsj.org/${year}s/conference/",
+      "series_ids": ["ORSJ-spring"]
+    },
+    {
+      "id": "orsj-autumn",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://orsj.org/${year}f/conference/",
+      "series_ids": ["ORSJ-autumn"]
+    },
+    {
+      "id": "orsj-rss",
+      "kind": "rss",
+      "role": "discovery",
+      "url_template": "https://orsj.org/?feed=rss2",
+      "series_ids": ["ORSJ-spring", "ORSJ-autumn", "RAMP", "TSUKUBA"],
+      "aliases": ["研究発表会", "RAMP", "未来を担う若手研究者の集い"]
+    },
+    {
+      "id": "ramp-history",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://orsj.org/ramp/symposium/",
+      "series_ids": ["RAMP"],
+      "aliases": ["RAMP ${year}", "第"]
+    },
+    {
+      "id": "tsukuba-home",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://orsj.org/raota/",
+      "series_ids": ["TSUKUBA"]
+    }
+  ]
+}

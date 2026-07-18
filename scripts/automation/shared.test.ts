@@ -139,10 +139,10 @@ describe("selectSeriesTarget", () => {
 });
 
 describe("buildBranchName", () => {
-  test("builds a stable branch name from series, conference, and timestamp", () => {
-    const branchName = buildBranchName("PODC", "PODC-2027", new Date("2026-04-26T08:57:50Z"));
+  test("builds a stable branch name from the series and conference", () => {
+    const branchName = buildBranchName("PODC", "PODC-2027");
 
-    expect(branchName).toBe("automation/podc/podc-2027-20260426T085750z");
+    expect(branchName).toBe("automation/podc/podc-2027");
   });
 });
 
