@@ -29,6 +29,7 @@ const targets = configSeries
       reason: target.reason,
       conferenceId,
       command: `vp run automation:describe-target -- ${series.id} --markdown`,
+      prGuardCommand: `vp run automation:check-open-pr -- ${conferenceId ?? series.id} --markdown`,
       branch: buildBranchName(series.id, conferenceId ?? "bootstrap"),
       prTitle: buildPrTitle(series.id, conferenceId, target.status),
       dataPath: "data/conferences.json",
@@ -51,6 +52,7 @@ if (format === "markdown") {
     console.log(`- Status: ${target.status}`);
     console.log(`- Conference: ${target.conferenceId ?? "n/a"}`);
     console.log(`- Command: ${target.command}`);
+    console.log(`- PR guard: ${target.prGuardCommand}`);
     console.log(`- Suggested branch: ${target.branch}`);
     console.log(`- PR title: ${target.prTitle}`);
     console.log(`- Reason: ${target.reason}`);

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T08:41:26Z",
+  "generated_at": "2026-07-18T14:48:11Z",
   "conference_series": [
     {
       "id": "PODC",
@@ -13,7 +13,7 @@
           "name": "The 45th ACM Symposium on Principles of Distributed Computing",
           "year": 2026,
           "ordinal_no": 45,
-          "url": "https://www.podc.org/",
+          "url": "https://www.podc.org/podc2026/",
           "venue": "Royal Holloway, University of London, Egham, England",
           "start_at_utc": "2026-07-06T00:00:00Z",
           "end_at_utc": "2026-07-10T23:59:59Z",
@@ -38,7 +38,7 @@
             }
           ],
           "call_for_paper": {
-            "source_url": "https://www.podc.org/",
+            "source_url": "https://www.podc.org/podc2026/call-for-papers/",
             "page_count": null
           }
         },
@@ -199,30 +199,33 @@
           "year": 2026,
           "ordinal_no": 24,
           "url": "https://algo-conference.org/2026/waoa/",
-          "venue": null,
-          "start_at_utc": null,
-          "end_at_utc": null,
+          "venue": "L’Aquila, Italy",
+          "start_at_utc": "2026-09-03T00:00:00Z",
+          "end_at_utc": "2026-09-04T23:59:59Z",
           "milestones": [
             {
               "type": "full_paper_submission_deadline",
-              "at_utc": "2026-07-07T11:59:59.000Z",
-              "source_url": "https://algo-conference.org/2025/waoa/",
-              "is_estimated": true
+              "at_utc": "2026-07-03T11:59:59Z",
+              "source_url": "https://algo-conference.org/2026/waoa/",
+              "is_estimated": false
             },
             {
               "type": "notification",
-              "at_utc": "2026-08-07T00:00:00.000Z",
-              "source_url": "https://algo-conference.org/2025/waoa/",
-              "is_estimated": true
+              "at_utc": "2026-08-04T00:00:00Z",
+              "source_url": "https://algo-conference.org/2026/waoa/",
+              "is_estimated": false
             },
             {
               "type": "camera_ready",
-              "at_utc": "2026-08-14T00:00:00.000Z",
-              "source_url": "https://algo-conference.org/2025/waoa/",
-              "is_estimated": true
+              "at_utc": "2026-08-15T00:00:00Z",
+              "source_url": "https://algo-conference.org/2026/waoa/",
+              "is_estimated": false
             }
           ],
-          "call_for_paper": null
+          "call_for_paper": {
+            "source_url": "https://algo-conference.org/2026/waoa/",
+            "page_count": null
+          }
         }
       ]
     },
@@ -401,14 +404,14 @@
               "is_estimated": false
             },
             {
-              "type": "registration_deadline",
-              "at_utc": "2026-07-10T00:00:00Z",
+              "type": "camera_ready",
+              "at_utc": "2026-07-28T00:00:00Z",
               "source_url": "https://algo.postech.ac.kr/workshops/waac26/",
               "is_estimated": false
             },
             {
-              "type": "camera_ready",
-              "at_utc": "2026-07-28T00:00:00Z",
+              "type": "registration_deadline",
+              "at_utc": "2026-08-07T14:59:59Z",
               "source_url": "https://algo.postech.ac.kr/workshops/waac26/",
               "is_estimated": false
             }
@@ -432,7 +435,7 @@
           "name": "第208回アルゴリズム研究発表会",
           "year": 2026,
           "ordinal_no": 208,
-          "url": "http://www.ipsj-sigal.or.jp/",
+          "url": "https://www.ipsj.or.jp/kenkyukai/event/al208.html",
           "venue": null,
           "start_at_utc": "2026-05-20T00:00:00Z",
           "end_at_utc": "2026-05-21T23:59:59Z",
@@ -445,31 +448,37 @@
             }
           ],
           "call_for_paper": {
-            "source_url": "http://www.ipsj-sigal.or.jp/",
+            "source_url": "https://www.ipsj.or.jp/kenkyukai/event/al208.html",
             "page_count": null
           }
         },
         {
-          "id": "SIGAL-2027",
+          "id": "SIGAL-209",
           "series_id": "SIGAL",
-          "name": "情報処理学会アルゴリズム研究会",
-          "year": 2027,
+          "name": "第209回アルゴリズム研究発表会",
+          "year": 2026,
           "ordinal_no": 209,
-          "url": "http://www.ipsj-sigal.or.jp/",
-          "venue": null,
-          "start_at_utc": "2027-05-20T00:00:00.000Z",
-          "end_at_utc": null,
+          "url": "https://www.ipsj.or.jp/kenkyukai/event/al209.html",
+          "venue": "北九州学術研究都市（FIT2026内、ハイブリッド開催）",
+          "start_at_utc": "2026-09-03T00:00:00Z",
+          "end_at_utc": "2026-09-03T23:59:59Z",
           "milestones": [
             {
               "type": "submission_deadline",
-              "at_utc": "2027-03-09T14:59:00.000Z",
-              "source_url": "http://www.ipsj-sigal.or.jp/",
-              "is_estimated": true
+              "at_utc": "2026-07-05T14:59:59Z",
+              "source_url": "https://www.ipsj.or.jp/kenkyukai/event/al209.html",
+              "is_estimated": false
+            },
+            {
+              "type": "camera_ready",
+              "at_utc": "2026-07-27T14:59:59Z",
+              "source_url": "https://www.ipsj.or.jp/kenkyukai/event/al209.html",
+              "is_estimated": false
             }
           ],
           "call_for_paper": {
-            "source_url": "http://www.ipsj-sigal.or.jp/",
-            "page_count": 1
+            "source_url": "https://www.ipsj.or.jp/kenkyukai/event/al209.html",
+            "page_count": null
           }
         }
       ]
@@ -486,7 +495,7 @@
           "name": "電子情報通信学会コンピュテーション研究会",
           "year": 2026,
           "ordinal_no": null,
-          "url": "https://www.ieice.org/~comp/",
+          "url": "https://ken.ieice.org/ken/program/index.php?lang=&layout=&mode=program&tgid=COMP&tgs_regid=ecc3a3b8712bc08512accde30369685ce66510fe488447ccdbb2b6ab1f68497c",
           "venue": "大阪大学 豊中キャンパス 基礎工学国際棟 セミナー室",
           "start_at_utc": "2026-05-20T00:00:00Z",
           "end_at_utc": "2026-05-21T00:00:00Z",
@@ -530,19 +539,19 @@
           "milestones": [
             {
               "type": "submission_deadline",
-              "at_utc": "2026-07-11T00:00:00.000Z",
-              "source_url": "https://jsiam.org/jsiam_archive/past_meetings",
-              "is_estimated": true
+              "at_utc": "2026-07-16T14:59:59Z",
+              "source_url": "https://jsiam.org/jsiam_archive/past_meetings/annual2026/",
+              "is_estimated": false
             },
             {
               "type": "camera_ready",
-              "at_utc": "2026-07-23T00:00:00.000Z",
-              "source_url": "https://jsiam.org/jsiam_archive/past_meetings",
-              "is_estimated": true
+              "at_utc": "2026-07-31T14:59:59Z",
+              "source_url": "https://jsiam.org/jsiam_archive/past_meetings/annual2026/",
+              "is_estimated": false
             }
           ],
           "call_for_paper": {
-            "source_url": "https://jsiam.org/annual2026/",
+            "source_url": "https://jsiam.org/jsiam_archive/past_meetings/annual2026/",
             "page_count": null
           }
         },
@@ -619,9 +628,9 @@
           "year": 2027,
           "ordinal_no": null,
           "url": "https://orsj.org/conference",
-          "venue": null,
-          "start_at_utc": "2027-03-04T00:00:00.000Z",
-          "end_at_utc": null,
+          "venue": "東京理科大学（野田キャンパス）",
+          "start_at_utc": "2027-03-03T00:00:00Z",
+          "end_at_utc": "2027-03-05T23:59:59Z",
           "milestones": [
             {
               "type": "submission_deadline",
@@ -675,12 +684,28 @@
           "name": "OR学会 秋季研究発表会 2026",
           "year": 2026,
           "ordinal_no": null,
-          "url": "https://orsj.org/nc-dummy",
+          "url": "https://orsj.org/2026f/",
           "venue": "京都大学（吉田キャンパス）",
-          "start_at_utc": "2026-09-11T00:00:00Z",
-          "end_at_utc": null,
-          "milestones": [],
-          "call_for_paper": null
+          "start_at_utc": "2026-09-10T00:00:00Z",
+          "end_at_utc": "2026-09-11T23:59:59Z",
+          "milestones": [
+            {
+              "type": "submission_deadline",
+              "at_utc": "2026-07-14T14:59:59Z",
+              "source_url": "https://orsj.org/2026f/conference/submission/",
+              "is_estimated": false
+            },
+            {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2026-07-21T14:59:59Z",
+              "source_url": "https://orsj.org/2026f/conference/submission/",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://orsj.org/2026f/conference/submission/",
+            "page_count": 2
+          }
         }
       ]
     },
@@ -725,25 +750,34 @@
           "name": "夏のLAシンポジウム 2026",
           "year": 2026,
           "ordinal_no": null,
-          "url": "https://la-symposium.github.io/index.html",
-          "venue": null,
-          "start_at_utc": "2026-07-23T00:00:00.000Z",
-          "end_at_utc": null,
+          "url": "https://la-symposium.github.io/2026/summer.html",
+          "venue": "水戸市民会館 中会議室303・304",
+          "start_at_utc": "2026-07-27T00:00:00Z",
+          "end_at_utc": "2026-07-29T23:59:59Z",
           "milestones": [
             {
               "type": "submission_deadline",
-              "at_utc": "2026-06-18T00:00:00.000Z",
-              "source_url": "https://la-symposium.github.io/index.html",
-              "is_estimated": true
+              "at_utc": "2026-06-22T14:59:59Z",
+              "source_url": "https://la-symposium.github.io/2026/summer.html",
+              "is_estimated": false
             },
             {
               "type": "registration_deadline",
-              "at_utc": "2026-07-13T00:00:00.000Z",
-              "source_url": "https://la-symposium.github.io/index.html",
-              "is_estimated": true
+              "at_utc": "2026-07-17T14:59:59Z",
+              "source_url": "https://la-symposium.github.io/2026/summer.html",
+              "is_estimated": false
+            },
+            {
+              "type": "camera_ready",
+              "at_utc": "2026-07-24T14:59:59Z",
+              "source_url": "https://la-symposium.github.io/2026/summer.html",
+              "is_estimated": false
             }
           ],
-          "call_for_paper": null
+          "call_for_paper": {
+            "source_url": "https://la-symposium.github.io/2026/summer.html",
+            "page_count": null
+          }
         }
       ]
     },
@@ -788,10 +822,10 @@
           "name": "冬のLAシンポジウム 2027",
           "year": 2027,
           "ordinal_no": null,
-          "url": "https://la-symposium.github.io/index.html",
-          "venue": null,
-          "start_at_utc": "2027-01-26T00:00:00.000Z",
-          "end_at_utc": null,
+          "url": "https://la-symposium.github.io/2026/winter.html",
+          "venue": "京都大学数理解析研究所 420号室",
+          "start_at_utc": "2027-02-08T00:00:00Z",
+          "end_at_utc": "2027-02-10T23:59:59Z",
           "milestones": [
             {
               "type": "submission_deadline",
@@ -835,7 +869,7 @@
           "name": "RAMP 数理最適化シンポジウム",
           "year": 2026,
           "ordinal_no": null,
-          "url": "https://orsj.org/ramp/",
+          "url": "https://orsj.org/ramp/ramp2026",
           "venue": null,
           "start_at_utc": "2026-02-17T00:00:00Z",
           "end_at_utc": "2026-02-17T23:59:59Z",
@@ -898,12 +932,6 @@
               "is_estimated": false
             },
             {
-              "type": "camera_ready",
-              "at_utc": "2026-06-13T00:00:00.000Z",
-              "source_url": "https://www.ipsj.or.jp/event/fit/fit.html",
-              "is_estimated": true
-            },
-            {
               "type": "full_paper_submission_deadline",
               "at_utc": "2026-06-30T06:00:00Z",
               "source_url": "https://www.ipsj.or.jp/event/fit/fit2026/appli_paper.html",
@@ -958,13 +986,13 @@
           "name": "The 23rd Mixed Integer Programming Workshop",
           "year": 2026,
           "ordinal_no": 23,
-          "url": "https://www.mixedinteger.org/",
+          "url": "https://www.mixedinteger.org/2026/",
           "venue": "University of Connecticut",
           "start_at_utc": "2026-05-18T00:00:00Z",
           "end_at_utc": "2026-05-21T23:59:59Z",
           "milestones": [],
           "call_for_paper": {
-            "source_url": "https://www.mixedinteger.org/",
+            "source_url": "https://www.mixedinteger.org/2026/",
             "page_count": 1
           }
         }
@@ -1126,6 +1154,19 @@
           "end_at_utc": "2025-07-24T23:59:59Z",
           "milestones": [],
           "call_for_paper": null
+        },
+        {
+          "id": "COSS-2026",
+          "series_id": "COSS",
+          "name": "RIMS 共同研究「組合せ最適化セミナー」",
+          "year": 2026,
+          "ordinal_no": null,
+          "url": "https://www.kurims.kyoto-u.ac.jp/coss/coss2026/coss2026.html",
+          "venue": "京都大学数理解析研究所 4階 420号室",
+          "start_at_utc": "2026-07-21T00:00:00Z",
+          "end_at_utc": "2026-07-23T23:59:59Z",
+          "milestones": [],
+          "call_for_paper": null
         }
       ]
     },
@@ -1148,7 +1189,7 @@
           "milestones": [
             {
               "type": "abstract_submission_deadline",
-              "at_utc": "2026-04-15T23:59:59Z",
+              "at_utc": "2026-05-02T23:59:59Z",
               "source_url": "https://coral.ise.lehigh.edu/mopta2026/",
               "is_estimated": false
             },
@@ -1191,7 +1232,7 @@
           "name": "Annual Meeting Combining the Premier Algorithmic Conference 2026",
           "year": 2026,
           "ordinal_no": null,
-          "url": "https://algo-conference.org/",
+          "url": "https://algo-conference.org/2026/",
           "venue": "L’Aquila, Italy",
           "start_at_utc": "2026-08-31T00:00:00Z",
           "end_at_utc": "2026-09-04T23:59:59Z",
@@ -1199,24 +1240,24 @@
             {
               "type": "abstract_submission_deadline",
               "at_utc": "2026-04-21T23:59:59Z",
-              "source_url": "https://algo-conference.org/",
+              "source_url": "https://algo-conference.org/2026/",
               "is_estimated": false
             },
             {
               "type": "full_paper_submission_deadline",
               "at_utc": "2026-04-23T23:59:59Z",
-              "source_url": "https://algo-conference.org/",
+              "source_url": "https://algo-conference.org/2026/",
               "is_estimated": false
             },
             {
               "type": "submission_deadline",
               "at_utc": "2026-06-29T23:59:59Z",
-              "source_url": "https://algo-conference.org/",
+              "source_url": "https://algo-conference.org/2026/",
               "is_estimated": false
             }
           ],
           "call_for_paper": {
-            "source_url": "https://algo-conference.org/",
+            "source_url": "https://algo-conference.org/2026/",
             "page_count": 6
           }
         }
@@ -1263,7 +1304,7 @@
           "name": "Japan Conference on Discrete and Computational Geometry, Graphs, and Games",
           "year": 2026,
           "ordinal_no": 28,
-          "url": "http://www.alg.cei.uec.ac.jp/itohiro/JCDCGG/",
+          "url": "https://sites.google.com/view/jcdcggg2026",
           "venue": "Tokyo University of Science, Kagurazaka, Tokyo, Japan",
           "start_at_utc": "2026-09-06T15:00:00Z",
           "end_at_utc": "2026-09-10T15:00:00Z",
@@ -1271,7 +1312,7 @@
             {
               "type": "submission_deadline",
               "at_utc": "2026-06-12T14:59:59Z",
-              "source_url": "https://dmatheorynet.blogspot.com/2026/04/dmanet-jcdcg3-2026-sept-7-10-tokyo-univ.html",
+              "source_url": "https://sites.google.com/view/jcdcggg2026",
               "is_estimated": false
             },
             {
@@ -1283,7 +1324,7 @@
             {
               "type": "camera_ready",
               "at_utc": "2026-07-24T00:00:00Z",
-              "source_url": "https://dmatheorynet.blogspot.com/2026/04/dmanet-jcdcg3-2026-sept-7-10-tokyo-univ.html",
+              "source_url": "https://sites.google.com/view/jcdcggg2026",
               "is_estimated": false
             }
           ],
@@ -1468,7 +1509,7 @@
           "name": "The 66th IEEE Symposium on Foundations of Computer Science",
           "year": 2025,
           "ordinal_no": 66,
-          "url": "https://focs.computer.org/",
+          "url": "https://focs.computer.org/2025/",
           "venue": "PARKROYAL Darling Harbour, Sydney, Australia",
           "start_at_utc": "2025-12-14T00:00:00Z",
           "end_at_utc": "2025-12-17T23:59:59Z",
@@ -1476,24 +1517,24 @@
             {
               "type": "submission_deadline",
               "at_utc": "2025-04-04T00:00:00Z",
-              "source_url": "https://focs.computer.org/",
+              "source_url": "https://focs.computer.org/2025/",
               "is_estimated": false
             },
             {
               "type": "notification",
               "at_utc": "2025-07-08T00:00:00Z",
-              "source_url": "https://focs.computer.org/",
+              "source_url": "https://focs.computer.org/2025/",
               "is_estimated": false
             },
             {
               "type": "registration_deadline",
               "at_utc": "2025-11-21T00:00:00Z",
-              "source_url": "https://focs.computer.org/",
+              "source_url": "https://focs.computer.org/2025/",
               "is_estimated": false
             }
           ],
           "call_for_paper": {
-            "source_url": "https://focs.computer.org/",
+            "source_url": "https://focs.computer.org/2025/",
             "page_count": null
           }
         },
@@ -1503,7 +1544,7 @@
           "name": "The 67th IEEE Symposium on Foundations of Computer Science",
           "year": 2026,
           "ordinal_no": 67,
-          "url": "https://focs.computer.org/",
+          "url": "https://focs.computer.org/2026/",
           "venue": "New York, NY, USA",
           "start_at_utc": "2026-11-08T00:00:00Z",
           "end_at_utc": "2026-11-11T23:59:59Z",
@@ -1511,18 +1552,18 @@
             {
               "type": "submission_deadline",
               "at_utc": "2026-04-01T21:00:00Z",
-              "source_url": "https://focs.computer.org/",
+              "source_url": "https://focs.computer.org/2026/",
               "is_estimated": false
             },
             {
               "type": "notification",
               "at_utc": "2026-07-03T00:00:00Z",
-              "source_url": "https://focs.computer.org/",
+              "source_url": "https://focs.computer.org/2026/",
               "is_estimated": false
             }
           ],
           "call_for_paper": {
-            "source_url": "https://focs.computer.org/",
+            "source_url": "https://focs.computer.org/2026/",
             "page_count": null
           }
         },
@@ -1615,24 +1656,24 @@
             {
               "type": "submission_deadline",
               "at_utc": "2026-11-04T21:59:00.000Z",
-              "source_url": "https://acm-stoc.org",
+              "source_url": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
               "is_estimated": true
             },
             {
               "type": "notification",
               "at_utc": "2027-02-01T00:00:00.000Z",
-              "source_url": "https://acm-stoc.org",
+              "source_url": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
               "is_estimated": true
             },
             {
               "type": "camera_ready",
               "at_utc": "2027-03-31T00:00:00.000Z",
-              "source_url": "https://acm-stoc.org",
+              "source_url": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
               "is_estimated": true
             }
           ],
           "call_for_paper": {
-            "source_url": "https://www.ourglocal.com/wikicfp/?conid=2&year=2027",
+            "source_url": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
             "page_count": null
           }
         }
@@ -1712,42 +1753,36 @@
           "ordinal_no": 41,
           "url": "https://aaai.org/conference/aaai/aaai-27/",
           "venue": "Montréal, Québec, Canada",
-          "start_at_utc": "2027-02-02T00:00:00Z",
-          "end_at_utc": "2027-02-09T23:59:59Z",
+          "start_at_utc": "2027-02-16T00:00:00Z",
+          "end_at_utc": "2027-02-23T23:59:59Z",
           "milestones": [
             {
               "type": "abstract_submission_deadline",
-              "at_utc": "2026-07-25T23:59:00Z",
-              "source_url": "https://aaai.org/conference/aaai/aaai-27/main-technical-track-call/",
-              "is_estimated": false
-            },
-            {
-              "type": "submission_deadline",
-              "at_utc": "2026-08-01T23:59:00Z",
+              "at_utc": "2026-07-22T11:59:59Z",
               "source_url": "https://aaai.org/conference/aaai/aaai-27/main-technical-track-call/",
               "is_estimated": false
             },
             {
               "type": "full_paper_submission_deadline",
-              "at_utc": "2026-08-02T11:59:59.000Z",
-              "source_url": "https://aaai.org/conference/aaai/",
-              "is_estimated": true
+              "at_utc": "2026-07-29T11:59:59Z",
+              "source_url": "https://aaai.org/conference/aaai/aaai-27/main-technical-track-call/",
+              "is_estimated": false
             },
             {
               "type": "phase1_notification",
-              "at_utc": "2026-09-15T00:00:00.000Z",
-              "source_url": "https://aaai.org/conference/aaai/",
-              "is_estimated": true
+              "at_utc": "2026-09-24T00:00:00Z",
+              "source_url": "https://aaai.org/conference/aaai/aaai-27/main-technical-track-call/",
+              "is_estimated": false
             },
             {
               "type": "notification",
-              "at_utc": "2026-11-08T00:00:00.000Z",
-              "source_url": "https://aaai.org/conference/aaai/",
-              "is_estimated": true
+              "at_utc": "2026-11-30T00:00:00Z",
+              "source_url": "https://aaai.org/conference/aaai/aaai-27/main-technical-track-call/",
+              "is_estimated": false
             },
             {
               "type": "camera_ready",
-              "at_utc": "2026-11-16T23:59:00Z",
+              "at_utc": "2026-12-14T23:59:59Z",
               "source_url": "https://aaai.org/conference/aaai/aaai-27/main-technical-track-call/",
               "is_estimated": false
             }
@@ -1809,7 +1844,7 @@
     {
       "id": "SWAT",
       "name": "Scandinavian Symposium on Algorithm Theory",
-      "url": "https://swat2026.compute.dtu.dk/",
+      "url": "https://swat-symposium.org/",
       "enabled": true,
       "conferences": [
         {
@@ -1859,7 +1894,7 @@
           "name": "The 21st Scandinavian Symposium on Algorithm Theory",
           "year": 2027,
           "ordinal_no": 21,
-          "url": "https://swat2026.compute.dtu.dk/",
+          "url": "https://swat-symposium.org/",
           "venue": null,
           "start_at_utc": "2027-06-17T00:00:00.000Z",
           "end_at_utc": null,
@@ -2103,19 +2138,19 @@
           "year": 2026,
           "ordinal_no": 34,
           "url": "https://algo-conference.org/2026/esa/",
-          "venue": null,
-          "start_at_utc": "2026-09-15T00:00:00.000Z",
-          "end_at_utc": null,
+          "venue": "L’Aquila, Italy",
+          "start_at_utc": "2026-08-31T00:00:00Z",
+          "end_at_utc": "2026-09-02T23:59:59Z",
           "milestones": [
             {
               "type": "abstract_submission_deadline",
-              "at_utc": "2026-04-21T23:59:59Z",
+              "at_utc": "2026-04-22T11:59:59Z",
               "source_url": "https://algo-conference.org/2026/esa/",
               "is_estimated": false
             },
             {
               "type": "full_paper_submission_deadline",
-              "at_utc": "2026-04-23T23:59:59Z",
+              "at_utc": "2026-04-24T11:59:59Z",
               "source_url": "https://algo-conference.org/2026/esa/",
               "is_estimated": false
             },
@@ -2127,9 +2162,9 @@
             },
             {
               "type": "camera_ready",
-              "at_utc": "2026-07-07T00:00:00.000Z",
-              "source_url": "https://algo-conference.org/esa/",
-              "is_estimated": true
+              "at_utc": "2026-07-15T00:00:00Z",
+              "source_url": "https://tcs-conf.github.io/",
+              "is_estimated": false
             }
           ],
           "call_for_paper": {
@@ -2186,7 +2221,7 @@
           "name": "The 37th International Symposium on Algorithms and Computation",
           "year": 2026,
           "ordinal_no": 37,
-          "url": "https://www.kurims.kyoto-u.ac.jp/isaac/ISAAC.html",
+          "url": "https://www.algo-door.com/isaac2026/",
           "venue": "Hangzhou, China",
           "start_at_utc": "2026-12-06T00:00:00Z",
           "end_at_utc": "2026-12-09T23:59:59Z",
@@ -2200,8 +2235,8 @@
             {
               "type": "full_paper_submission_deadline",
               "at_utc": "2026-06-30T11:59:59.000Z",
-              "source_url": "https://www.kurims.kyoto-u.ac.jp/isaac/ISAAC.html",
-              "is_estimated": true
+              "source_url": "https://www.algo-door.com/isaac2026/",
+              "is_estimated": false
             },
             {
               "type": "notification",
@@ -2379,30 +2414,33 @@
           "year": 2027,
           "ordinal_no": 18,
           "url": "http://itcs-conf.org/index.html",
-          "venue": null,
-          "start_at_utc": "2027-01-27T00:00:00.000Z",
-          "end_at_utc": null,
+          "venue": "Simons Institute for the Theory of Computing, UC Berkeley, Berkeley, California, USA",
+          "start_at_utc": "2027-01-12T00:00:00Z",
+          "end_at_utc": "2027-01-15T23:59:59Z",
           "milestones": [
             {
               "type": "abstract_submission_deadline",
-              "at_utc": "2026-09-04T23:59:00.000Z",
+              "at_utc": "2026-09-02T23:59:00Z",
               "source_url": "http://itcs-conf.org/index.html",
-              "is_estimated": true
+              "is_estimated": false
             },
             {
               "type": "full_paper_submission_deadline",
-              "at_utc": "2026-09-06T23:59:00.000Z",
+              "at_utc": "2026-09-04T23:59:00Z",
               "source_url": "http://itcs-conf.org/index.html",
-              "is_estimated": true
+              "is_estimated": false
             },
             {
               "type": "notification",
-              "at_utc": "2026-11-10T00:00:00.000Z",
+              "at_utc": "2026-11-06T00:00:00Z",
               "source_url": "http://itcs-conf.org/index.html",
-              "is_estimated": true
+              "is_estimated": false
             }
           ],
-          "call_for_paper": null
+          "call_for_paper": {
+            "source_url": "http://itcs-conf.org/index.html",
+            "page_count": null
+          }
         }
       ]
     },
@@ -2419,13 +2457,13 @@
           "year": 2026,
           "ordinal_no": 29,
           "url": "https://approxconference.com",
-          "venue": null,
-          "start_at_utc": null,
-          "end_at_utc": null,
+          "venue": "Boston University, Boston, Massachusetts, USA",
+          "start_at_utc": "2026-08-19T00:00:00Z",
+          "end_at_utc": "2026-08-21T23:59:59Z",
           "milestones": [
             {
               "type": "full_paper_submission_deadline",
-              "at_utc": "2026-05-06T11:59:59Z",
+              "at_utc": "2026-05-07T11:59:59Z",
               "source_url": "https://approxconference.com",
               "is_estimated": false
             },
@@ -2537,16 +2575,10 @@
           "end_at_utc": "2026-08-21T23:59:59Z",
           "milestones": [
             {
-              "type": "submission_deadline",
-              "at_utc": "2026-05-06T00:00:00Z",
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2026-05-07T11:59:59Z",
               "source_url": "https://randomconference.com",
               "is_estimated": false
-            },
-            {
-              "type": "full_paper_submission_deadline",
-              "at_utc": "2026-05-08T11:59:59.000Z",
-              "source_url": "https://randomconference.com",
-              "is_estimated": true
             },
             {
               "type": "notification",
@@ -2617,26 +2649,14 @@
           "ordinal_no": 21,
           "url": "https://algo-conference.org/2026/ipec/",
           "venue": "L’Aquila, Italy",
-          "start_at_utc": "2026-08-31T00:00:00Z",
+          "start_at_utc": "2026-09-02T00:00:00Z",
           "end_at_utc": "2026-09-04T23:59:59Z",
           "milestones": [
             {
-              "type": "abstract_submission_deadline",
-              "at_utc": "2026-06-27T11:59:59.000Z",
-              "source_url": "https://algo-conference.org",
-              "is_estimated": true
-            },
-            {
               "type": "submission_deadline",
-              "at_utc": "2026-06-29T23:59:00Z",
+              "at_utc": "2026-06-30T11:59:59Z",
               "source_url": "https://algo-conference.org/2026/ipec/",
               "is_estimated": false
-            },
-            {
-              "type": "full_paper_submission_deadline",
-              "at_utc": "2026-06-30T11:59:59.000Z",
-              "source_url": "https://algo-conference.org",
-              "is_estimated": true
             },
             {
               "type": "notification",
@@ -2726,37 +2746,52 @@
           "name": "The 39th ACM Symposium on Parallelism in Algorithms and Architectures",
           "year": 2027,
           "ordinal_no": 39,
-          "url": "https://spaa.acm.org",
-          "venue": null,
-          "start_at_utc": "2027-07-06T00:00:00.000Z",
-          "end_at_utc": null,
+          "url": "https://spaa.acm.org/spaa-2027-call-for-papers/",
+          "venue": "Hyatt Regency Atlanta, Atlanta, GA, USA",
+          "start_at_utc": "2027-06-05T00:00:00Z",
+          "end_at_utc": "2027-06-11T23:59:59Z",
           "milestones": [
             {
               "type": "abstract_submission_deadline",
-              "at_utc": "2027-02-20T11:59:59.000Z",
-              "source_url": "https://spaa.acm.org",
-              "is_estimated": true
+              "at_utc": "2026-09-19T11:59:59Z",
+              "source_url": "https://spaa.acm.org/spaa-2027-call-for-papers/",
+              "is_estimated": false
             },
             {
               "type": "full_paper_submission_deadline",
-              "at_utc": "2027-02-27T11:59:59.000Z",
-              "source_url": "https://spaa.acm.org",
-              "is_estimated": true
+              "at_utc": "2026-09-26T11:59:59Z",
+              "source_url": "https://spaa.acm.org/spaa-2027-call-for-papers/",
+              "is_estimated": false
             },
             {
               "type": "notification",
-              "at_utc": "2027-05-15T00:00:00.000Z",
-              "source_url": "https://spaa.acm.org",
-              "is_estimated": true
+              "at_utc": "2026-12-05T00:00:00Z",
+              "source_url": "https://spaa.acm.org/spaa-2027-call-for-papers/",
+              "is_estimated": false
             },
             {
-              "type": "camera_ready",
-              "at_utc": "2027-06-05T00:00:00.000Z",
-              "source_url": "https://spaa.acm.org",
-              "is_estimated": true
+              "type": "abstract_submission_deadline",
+              "at_utc": "2027-01-23T11:59:59Z",
+              "source_url": "https://spaa.acm.org/spaa-2027-call-for-papers/",
+              "is_estimated": false
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2027-01-30T11:59:59Z",
+              "source_url": "https://spaa.acm.org/spaa-2027-call-for-papers/",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2027-04-10T00:00:00Z",
+              "source_url": "https://spaa.acm.org/spaa-2027-call-for-papers/",
+              "is_estimated": false
             }
           ],
-          "call_for_paper": null
+          "call_for_paper": {
+            "source_url": "https://spaa.acm.org/spaa-2027-call-for-papers/",
+            "page_count": null
+          }
         }
       ]
     },
@@ -2774,8 +2809,21 @@
           "ordinal_no": 29,
           "url": "https://opodis.net",
           "venue": "Iași, Romania",
-          "start_at_utc": "2025-12-15T00:00:00Z",
-          "end_at_utc": "2025-12-17T23:59:59Z",
+          "start_at_utc": "2025-12-03T00:00:00Z",
+          "end_at_utc": "2025-12-05T23:59:59Z",
+          "milestones": [],
+          "call_for_paper": null
+        },
+        {
+          "id": "OPODIS-2026",
+          "series_id": "OPODIS",
+          "name": "The 30th International Conference on Principles of Distributed Systems",
+          "year": 2026,
+          "ordinal_no": 30,
+          "url": "https://opodis.net",
+          "venue": "Madrid, Spain",
+          "start_at_utc": "2026-12-09T00:00:00Z",
+          "end_at_utc": "2026-12-11T23:59:59Z",
           "milestones": [],
           "call_for_paper": null
         },
@@ -2893,7 +2941,7 @@
           "name": "The 23rd International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research",
           "year": 2026,
           "ordinal_no": 23,
-          "url": "https://cpaior.org",
+          "url": "https://sites.google.com/view/cpaior2026/home",
           "venue": "Rabat, Morocco",
           "start_at_utc": "2026-05-26T00:00:00Z",
           "end_at_utc": "2026-05-29T23:59:59Z",
@@ -2963,7 +3011,7 @@
           "name": "未来を担う若手研究者の集い（つくば合宿）2026",
           "year": 2026,
           "ordinal_no": 12,
-          "url": "https://orsj.org/raota/",
+          "url": "https://orsj.org/raota/#raota12",
           "venue": "国立情報学研究所 (NII) 12 階 1208 号室",
           "start_at_utc": "2026-02-23T04:30:00Z",
           "end_at_utc": "2026-02-23T09:00:00Z",
