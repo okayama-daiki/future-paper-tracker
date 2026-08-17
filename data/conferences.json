@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T14:48:11Z",
+  "generated_at": "2026-08-17T13:40:16Z",
   "conference_series": [
     {
       "id": "PODC",
@@ -48,10 +48,10 @@
           "name": "The 46th ACM Symposium on Principles of Distributed Computing",
           "year": 2027,
           "ordinal_no": 46,
-          "url": "https://www.podc.org/",
-          "venue": null,
-          "start_at_utc": "2027-07-06T00:00:00.000Z",
-          "end_at_utc": null,
+          "url": "https://www.podc.org/podc2026/next-podc/",
+          "venue": "Reykjavik University, Reykjavik, Iceland",
+          "start_at_utc": "2027-06-21T00:00:00Z",
+          "end_at_utc": "2027-06-25T23:59:59Z",
           "milestones": [
             {
               "type": "abstract_submission_deadline",
@@ -123,31 +123,28 @@
           "name": "The 34th International Colloquium on Structural Information and Communication Complexity",
           "year": 2027,
           "ordinal_no": 34,
-          "url": "https://sirocco.hiit.fi",
-          "venue": null,
-          "start_at_utc": "2027-06-09T00:00:00.000Z",
-          "end_at_utc": null,
+          "url": "https://cyprusconferences.org/sirocco2027/",
+          "venue": "Radisson Beach Resort, Larnaca, Cyprus",
+          "start_at_utc": "2027-06-02T00:00:00Z",
+          "end_at_utc": "2027-06-04T23:59:59Z",
           "milestones": [
             {
-              "type": "abstract_submission_deadline",
-              "at_utc": "2026-11-03T11:59:59.000Z",
-              "source_url": "https://sirocco2026.webspace.durham.ac.uk/call-for-papers/",
-              "is_estimated": true
-            },
-            {
               "type": "full_paper_submission_deadline",
-              "at_utc": "2026-11-15T11:59:59.000Z",
-              "source_url": "https://sirocco2026.webspace.durham.ac.uk/call-for-papers/",
-              "is_estimated": true
+              "at_utc": "2026-11-01T11:59:59Z",
+              "source_url": "https://cyprusconferences.org/sirocco2027/",
+              "is_estimated": false
             },
             {
               "type": "notification",
-              "at_utc": "2027-01-20T00:00:00.000Z",
-              "source_url": "https://sirocco2026.webspace.durham.ac.uk/call-for-papers/",
-              "is_estimated": true
+              "at_utc": "2027-01-30T00:00:00Z",
+              "source_url": "https://cyprusconferences.org/sirocco2027/",
+              "is_estimated": false
             }
           ],
-          "call_for_paper": null
+          "call_for_paper": {
+            "source_url": "https://cyprusconferences.org/sirocco2027/call-for-papers/",
+            "page_count": null
+          }
         }
       ]
     },
@@ -1348,11 +1345,27 @@
           "year": 2026,
           "ordinal_no": null,
           "url": "https://meetings.informs.org/wordpress/annual/",
-          "venue": "New Orleans, Louisiana, USA",
+          "venue": "Moscone Center South and San Francisco Marriott Marquis, San Francisco, California, USA",
           "start_at_utc": "2026-11-01T00:00:00Z",
           "end_at_utc": "2026-11-04T23:59:59Z",
-          "milestones": [],
-          "call_for_paper": null
+          "milestones": [
+            {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2026-05-20T00:00:00Z",
+              "source_url": "https://meetings.informs.org/wordpress/annual/abstract-submission/",
+              "is_estimated": false
+            },
+            {
+              "type": "registration_deadline",
+              "at_utc": "2026-07-22T00:00:00Z",
+              "source_url": "https://meetings.informs.org/wordpress/annual/abstract-submission/",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://meetings.informs.org/wordpress/annual/abstract-submission/",
+            "page_count": null
+          }
         }
       ]
     },
@@ -1726,15 +1739,33 @@
           "end_at_utc": "2027-02-24T23:59:59Z",
           "milestones": [
             {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2026-09-08T00:00:00Z",
+              "source_url": "https://www.siam.org/conferences-events/siam-conferences/acda27/submissions/",
+              "is_estimated": false
+            },
+            {
               "type": "submission_deadline",
-              "at_utc": "2026-09-15T23:59:59Z",
-              "source_url": "https://easychair.org/cfp/ACDA27",
-              "is_estimated": true
+              "at_utc": "2026-09-15T00:00:00Z",
+              "source_url": "https://www.siam.org/conferences-events/siam-conferences/acda27/submissions/",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2026-11-02T00:00:00Z",
+              "source_url": "https://www.siam.org/conferences-events/siam-conferences/acda27/submissions/",
+              "is_estimated": false
+            },
+            {
+              "type": "camera_ready",
+              "at_utc": "2026-11-23T00:00:00Z",
+              "source_url": "https://www.siam.org/conferences-events/siam-conferences/acda27/submissions/",
+              "is_estimated": false
             }
           ],
           "call_for_paper": {
-            "source_url": "https://easychair.org/cfp/ACDA27",
-            "page_count": 1
+            "source_url": "https://www.siam.org/conferences-events/siam-conferences/acda27/submissions/",
+            "page_count": 12
           }
         }
       ]
@@ -1975,31 +2006,28 @@
           "name": "The 21st International Conference and Workshops on Algorithms and Computation",
           "year": 2027,
           "ordinal_no": 21,
-          "url": "https://www.walcom-conference.org/",
-          "venue": null,
-          "start_at_utc": "2027-03-04T00:00:00.000Z",
-          "end_at_utc": null,
+          "url": "https://sites.google.com/gapps.ntnu.edu.tw/walcom2027/",
+          "venue": "Taipei, Taiwan",
+          "start_at_utc": "2027-03-24T00:00:00Z",
+          "end_at_utc": "2027-03-26T23:59:59Z",
           "milestones": [
             {
               "type": "submission_deadline",
-              "at_utc": "2026-09-22T11:59:59.000Z",
-              "source_url": "https://www.walcom-conference.org/",
-              "is_estimated": true
+              "at_utc": "2026-09-22T11:59:59Z",
+              "source_url": "https://sites.google.com/gapps.ntnu.edu.tw/walcom2027/",
+              "is_estimated": false
             },
             {
               "type": "notification",
-              "at_utc": "2026-11-08T11:59:59.000Z",
-              "source_url": "https://www.walcom-conference.org/",
-              "is_estimated": true
-            },
-            {
-              "type": "camera_ready",
-              "at_utc": "2026-11-25T11:59:59.000Z",
-              "source_url": "https://www.walcom-conference.org/",
-              "is_estimated": true
+              "at_utc": "2026-11-09T00:00:00Z",
+              "source_url": "https://sites.google.com/gapps.ntnu.edu.tw/walcom2027/",
+              "is_estimated": false
             }
           ],
-          "call_for_paper": null
+          "call_for_paper": {
+            "source_url": "https://sites.google.com/gapps.ntnu.edu.tw/walcom2027/",
+            "page_count": null
+          }
         }
       ]
     },
@@ -2304,6 +2332,19 @@
             "source_url": "https://cgweek26.computational-geometry.org/contribute/",
             "page_count": null
           }
+        },
+        {
+          "id": "SoCG-2027",
+          "series_id": "SoCG",
+          "name": "The 43rd International Symposium on Computational Geometry",
+          "year": 2027,
+          "ordinal_no": 43,
+          "url": "https://cgweek27.computational-geometry.org/",
+          "venue": "Indian Institute of Science, Bengaluru, India",
+          "start_at_utc": "2027-06-21T00:00:00Z",
+          "end_at_utc": "2027-06-25T23:59:59Z",
+          "milestones": [],
+          "call_for_paper": null
         },
         {
           "id": "SoCG-2025",
@@ -2684,12 +2725,34 @@
           "name": "The 40th International Symposium on Distributed Computing",
           "year": 2026,
           "ordinal_no": 40,
-          "url": "https://www.disc-conference.org/wp/",
+          "url": "https://www.disc-conference.org/wp/disc2026/",
           "venue": "Rome, Italy",
           "start_at_utc": "2026-11-09T00:00:00Z",
           "end_at_utc": "2026-11-13T23:59:59Z",
-          "milestones": [],
-          "call_for_paper": null
+          "milestones": [
+            {
+              "type": "registration_deadline",
+              "at_utc": "2026-05-28T11:59:59Z",
+              "source_url": "https://www.disc-conference.org/wp/disc2026/",
+              "is_estimated": false
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2026-06-02T11:59:59Z",
+              "source_url": "https://www.disc-conference.org/wp/disc2026/",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2026-08-06T11:59:59Z",
+              "source_url": "https://www.disc-conference.org/wp/disc2026/call-for-papers/",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://www.disc-conference.org/wp/disc2026/call-for-papers/",
+            "page_count": 15
+          }
         }
       ]
     },
@@ -2820,12 +2883,34 @@
           "name": "The 30th International Conference on Principles of Distributed Systems",
           "year": 2026,
           "ordinal_no": 30,
-          "url": "https://opodis.net",
-          "venue": "Madrid, Spain",
+          "url": "https://opodis26.software.imdea.org/",
+          "venue": "IMDEA Software Institute, Pozuelo de Alarcón, Madrid, Spain",
           "start_at_utc": "2026-12-09T00:00:00Z",
           "end_at_utc": "2026-12-11T23:59:59Z",
-          "milestones": [],
-          "call_for_paper": null
+          "milestones": [
+            {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2026-09-01T11:59:59Z",
+              "source_url": "https://opodis26.software.imdea.org/cfp.html",
+              "is_estimated": false
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2026-09-04T11:59:59Z",
+              "source_url": "https://opodis26.software.imdea.org/cfp.html",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2026-10-29T11:59:59Z",
+              "source_url": "https://opodis26.software.imdea.org/cfp.html",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://opodis26.software.imdea.org/cfp.html",
+            "page_count": 15
+          }
         },
         {
           "id": "OPODIS-2024",
@@ -2854,31 +2939,22 @@
         {
           "id": "ISMP-2027",
           "series_id": "ISMP",
-          "name": "The 25th International Symposium on Mathematical Programming",
+          "name": "The 26th International Symposium on Mathematical Programming",
           "year": 2027,
-          "ordinal_no": 25,
-          "url": "https://www.mathopt.org/ISMP-Conferences",
-          "venue": null,
-          "start_at_utc": null,
-          "end_at_utc": null,
-          "milestones": [],
+          "ordinal_no": 26,
+          "url": "https://ismp2027.mathopt.nl/",
+          "venue": "Amsterdam, The Netherlands",
+          "start_at_utc": "2027-07-25T00:00:00Z",
+          "end_at_utc": "2027-07-30T23:59:59Z",
+          "milestones": [
+            {
+              "type": "registration_deadline",
+              "at_utc": "2027-03-15T00:00:00Z",
+              "source_url": "https://ismp2027.mathopt.nl/",
+              "is_estimated": false
+            }
+          ],
           "call_for_paper": null
-        },
-        {
-          "id": "ISMP-2026",
-          "series_id": "ISMP",
-          "name": "International Symposium on Mathematical Programming",
-          "year": 2026,
-          "ordinal_no": null,
-          "url": "https://www.mathopt.org/ISMP-Conferences",
-          "venue": null,
-          "start_at_utc": "2026-02-17T00:00:00Z",
-          "end_at_utc": "2026-02-20T23:59:59Z",
-          "milestones": [],
-          "call_for_paper": {
-            "source_url": "https://www.mathopt.org/ISMP-Conferences",
-            "page_count": 1
-          }
         }
       ]
     },
@@ -2904,13 +2980,13 @@
         {
           "id": "EURO-2027",
           "series_id": "EURO",
-          "name": "EURO",
+          "name": "The 35th European Conference on Operational Research",
           "year": 2027,
-          "ordinal_no": null,
-          "url": "https://www.euro-online.org/web/pages/100/conferences",
-          "venue": null,
-          "start_at_utc": "2027-09-14T00:00:00Z",
-          "end_at_utc": "2027-09-17T00:00:00Z",
+          "ordinal_no": 35,
+          "url": "https://euro2027athens.com/",
+          "venue": "University of West Attica, Athens, Greece",
+          "start_at_utc": "2027-07-11T00:00:00Z",
+          "end_at_utc": "2027-07-14T23:59:59Z",
           "milestones": [],
           "call_for_paper": null
         },
@@ -2935,6 +3011,19 @@
       "url": "https://cpaior.org",
       "enabled": true,
       "conferences": [
+        {
+          "id": "CPAIOR-2027",
+          "series_id": "CPAIOR",
+          "name": "The 24th International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research",
+          "year": 2027,
+          "ordinal_no": 24,
+          "url": "https://cpaior.org/",
+          "venue": "Toulouse, France",
+          "start_at_utc": "2027-06-01T00:00:00Z",
+          "end_at_utc": "2027-06-04T23:59:59Z",
+          "milestones": [],
+          "call_for_paper": null
+        },
         {
           "id": "CPAIOR-2026",
           "series_id": "CPAIOR",
