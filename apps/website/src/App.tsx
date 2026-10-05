@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "preact/hooks";
-import { Header } from "./components/Header.tsx";
 import { Toolbar } from "./components/Toolbar.tsx";
 import { DeadlineTable } from "./components/DeadlineTable.tsx";
 import type {
@@ -74,11 +73,17 @@ export function App() {
 
   return (
     <div class={styles.app}>
-      <Header />
+      <hr class={styles.divider} />
       <main class={styles.main}>
-        {loadState.status === "loading" && <p class={styles.message}>Loading…</p>}
+        {loadState.status === "loading" && (
+          <p class={styles.message} role="status">
+            学会情報を読み込んでいます…
+          </p>
+        )}
         {loadState.status === "error" && (
-          <p class={styles.message}>Failed to load conference data.</p>
+          <p class={styles.message} role="alert">
+            学会情報を読み込めませんでした。ページを再読み込みしてください。
+          </p>
         )}
         {loadState.status === "ready" && (
           <>
@@ -95,7 +100,7 @@ export function App() {
       <footer class={styles.footer}>
         <p>
           {loadState.status === "ready"
-            ? `Data updated: ${formatDate(loadState.generatedAt)}`
+            ? `最終更新：${formatDate(loadState.generatedAt)}`
             : "\u00a0"}
         </p>
       </footer>

@@ -1,14 +1,11 @@
-import type { DeadlineRow, MilestoneType } from "../types.ts";
-import type { SortKey } from "../types.ts";
+import type { DeadlineRow, MilestoneType, SortKey } from "../types.ts";
 import {
-  MILESTONE_ABBR,
   MILESTONE_LABELS,
   daysLabel,
   daysUntil,
   deadlineStatus,
   formatDate,
   formatDateRange,
-  formatVenueCompact,
 } from "../utils.ts";
 import styles from "./DeadlineTable.module.css";
 
@@ -18,19 +15,14 @@ interface Props {
   onSortChange: (key: SortKey) => void;
 }
 
-interface ColHeader {
-  key: SortKey;
-  label: string;
-}
-
-const SORTABLE_COLS: ColHeader[] = [{ key: "series", label: "Series" }];
+const SORTABLE_COLS: { key: SortKey; label: string; className: string }[] = [
+  { key: "series", label: "学会", className: styles.colSeries },
+  { key: "deadline", label: "締切", className: styles.colDate },
+  { key: "conference", label: "開催日", className: styles.colConfDate },
+];
 
 function TypeBadge({ type }: { type: MilestoneType }) {
-  return (
-    <span class={styles.typeBadge} title={MILESTONE_LABELS[type]}>
-      {MILESTONE_ABBR[type]}
-    </span>
-  );
+  return <span class={styles.typeBadge}>{MILESTONE_LABELS[type]}</span>;
 }
 
 function Row({ row }: { row: DeadlineRow }) {
@@ -38,26 +30,42 @@ function Row({ row }: { row: DeadlineRow }) {
   const status = deadlineStatus(days);
 
   return (
-    <tr class={`${styles.row} ${styles[status]}`}>
+    <tr class={`${styles.row} ${styles[status] ?? ""}`}>
       <td class={styles.colSeries}>
         <a href={row.conference.url} target="_blank" rel="noopener">
-          {row.seriesId}
+          {row.seriesId} {row.conference.year}
+          <span class="sr-only">（公式サイトを新しいタブで開く）</span>
         </a>
-        {row.conference.name && <div class={styles.seriesName}>{row.conference.name}</div>}
+        {row.conference.name && (
+          <div class={styles.seriesName} title={row.conference.name}>
+            {row.conference.name}
+          </div>
+        )}
       </td>
       <td class={styles.colType}>
         <TypeBadge type={row.milestone.type} />
-        {row.milestone.is_estimated && <span class={styles.estimated}> est.</span>}
       </td>
-      <td class={styles.colDate}>
-        <span>{formatDate(row.milestone.at_utc)}</span>
-        <span class={`${styles.daysBadge} ${styles[status]}`}>{daysLabel(days)}</span>
+      <td class={styles.colDate} data-label="締切">
+        <div class={styles.dateDetails}>
+          <time
+            dateTime={row.milestone.at_utc}
+            title={new Date(row.milestone.at_utc).toLocaleString("ja-JP")}
+          >
+            {formatDate(row.milestone.at_utc)}
+          </time>
+          {row.milestone.is_estimated && <span class={styles.estimated}>（予測）</span>}
+          <span class={styles.daysRemaining}>{daysLabel(days)}</span>
+        </div>
       </td>
-      <td class={styles.colVenue}>{formatVenueCompact(row.conference.venue)}</td>
-      <td class={styles.colConfDate}>
-        {row.conference.start_at_utc && row.conference.end_at_utc
-          ? formatDateRange(row.conference.start_at_utc, row.conference.end_at_utc)
-          : "TBA"}
+      <td class={styles.colVenue} data-label="開催地" title={row.conference.venue ?? undefined}>
+        <span>{row.conference.venue || "未定"}</span>
+      </td>
+      <td class={styles.colConfDate} data-label="開催日">
+        <span>
+          {row.conference.start_at_utc && row.conference.end_at_utc
+            ? formatDateRange(row.conference.start_at_utc, row.conference.end_at_utc)
+            : "未定"}
+        </span>
       </td>
     </tr>
   );
@@ -65,48 +73,59 @@ function Row({ row }: { row: DeadlineRow }) {
 
 export function DeadlineTable({ rows, sort, onSortChange }: Props) {
   if (rows.length === 0) {
-    return <p class={styles.empty}>No deadlines found.</p>;
+    return (
+      <p class={styles.empty} role="status">
+        該当する締切はありません。
+      </p>
+    );
+  }
+
+  function sortHeader(key: SortKey) {
+    const column = SORTABLE_COLS.find((col) => col.key === key)!;
+    const selected = sort === key;
+
+    return (
+      <th class={column.className} scope="col" aria-sort={selected ? "ascending" : "none"}>
+        <button
+          type="button"
+          class={`${styles.sortBtn} ${selected ? styles.sorted : ""}`}
+          onClick={() => {
+            onSortChange(key);
+          }}
+          aria-label={`${column.label}で並び替え`}
+        >
+          {column.label}
+          <span class={styles.sortIcon} aria-hidden="true">
+            {selected ? "↑" : ""}
+          </span>
+        </button>
+      </th>
+    );
   }
 
   return (
     <div class={styles.wrap}>
       <table class={styles.table}>
+        <caption class="sr-only">学会の締切・開催地・開催日の一覧</caption>
         <thead>
           <tr>
-            {SORTABLE_COLS.map(({ key, label }) => (
-              <th
-                key={key}
-                class={sort === key ? styles.sorted : ""}
-                onClick={() => {
-                  onSortChange(key);
-                }}
-              >
-                {label}
-              </th>
-            ))}
-            <th>Type</th>
-            <th
-              class={sort === "deadline" ? styles.sorted : ""}
-              onClick={() => {
-                onSortChange("deadline");
-              }}
-            >
-              Deadline
+            {sortHeader("series")}
+            <th class={styles.colType} scope="col">
+              種別
             </th>
-            <th class={styles.colVenue}>Venue</th>
-            <th
-              class={`${styles.colConfDate}${sort === "conference" ? ` ${styles.sorted}` : ""}`}
-              onClick={() => {
-                onSortChange("conference");
-              }}
-            >
-              Dates
+            {sortHeader("deadline")}
+            <th class={styles.colVenue} scope="col">
+              開催地
             </th>
+            {sortHeader("conference")}
           </tr>
         </thead>
         <tbody>
           {rows.map((row) => (
-            <Row key={`${row.seriesId}-${row.milestone.type}-${row.milestone.at_utc}`} row={row} />
+            <Row
+              key={`${row.conference.id}-${row.milestone.type}-${row.milestone.at_utc}`}
+              row={row}
+            />
           ))}
         </tbody>
       </table>

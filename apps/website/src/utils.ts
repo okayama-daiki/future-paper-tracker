@@ -21,26 +21,21 @@ export const MILESTONE_ABBR: Record<MilestoneType, string> = {
 };
 
 export function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-US", {
+  return new Date(iso).toLocaleDateString("ja-JP", {
     year: "numeric",
-    month: "short",
-    day: "numeric",
+    month: "2-digit",
+    day: "2-digit",
   });
 }
 
 export function formatDateRange(start: string, end: string): string {
   const s = new Date(start);
   const e = new Date(end);
-  const sOpts: Intl.DateTimeFormatOptions = { month: "short", day: "numeric" };
-  const eOpts: Intl.DateTimeFormatOptions = {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  };
-  if (s.getFullYear() === e.getFullYear() && s.getMonth() === e.getMonth()) {
-    return `${s.toLocaleDateString("en-US", sOpts)}–${e.getDate()}, ${e.getFullYear()}`;
+  if (s.getFullYear() === e.getFullYear()) {
+    const endLabel = e.toLocaleDateString("ja-JP", { month: "2-digit", day: "2-digit" });
+    return `${formatDate(start)} – ${endLabel}`;
   }
-  return `${s.toLocaleDateString("en-US", sOpts)} – ${e.toLocaleDateString("en-US", eOpts)}`;
+  return `${formatDate(start)} – ${formatDate(end)}`;
 }
 
 export function daysUntil(iso: string): number {
@@ -49,9 +44,9 @@ export function daysUntil(iso: string): number {
 }
 
 export function daysLabel(days: number): string {
-  if (days < 0) return `${Math.abs(days)}d ago`;
-  if (days === 0) return "Today";
-  return `${days}d`;
+  if (days < 0) return `${Math.abs(days)}日前`;
+  if (days === 0) return "今日";
+  return `あと${days}日`;
 }
 
 export type DeadlineStatus = "urgent" | "soon" | "future" | "past";
@@ -69,18 +64,6 @@ export const DEFAULT_MILESTONE_FILTER: MilestoneFilter = new Set<MilestoneType>(
   "full_paper_submission_deadline",
   "submission_deadline",
 ]);
-
-export function formatVenueCompact(venue: string | null): string {
-  if (!venue) return "TBA";
-  const parts = venue
-    .split(",")
-    .map((s) => s.trim())
-    .filter(Boolean);
-  if (parts.length >= 3) {
-    return `${parts[parts.length - 3]}, ${parts[parts.length - 1]}`;
-  }
-  return venue;
-}
 
 export function buildRows(data: ConferencesData): DeadlineRow[] {
   const rows: DeadlineRow[] = [];

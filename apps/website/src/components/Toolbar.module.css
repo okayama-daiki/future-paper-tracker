@@ -2,120 +2,102 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
   gap: 12px;
-  flex-wrap: wrap;
+  padding: 10px 0 12px;
 }
 
 .filters {
   display: flex;
-  gap: 2px;
-  background: var(--badge-bg);
-  border-radius: 6px;
-  padding: 2px;
+  gap: 16px;
 }
 
 .filterBtn {
-  font-family: var(--font);
-  font-size: 13px;
-  padding: 6px 12px;
-  border: none;
-  border-radius: 4px;
+  padding: 5px 0;
+  border: 0;
+  border-bottom: 1px solid transparent;
   background: transparent;
   color: var(--text-muted);
+  font-size: 12px;
   cursor: pointer;
-  transition: color 0.15s;
+  white-space: nowrap;
 }
 
-.filterBtn:hover {
+.filterBtn:hover,
+.filterBtn.active {
   color: var(--text);
 }
 
 .filterBtn.active {
-  background: var(--bg);
-  color: var(--accent);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-bottom-color: var(--text);
 }
 
-/* Dropdown */
 .dropdown {
   position: relative;
 }
 
 .dropdownBtn {
-  font-family: var(--font);
-  font-size: 13px;
-  padding: 6px 12px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--bg);
-  color: var(--text);
-  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 12px;
+  cursor: pointer;
   white-space: nowrap;
 }
 
 .dropdownBtn:hover {
-  border-color: var(--text-muted);
+  color: var(--text);
 }
 
 .caret {
-  font-size: 10px;
-  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.caretOpen {
+  transform: rotate(180deg);
 }
 
 .dropdownMenu {
   position: absolute;
   right: 0;
-  top: calc(100% + 4px);
+  top: calc(100% + 6px);
+  z-index: 10;
+  width: 232px;
+  max-width: calc(100vw - 32px);
+  padding: 6px;
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  min-width: 200px;
-  padding: 4px;
-  z-index: 10;
-}
-
-@media (prefers-color-scheme: dark) {
-  .dropdownMenu {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  }
 }
 
 .menuActions {
   display: flex;
-  gap: 8px;
-  padding: 4px 10px;
+  gap: 16px;
+  padding: 6px 8px;
 }
 
 .menuLink {
-  font-family: var(--font);
-  font-size: 12px;
-  color: var(--text-muted);
-  background: none;
-  border: none;
-  cursor: pointer;
   padding: 0;
-  text-decoration: underline;
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  font-size: 11px;
+  cursor: pointer;
 }
 
 .menuLink:hover {
-  color: var(--accent);
+  color: var(--text);
 }
 
 .menuItem {
   display: flex;
   align-items: center;
-  gap: 8px;
-  width: 100%;
-  padding: 6px 10px;
-  border-radius: 4px;
-  font-family: var(--font);
-  font-size: 13px;
-  color: var(--text);
+  gap: 10px;
+  min-height: 30px;
+  padding: 5px 8px;
+  font-size: 12px;
   cursor: pointer;
 }
 
@@ -124,32 +106,24 @@
 }
 
 .menuItem input[type="checkbox"] {
-  accent-color: var(--accent);
+  width: 13px;
+  height: 13px;
+  accent-color: var(--text);
 }
 
 .menuDivider {
   height: 1px;
-  background: var(--border);
   margin: 4px 0;
+  background: var(--border);
 }
 
-.typeBadge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 3px;
-  font-size: 10px;
-  font-weight: 700;
-  font-family: var(--mono);
-  background: var(--badge-bg);
-  color: var(--text-muted);
-}
-
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .toolbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+  }
+
+  .filters {
+    gap: 12px;
   }
 }

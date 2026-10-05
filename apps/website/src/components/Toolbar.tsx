@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "preact/hooks";
 import type { MilestoneFilter, MilestoneType, ViewFilter } from "../types.ts";
-import { DEFAULT_MILESTONE_FILTER, MILESTONE_ABBR, MILESTONE_LABELS } from "../utils.ts";
+import { DEFAULT_MILESTONE_FILTER, MILESTONE_LABELS } from "../utils.ts";
 import styles from "./Toolbar.module.css";
 
 interface Props {
@@ -11,21 +11,12 @@ interface Props {
 }
 
 const TIME_FILTERS: { value: ViewFilter; label: string }[] = [
-  { value: "upcoming", label: "Upcoming" },
-  { value: "all", label: "All" },
-  { value: "past", label: "Past" },
+  { value: "upcoming", label: "今後の締切" },
+  { value: "all", label: "すべて" },
+  { value: "past", label: "過去の締切" },
 ];
 
-const ALL_TYPES = Object.keys(MILESTONE_ABBR) as MilestoneType[];
-
-function filterLabel(mf: MilestoneFilter): string {
-  if (mf.size === 0) return "Type: None";
-  if (mf.size === ALL_TYPES.length) return "Type: All";
-  if (mf.size <= 2) {
-    return [...mf].map((t) => MILESTONE_LABELS[t]).join(", ");
-  }
-  return `Type: ${mf.size} selected`;
-}
+const ALL_TYPES = Object.keys(MILESTONE_LABELS) as MilestoneType[];
 
 export function Toolbar({
   timeFilter,
@@ -35,6 +26,7 @@ export function Toolbar({
 }: Props) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -69,55 +61,82 @@ export function Toolbar({
 
   return (
     <div class={styles.toolbar}>
-      <div class={styles.filters}>
-        {TIME_FILTERS.map(({ value, label }) => (
-          <button
-            key={value}
-            class={`${styles.filterBtn} ${timeFilter === value ? styles.active : ""}`}
-            onClick={() => {
-              onTimeFilterChange(value);
-            }}
-          >
-            {label}
-          </button>
-        ))}
+      <div>
+        <div class={styles.filters} role="group" aria-label="締切の期間">
+          {TIME_FILTERS.map(({ value, label }) => (
+            <button
+              key={value}
+              type="button"
+              class={`${styles.filterBtn} ${timeFilter === value ? styles.active : ""}`}
+              aria-pressed={timeFilter === value}
+              onClick={() => {
+                onTimeFilterChange(value);
+              }}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
       </div>
-      <div class={styles.dropdown} ref={dropdownRef}>
-        <button
-          class={styles.dropdownBtn}
-          onClick={() => {
-            setOpen(!open);
+      <div>
+        <div
+          class={styles.dropdown}
+          ref={dropdownRef}
+          onKeyDown={(e) => {
+            if (open && e.key === "Escape") {
+              setOpen(false);
+              dropdownButtonRef.current?.focus();
+            }
           }}
         >
-          {filterLabel(milestoneFilter)}
-          <span class={styles.caret}>{open ? "▲" : "▼"}</span>
-        </button>
-        {open && (
-          <div class={styles.dropdownMenu}>
-            <div class={styles.menuActions}>
-              <button class={styles.menuLink} onClick={selectAll}>
-                All
-              </button>
-              <button class={styles.menuLink} onClick={selectDefault}>
-                Default
-              </button>
+          <button
+            ref={dropdownButtonRef}
+            type="button"
+            class={styles.dropdownBtn}
+            aria-expanded={open}
+            aria-controls="milestone-options"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            フィルタ
+            <svg
+              class={`${styles.caret} ${open ? styles.caretOpen : ""}`}
+              width="14"
+              height="14"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </button>
+          {open && (
+            <div class={styles.dropdownMenu} id="milestone-options">
+              <div class={styles.menuActions}>
+                <button type="button" class={styles.menuLink} onClick={selectAll}>
+                  すべて選択
+                </button>
+                <button type="button" class={styles.menuLink} onClick={selectDefault}>
+                  投稿の締切のみ
+                </button>
+              </div>
+              <div class={styles.menuDivider} />
+              {ALL_TYPES.map((type) => (
+                <label key={type} class={styles.menuItem}>
+                  <input
+                    type="checkbox"
+                    checked={milestoneFilter.has(type)}
+                    onChange={() => {
+                      toggleType(type);
+                    }}
+                  />
+                  {MILESTONE_LABELS[type]}
+                </label>
+              ))}
             </div>
-            <div class={styles.menuDivider} />
-            {ALL_TYPES.map((type) => (
-              <label key={type} class={styles.menuItem}>
-                <input
-                  type="checkbox"
-                  checked={milestoneFilter.has(type)}
-                  onChange={() => {
-                    toggleType(type);
-                  }}
-                />
-                <span class={styles.typeBadge}>{MILESTONE_ABBR[type]}</span>
-                {MILESTONE_LABELS[type]}
-              </label>
-            ))}
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
