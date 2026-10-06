@@ -8,9 +8,7 @@
   --accent-hover: #000;
   --accent-soft: #ededed;
 
-  --font: Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-  --heading-font: "Comfortaa", var(--font);
-  --number-font: Arial, sans-serif;
+  --font: "Comfortaa", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
 
   color-scheme: light;
 }

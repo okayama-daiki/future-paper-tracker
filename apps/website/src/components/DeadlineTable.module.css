@@ -39,7 +39,6 @@
 }
 
 .sortIcon {
-  font-family: var(--number-font);
   font-size: 11px;
 }
 
@@ -59,7 +58,6 @@
 
 .colSeries a {
   color: var(--text);
-  font-family: var(--heading-font);
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
@@ -95,7 +93,6 @@
 
 .dateDetails time,
 .colConfDate > span {
-  font-family: var(--number-font);
   font-weight: 400;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;

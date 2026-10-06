@@ -44,9 +44,9 @@ export function daysUntil(iso: string): number {
 }
 
 export function daysLabel(days: number): string {
-  if (days < 0) return `${Math.abs(days)}日前`;
+  if (days < 0) return `${Math.abs(days)} 日前`;
   if (days === 0) return "今日";
-  return `あと${days}日`;
+  return `あと ${days} 日`;
 }
 
 export type DeadlineStatus = "urgent" | "soon" | "future" | "past";

@@ -53,7 +53,7 @@ function Row({ row }: { row: DeadlineRow }) {
           >
             {formatDate(row.milestone.at_utc)}
           </time>
-          {row.milestone.is_estimated && <span class={styles.estimated}>（予測）</span>}
+          {row.milestone.is_estimated && <span class={styles.estimated}>（推定）</span>}
           <span class={styles.daysRemaining}>{daysLabel(days)}</span>
         </div>
       </td>
