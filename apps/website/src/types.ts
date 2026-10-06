@@ -56,3 +56,7 @@ export interface DeadlineRow {
 export type SortKey = "deadline" | "series" | "conference";
 export type ViewFilter = "upcoming" | "all" | "past";
 export type MilestoneFilter = Set<MilestoneType>;
+
+export type GenreId = "geometry" | "distributed" | "algorithms" | "or_ai" | "unclassified";
+
+export type GenreFilter = Set<GenreId>;

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "preact/hooks";
-import type { MilestoneFilter, MilestoneType, ViewFilter } from "../types.ts";
-import { DEFAULT_MILESTONE_FILTER, MILESTONE_LABELS } from "../utils.ts";
+import type { GenreFilter, GenreId, MilestoneFilter, MilestoneType, ViewFilter } from "../types.ts";
+import { ALL_GENRES, GENRE_LABELS } from "../genres.ts";
+import { MILESTONE_LABELS } from "../utils.ts";
 import styles from "./Toolbar.module.css";
 
 interface Props {
@@ -8,6 +9,9 @@ interface Props {
   onTimeFilterChange: (f: ViewFilter) => void;
   milestoneFilter: MilestoneFilter;
   onMilestoneFilterChange: (f: MilestoneFilter) => void;
+  genreOptions: readonly GenreId[];
+  genreFilter: GenreFilter;
+  onGenreFilterChange: (f: GenreFilter) => void;
 }
 
 const TIME_FILTERS: { value: ViewFilter; label: string }[] = [
@@ -23,6 +27,9 @@ export function Toolbar({
   onTimeFilterChange,
   milestoneFilter,
   onMilestoneFilterChange,
+  genreOptions,
+  genreFilter,
+  onGenreFilterChange,
 }: Props) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -55,8 +62,14 @@ export function Toolbar({
     onMilestoneFilterChange(new Set(ALL_TYPES));
   }
 
-  function selectDefault() {
-    onMilestoneFilterChange(DEFAULT_MILESTONE_FILTER);
+  function toggleGenre(genre: GenreId) {
+    const next = new Set(genreFilter);
+    if (next.has(genre)) {
+      next.delete(genre);
+    } else {
+      next.add(genre);
+    }
+    onGenreFilterChange(next);
   }
 
   return (
@@ -94,7 +107,7 @@ export function Toolbar({
             type="button"
             class={styles.dropdownBtn}
             aria-expanded={open}
-            aria-controls="milestone-options"
+            aria-controls="filter-options"
             onClick={() => {
               setOpen(!open);
             }}
@@ -112,28 +125,72 @@ export function Toolbar({
             </svg>
           </button>
           {open && (
-            <div class={styles.dropdownMenu} id="milestone-options">
-              <div class={styles.menuActions}>
-                <button type="button" class={styles.menuLink} onClick={selectAll}>
-                  すべて選択
-                </button>
-                <button type="button" class={styles.menuLink} onClick={selectDefault}>
-                  投稿の締切のみ
-                </button>
-              </div>
-              <div class={styles.menuDivider} />
-              {ALL_TYPES.map((type) => (
-                <label key={type} class={styles.menuItem}>
-                  <input
-                    type="checkbox"
-                    checked={milestoneFilter.has(type)}
-                    onChange={() => {
-                      toggleType(type);
+            <div class={styles.dropdownMenu} id="filter-options">
+              <fieldset class={styles.menuSection}>
+                <legend class={styles.menuHeading}>ジャンル</legend>
+                <div class={styles.menuActions}>
+                  <button
+                    type="button"
+                    class={styles.menuLink}
+                    onClick={() => {
+                      onGenreFilterChange(new Set(ALL_GENRES));
                     }}
-                  />
-                  {MILESTONE_LABELS[type]}
-                </label>
-              ))}
+                  >
+                    すべて選択
+                  </button>
+                  <button
+                    type="button"
+                    class={styles.menuLink}
+                    onClick={() => {
+                      onGenreFilterChange(new Set());
+                    }}
+                  >
+                    すべて解除
+                  </button>
+                </div>
+                {genreOptions.map((genre) => (
+                  <label key={genre} class={styles.menuItem}>
+                    <input
+                      type="checkbox"
+                      checked={genreFilter.has(genre)}
+                      onChange={() => {
+                        toggleGenre(genre);
+                      }}
+                    />
+                    {GENRE_LABELS[genre]}
+                  </label>
+                ))}
+              </fieldset>
+              <div class={styles.menuDivider} />
+              <fieldset class={styles.menuSection}>
+                <legend class={styles.menuHeading}>種別</legend>
+                <div class={styles.menuActions}>
+                  <button type="button" class={styles.menuLink} onClick={selectAll}>
+                    すべて選択
+                  </button>
+                  <button
+                    type="button"
+                    class={styles.menuLink}
+                    onClick={() => {
+                      onMilestoneFilterChange(new Set());
+                    }}
+                  >
+                    すべて解除
+                  </button>
+                </div>
+                {ALL_TYPES.map((type) => (
+                  <label key={type} class={styles.menuItem}>
+                    <input
+                      type="checkbox"
+                      checked={milestoneFilter.has(type)}
+                      onChange={() => {
+                        toggleType(type);
+                      }}
+                    />
+                    {MILESTONE_LABELS[type]}
+                  </label>
+                ))}
+              </fieldset>
             </div>
           )}
         </div>

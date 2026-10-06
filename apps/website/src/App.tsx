@@ -8,7 +8,9 @@ import type {
   SortKey,
   ViewFilter,
 } from "./types.ts";
-import { DEFAULT_MILESTONE_FILTER, buildRows, formatDate } from "./utils.ts";
+import { loadFilterPreferences, saveFilterPreferences } from "./filterPreferences.ts";
+import { filterByGenre, getAvailableGenres } from "./genres.ts";
+import { buildRows, formatDate } from "./utils.ts";
 import styles from "./App.module.css";
 
 function filterByTime(rows: DeadlineRow[], filter: ViewFilter): DeadlineRow[] {
@@ -50,8 +52,13 @@ type LoadState =
 export function App() {
   const [loadState, setLoadState] = useState<LoadState>({ status: "loading" });
   const [timeFilter, setTimeFilter] = useState<ViewFilter>("upcoming");
-  const [milestoneFilter, setMilestoneFilter] = useState<MilestoneFilter>(DEFAULT_MILESTONE_FILTER);
+  const [filterPreferences, setFilterPreferences] = useState(loadFilterPreferences);
+  const { milestoneFilter, genreFilter } = filterPreferences;
   const [sort, setSort] = useState<SortKey>("deadline");
+
+  useEffect(() => {
+    saveFilterPreferences(filterPreferences);
+  }, [filterPreferences]);
 
   useEffect(() => {
     fetch("/conferences.json")
@@ -64,12 +71,18 @@ export function App() {
       });
   }, []);
 
+  const genreOptions = useMemo(
+    () => (loadState.status === "ready" ? getAvailableGenres(loadState.rows) : []),
+    [loadState],
+  );
+
   const visibleRows = useMemo(() => {
     if (loadState.status !== "ready") return [];
     const byTime = filterByTime(loadState.rows, timeFilter);
     const byMilestone = filterByMilestone(byTime, milestoneFilter);
-    return sortRows(byMilestone, sort);
-  }, [loadState, timeFilter, milestoneFilter, sort]);
+    const byGenre = filterByGenre(byMilestone, genreFilter);
+    return sortRows(byGenre, sort);
+  }, [loadState, timeFilter, milestoneFilter, genreFilter, sort]);
 
   return (
     <div class={styles.app}>
@@ -91,7 +104,14 @@ export function App() {
               timeFilter={timeFilter}
               onTimeFilterChange={setTimeFilter}
               milestoneFilter={milestoneFilter}
-              onMilestoneFilterChange={setMilestoneFilter}
+              onMilestoneFilterChange={(milestoneFilter) => {
+                setFilterPreferences((current) => ({ ...current, milestoneFilter }));
+              }}
+              genreOptions={genreOptions}
+              genreFilter={genreFilter}
+              onGenreFilterChange={(genreFilter) => {
+                setFilterPreferences((current) => ({ ...current, genreFilter }));
+              }}
             />
             <DeadlineTable rows={visibleRows} sort={sort} onSortChange={setSort} />
           </>

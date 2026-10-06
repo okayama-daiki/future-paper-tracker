@@ -16,7 +16,7 @@ import {
 } from "./source-registry.ts";
 
 describe("source registry", () => {
-  test("gives every configured series a source and maps 27 series to tcs-conf", async () => {
+  test("gives every configured series a source and maps 32 series to tcs-conf", async () => {
     const [registry, configuredSeries] = await Promise.all([
       loadSourceRegistry(),
       loadConferenceConfig(),
@@ -24,7 +24,7 @@ describe("source registry", () => {
     const configuredIds = new Set(configuredSeries.map((series) => series.id));
     const tcsConf = registry.sources.find((source) => source.id === "tcs-conf");
 
-    expect(tcsConf?.series_ids).toHaveLength(27);
+    expect(tcsConf?.series_ids).toHaveLength(32);
     expect(
       registry.sources.flatMap((source) => source.series_ids).every((id) => configuredIds.has(id)),
     ).toBe(true);

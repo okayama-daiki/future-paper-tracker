@@ -33,7 +33,12 @@
         "EURO",
         "CPAIOR",
         "ALGO",
-        "AAAI"
+        "AAAI",
+        "IWOCA",
+        "LATIN",
+        "IJCAI",
+        "ICAPS",
+        "CP"
       ]
     },
     {
@@ -136,6 +141,62 @@
       "role": "official",
       "url_template": "https://orsj.org/raota/",
       "series_ids": ["TSUKUBA"]
+    },
+    {
+      "id": "iwoca-2027-home",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://kam.mff.cuni.cz/conferences/iwoca27/",
+      "series_ids": ["IWOCA"]
+    },
+    {
+      "id": "iwoca-2027-cfp",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://kam.mff.cuni.cz/conferences/iwoca27/cfp.html",
+      "series_ids": ["IWOCA"]
+    },
+    {
+      "id": "latin-home",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://www.latintcs.org/",
+      "series_ids": ["LATIN"]
+    },
+    {
+      "id": "ijcai-year",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://${year}.ijcai.org/",
+      "series_ids": ["IJCAI"]
+    },
+    {
+      "id": "icaps-2027-dates",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://icaps27.icaps-conference.org/dates/",
+      "series_ids": ["ICAPS"]
+    },
+    {
+      "id": "icaps-2027-cfp",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://icaps27.icaps-conference.org/calls/cfp/",
+      "series_ids": ["ICAPS"]
+    },
+    {
+      "id": "cp-year",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://cp${year}.a4cp.org/cfp.html",
+      "series_ids": ["CP"]
+    },
+    {
+      "id": "cp-2027-announcement",
+      "kind": "static_html",
+      "role": "official",
+      "url_template": "https://www.a4cp.org/index.php/-102",
+      "series_ids": ["CP"]
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T15:56:30Z",
+  "generated_at": "2026-10-06T04:30:15Z",
   "conference_series": [
     {
       "id": "PODC",
@@ -3287,6 +3287,328 @@
           "start_at_utc": null,
           "end_at_utc": null,
           "milestones": [],
+          "call_for_paper": null
+        }
+      ]
+    },
+    {
+      "id": "IWOCA",
+      "name": "International Workshop on Combinatorial Algorithms",
+      "url": "https://tomasz-radzik.github.io/IWOCA/",
+      "enabled": true,
+      "conferences": [
+        {
+          "id": "IWOCA-2026",
+          "series_id": "IWOCA",
+          "name": "The 37th International Workshop on Combinatorial Algorithms",
+          "year": 2026,
+          "ordinal_no": 37,
+          "url": "https://iwoca2026.limos.fr/",
+          "venue": "Université Clermont Auvergne, Clermont-Ferrand, France",
+          "start_at_utc": "2026-06-08T00:00:00Z",
+          "end_at_utc": "2026-06-12T00:00:00Z",
+          "milestones": [
+            {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2026-01-27T11:59:59Z",
+              "source_url": "https://iwoca2026.limos.fr/",
+              "is_estimated": false
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2026-02-03T11:59:59Z",
+              "source_url": "https://iwoca2026.limos.fr/",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2026-03-25T00:00:00Z",
+              "source_url": "https://iwoca2026.limos.fr/",
+              "is_estimated": false
+            },
+            {
+              "type": "camera_ready",
+              "at_utc": "2026-04-07T11:59:59Z",
+              "source_url": "https://iwoca2026.limos.fr/",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://iwoca2026.limos.fr/cfp.php",
+            "page_count": 12
+          }
+        },
+        {
+          "id": "IWOCA-2027",
+          "series_id": "IWOCA",
+          "name": "The 38th International Workshop on Combinatorial Algorithms",
+          "year": 2027,
+          "ordinal_no": 38,
+          "url": "https://kam.mff.cuni.cz/conferences/iwoca27/",
+          "venue": "Faculty of Mathematics and Physics, Charles University, Prague, Czechia",
+          "start_at_utc": "2027-06-21T00:00:00Z",
+          "end_at_utc": "2027-06-25T00:00:00Z",
+          "milestones": [
+            {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2027-02-09T11:59:59Z",
+              "source_url": "https://kam.mff.cuni.cz/conferences/iwoca27/",
+              "is_estimated": false
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2027-02-16T11:59:59Z",
+              "source_url": "https://kam.mff.cuni.cz/conferences/iwoca27/",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2027-04-12T00:00:00Z",
+              "source_url": "https://kam.mff.cuni.cz/conferences/iwoca27/",
+              "is_estimated": false
+            },
+            {
+              "type": "camera_ready",
+              "at_utc": "2027-04-23T11:59:59Z",
+              "source_url": "https://kam.mff.cuni.cz/conferences/iwoca27/",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://kam.mff.cuni.cz/conferences/iwoca27/cfp.html",
+            "page_count": 12
+          }
+        }
+      ]
+    },
+    {
+      "id": "LATIN",
+      "name": "Latin American Theoretical Informatics Symposium",
+      "url": "https://www.latintcs.org/",
+      "enabled": true,
+      "conferences": [
+        {
+          "id": "LATIN-2026",
+          "series_id": "LATIN",
+          "name": "The 17th Latin American Theoretical Informatics Symposium",
+          "year": 2026,
+          "ordinal_no": 17,
+          "url": "https://latin2026.sites.ufsc.br/index.html",
+          "venue": "Auditório do CCB, Universidade Federal de Santa Catarina (UFSC), Florianópolis, Brazil",
+          "start_at_utc": "2026-04-13T00:00:00Z",
+          "end_at_utc": "2026-04-17T00:00:00Z",
+          "milestones": [
+            {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2025-10-14T11:59:59Z",
+              "source_url": "https://latin2026.sites.ufsc.br/index.html",
+              "is_estimated": false
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2025-10-21T11:59:59Z",
+              "source_url": "https://latin2026.sites.ufsc.br/index.html",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2026-01-09T00:00:00Z",
+              "source_url": "https://latin2026.sites.ufsc.br/index.html",
+              "is_estimated": false
+            },
+            {
+              "type": "camera_ready",
+              "at_utc": "2026-02-17T11:59:59Z",
+              "source_url": "https://latin2026.sites.ufsc.br/index.html",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://latin2026.sites.ufsc.br/index.html",
+            "page_count": 15
+          }
+        },
+        {
+          "id": "LATIN-2028",
+          "series_id": "LATIN",
+          "name": "Latin American Theoretical Informatics Symposium",
+          "year": 2028,
+          "ordinal_no": null,
+          "url": "https://www.latintcs.org/",
+          "venue": null,
+          "start_at_utc": null,
+          "end_at_utc": null,
+          "milestones": [],
+          "call_for_paper": null
+        }
+      ]
+    },
+    {
+      "id": "IJCAI",
+      "name": "International Joint Conference on Artificial Intelligence",
+      "url": "https://www.ijcai.org/",
+      "enabled": true,
+      "conferences": [
+        {
+          "id": "IJCAI-2027",
+          "series_id": "IJCAI",
+          "name": "The 36th International Joint Conference on Artificial Intelligence",
+          "year": 2027,
+          "ordinal_no": 36,
+          "url": "https://2027.ijcai.org/",
+          "venue": "Kyoto, Japan",
+          "start_at_utc": "2027-08-07T00:00:00Z",
+          "end_at_utc": "2027-08-13T00:00:00Z",
+          "milestones": [
+            {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2027-01-05T11:59:59Z",
+              "source_url": "https://2027.ijcai.org/",
+              "is_estimated": false
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2027-01-12T11:59:59Z",
+              "source_url": "https://2027.ijcai.org/",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2027-04-21T00:00:00Z",
+              "source_url": "https://2027.ijcai.org/",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": null
+        }
+      ]
+    },
+    {
+      "id": "ICAPS",
+      "name": "International Conference on Automated Planning and Scheduling",
+      "url": "https://www.icaps-conference.org/",
+      "enabled": true,
+      "conferences": [
+        {
+          "id": "ICAPS-2027",
+          "series_id": "ICAPS",
+          "name": "The 37th International Conference on Automated Planning and Scheduling",
+          "year": 2027,
+          "ordinal_no": 37,
+          "url": "https://icaps27.icaps-conference.org/",
+          "venue": "Columbia, South Carolina, USA",
+          "start_at_utc": "2027-06-27T00:00:00Z",
+          "end_at_utc": "2027-07-02T00:00:00Z",
+          "milestones": [
+            {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2026-12-08T11:59:59Z",
+              "source_url": "https://icaps27.icaps-conference.org/calls/cfp/",
+              "is_estimated": false
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2026-12-15T11:59:59Z",
+              "source_url": "https://icaps27.icaps-conference.org/calls/cfp/",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2027-02-26T00:00:00Z",
+              "source_url": "https://icaps27.icaps-conference.org/calls/cfp/",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://icaps27.icaps-conference.org/calls/cfp/",
+            "page_count": 8
+          }
+        }
+      ]
+    },
+    {
+      "id": "CP",
+      "name": "International Conference on Principles and Practice of Constraint Programming",
+      "url": "https://www.a4cp.org/index.php/events/cp-conference-series",
+      "enabled": true,
+      "conferences": [
+        {
+          "id": "CP-2026",
+          "series_id": "CP",
+          "name": "The 32nd International Conference on Principles and Practice of Constraint Programming",
+          "year": 2026,
+          "ordinal_no": 32,
+          "url": "https://cp2026.a4cp.org/",
+          "venue": "ISCTE – Instituto Universitário de Lisboa, Lisbon, Portugal",
+          "start_at_utc": "2026-07-20T00:00:00Z",
+          "end_at_utc": "2026-07-23T00:00:00Z",
+          "milestones": [
+            {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2026-03-03T11:00:00Z",
+              "source_url": "https://cp2026.a4cp.org/cfp.html",
+              "is_estimated": false
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2026-03-15T11:00:00Z",
+              "source_url": "https://cp2026.a4cp.org/cfp.html",
+              "is_estimated": false
+            },
+            {
+              "type": "notification",
+              "at_utc": "2026-04-30T00:00:00Z",
+              "source_url": "https://cp2026.a4cp.org/cfp.html",
+              "is_estimated": false
+            },
+            {
+              "type": "camera_ready",
+              "at_utc": "2026-05-08T11:00:00Z",
+              "source_url": "https://cp2026.a4cp.org/cfp.html",
+              "is_estimated": false
+            }
+          ],
+          "call_for_paper": {
+            "source_url": "https://cp2026.a4cp.org/cfp.html",
+            "page_count": 15
+          }
+        },
+        {
+          "id": "CP-2027",
+          "series_id": "CP",
+          "name": "The 33rd International Conference on Principles and Practice of Constraint Programming",
+          "year": 2027,
+          "ordinal_no": 33,
+          "url": "https://www.a4cp.org/index.php/-102",
+          "venue": "Changchun, China",
+          "start_at_utc": "2027-08-16T00:00:00Z",
+          "end_at_utc": "2027-08-20T00:00:00Z",
+          "milestones": [
+            {
+              "type": "abstract_submission_deadline",
+              "at_utc": "2027-03-30T11:00:00Z",
+              "source_url": "https://cp2026.a4cp.org/cfp.html",
+              "is_estimated": true
+            },
+            {
+              "type": "full_paper_submission_deadline",
+              "at_utc": "2027-04-11T11:00:00Z",
+              "source_url": "https://cp2026.a4cp.org/cfp.html",
+              "is_estimated": true
+            },
+            {
+              "type": "notification",
+              "at_utc": "2027-05-27T00:00:00Z",
+              "source_url": "https://cp2026.a4cp.org/cfp.html",
+              "is_estimated": true
+            },
+            {
+              "type": "camera_ready",
+              "at_utc": "2027-06-04T11:00:00Z",
+              "source_url": "https://cp2026.a4cp.org/cfp.html",
+              "is_estimated": true
+            }
+          ],
           "call_for_paper": null
         }
       ]
